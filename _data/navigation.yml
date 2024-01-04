@@ -39,33 +39,13 @@ offering_links:
   - title: Assignments
     url: /lab_list/
     description: "Programming Assignments"
-  # - title: Lab
-  #   url: /lab_list/
-  #   description: "Lab Assignments"
-  # - title: Cal
-  #   url: /info/calendar/
-  #   description: "Assignment Calendar"
   - title: Syllabus
     url: /info/syllabus/
     description: "Syllabus" 
   - title: Piazza
     url: https://piazza.com/ucsb/winter2024/cmpsc24/resources
     description: "Q&A Forum"
-
-  # - title: More
-  #   dropdown:
-          
-  #      - title: Info Pages
-  #        url: /info_list/
-  #        description: "List of General Information Pages"
-  # - title: Links 
-      #  - title: Gauchospace
-      #    url: https://gauchospace.ucsb.edu
-      #    description: "Overall Grade Information"
-      #  - title: GradeScope
-      #    url: https://gradescope.com
-      #    description: "HW and Lab Grades"
-       
+      
   - title: Github
     dropdown:
        - title: ucsb-cs24-w24

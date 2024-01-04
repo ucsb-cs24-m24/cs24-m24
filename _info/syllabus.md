@@ -11,7 +11,7 @@ You must contact the instructor for clarification if you receive information fro
 
 ## Basic Facts
 * **Course Web Site**: <{{ site.url}}>
-* **Instructor**:  {{site.instructor}}, office hours Mondays 2p -3p, HFH 1155
+* **Instructor**:  {{site.instructor}}
 * **Lecture**: {{ site.lecture_times}}, {{ site.lecture_location}} 
 * **TAs**: {{ site.tas}}
 * **ULAs**: {{site.ulas}}
