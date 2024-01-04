@@ -35,7 +35,7 @@ title: "CS 24: Problem Solving with Computers-II , {{site.quarter}}"
 
 
 
-### Lecture schedule
+### Lectures 
 <!-- {% include collapse-button.html label="Lectures" id="lectures" %} -->
 <!-- <div class="collapse" id="lectures"> -->
  <div class="card card-body" id="lectures" markdown="1">
@@ -52,7 +52,7 @@ title: "CS 24: Problem Solving with Computers-II , {{site.quarter}}"
 <!-- </div> -->
 
 
-### Office hours schedule
+### Office hours 
 
 <style>
  iframe { width: 100%; height: 550px; }
