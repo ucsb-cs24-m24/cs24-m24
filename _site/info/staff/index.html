@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- head.html; common header items for all layouts -->
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+
+<link rel="stylesheet" href="/w24/assets/css/main.css">
+  
+<script
+   src="https://code.jquery.com/jquery-3.3.1.min.js"
+   integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+   crossorigin="anonymous"></script>
+
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+<script src="//cdnjs.cloudflare.com/ajax/libs/mousetrap/1.4.6/mousetrap.min.js"></script>
+
+
+<script src="/w24/assets/js/site.js"></script>
+
+<script>
+var nav ={
+    
+    "offerings": {
+	"title" : "W24",
+	"url" : "/",
+	"baseurl" : "/w24",
+	"items" : [
+	    
+	    {
+		"title" : "W24-Home",
+		"url" : "/",
+		"baseurl" : "/w24",
+	    },
+	    
+	],
+    },
+    
+    
+    "offering_links": [
+	
+		{
+		    "title": "Assignments",		    
+		     "url": "/lab_list/", 		    
+		     "description": "Programming Assignments", 
+		    		    
+		},
+	
+		{
+		    "title": "Syllabus",		    
+		     "url": "/info/syllabus/", 		    
+		     "description": "Syllabus", 
+		    		    
+		},
+	
+		{
+		    "title": "Piazza",		    
+		     "url": "https://piazza.com/ucsb/winter2024/cmpsc24/resources", 		    
+		     "description": "Q&A Forum", 
+		    		    
+		},
+	
+		{
+		    "title": "Github",		    
+		    		    
+		    
+		    
+		    "dropdown" : [
+			
+			{
+			    "title": "ucsb-cs24-w24",		    
+			    "url": "https://github.com/ucsb-cs24-w24", 
+			    
+			},
+			
+		    ]
+		    		    
+		},
+	
+     
+    ],
+    
+        
+}
+;
+</script>
+
+
+
+
+
+
+    <!-- start custom head snippets -->
+
+<!-- insert favicons. use https://realfavicongenerator.net/ -->
+
+<!-- end custom head snippets -->
+    
+  <title> Course Staff |  CS24 Winter 2024</title>
+  </head>
+  <body id="page-top">
+    <div class="container">
+    
+
+<script>
+  console.log("site.url=http://localhost:4000");
+  console.log("site.baseurl=/w24");
+  console.log("site.data.navigation.home.url=/");
+  console.log("site.data.navigation.home.baseurl=/");
+  console.log("home_url=/");
+  console.log("home_url_final=https://ucsb-cs24.github.io/");
+</script>
+
+
+
+<script>
+  console.log("offering_url=/");
+  console.log("offering_baseurl=/w24");
+  console.log("offering_url_final=/w24/");
+  console.log("offering_title=W24-Home");
+</script>
+
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+
+  <a class="navbar-brand" href="https://ucsb-cs24.github.io/">UCSB CS24</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+    <ul class="navbar-nav mr-auto"><li class="nav-item dropdown">
+  <a class="nav-link dropdown-toggle" href="#" id="main-dropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    Resources
+  </a>
+  <div class="dropdown-menu" aria-labelledby="main-dropdown"><a class="dropdown-item" href="https://ucsb-cs24.github.io/topic_list/">Topics</a><a class="dropdown-item" href="https://ucsb-cs24.github.io/resources_list/">Resources</a></div>
+</li><li class="nav-item">
+  <a class="nav-link" href="/w24/">
+    W24-Home
+  </a>
+</li>
+<li class="nav-item"><a class="nav-link" href="/w24/lab_list/"title="Programming Assignments"data-term="" >Assignments</a>
+
+</li><li class="nav-item"><a class="nav-link" href="/w24/info/syllabus/"title="Syllabus"data-term="" >Syllabus</a>
+
+</li><li class="nav-item"><a class="nav-link" href="https://piazza.com/ucsb/winter2024/cmpsc24/resources"title="Q&A Forum"data-term="" >Piazza</a>
+
+</li><li class="nav-item dropdown " data-term="">
+  <a class="nav-link dropdown-toggle" href="#" id="navbar-offering-specific-dropdown-Github" data-toggle="dropdown" aria-haspopup="true"
+     aria-expanded="false">Github</a>
+    <div class="dropdown-menu" aria-labelledby="navbar-offering-specific-dropdown-Github"><a class="dropdown-item" href="https://github.com/ucsb-cs24-w24"data-term="" ><i class='fab fa-github' aria-hidden='true'></i>&nbsp;ucsb-cs24-w24</a>
+
+</div>
+</li>
+
+
+</ul>
+  </div>
+</nav>
+
+
+    <div id="content"  class="ui-content">
+      
+      
+        
+          
+      
+      <h1 id="course-staff-profiles">Course Staff Profiles<a name="staff"></a></h1>
+
+<h2 id="zackary-glazewski-la">Zackary Glazewski, LA</h2>
+
+<p><img src="../staff/CS24-F23-Zackary-G.jpg" alt="Zack" width="150px" style="float: left; margin: 5px 10px 10px 10px;" /></p>
+
+<p>Hello everyone! My name is Zack Glazewski and I’m a 4th year CS Major. I feel very excited to help you all learn and enjoy the process along the way. Some more information about me: I love cats (I have a cat named Link), playing piano, and developing my own games. I’m always happy to help, so please don’t hesitate if you have any questions. I look forward to meeting you all!</p>
+
+<p><br /></p>
+
+<h2 id="karanina-laszlo-zim-la">Karanina (Laszlo) Zim, LA</h2>
+
+<p><img src="../staff/CS24-F23-Laszlo-Z.jpeg" alt="Laszlo" width="150px" style="float: left; margin: 5px 10px 10px 10px;" /></p>
+
+<p>Hello everyone! My name is Karanina Zim, but I go by Laszlo. I’m a third year year CS &amp; Chinese double major. Some of my hobbies are cafe-hopping and being a dedicated servant to my dear cat Stinkie. I also love music and I enjoy attending concerts in my (very limited) free time. I absolutely love being a ULA so please feel more than welcome to approach me with questions and I’ll be happy to help! Looking forward to meeting everybody this quarter!</p>
+
+<p><br /></p>
+
+<h2 id="torin-schlunk-la">Torin Schlunk, LA</h2>
+
+<p><img src="../staff/CS24-F23-Torin-S.jpg" alt="Torin" width="150px" style="float: left; margin: 5px 10px 10px 10px;" /></p>
+
+<p>Hey! My name is Torin Schlunk and I’m a 4th year Computer Engineering Major. I’m looking forward to getting to know you guys this quarter! Aside from coding, I enjoy building custom computer keyboards and designing my own PCBs for them! I love to answer questions and talk about all things computing so feel free to come talk to me at my office hours or post any questions on Piazza.</p>
+
+</div><!-- content -->
+    <!-- start custom footer snippets -->
+
+<!-- end custom footer snippets -->
+    
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light footer-navbar ">
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#footer-navbar-NavAltMarkup" aria-controls="footer-navbar-NavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="footer-navbar-NavAltMarkup">
+    <div class="navbar-nav">
+      <a class="nav-item nav-link" href="https://github.com/ucsb-cs24/w24">github site</a>
+      <a class="nav-item nav-link" href="https://github.com/ucsb-cs24/w24/edit/master/_info/staff.md">edit this page on github</a>
+      <span class="nav-item travis-ci-status "><a class="nav-link" href="https://travis-ci.org/ucsb-cs24/w24">
+	  <img src="https://travis-ci.org/ucsb-cs24/w24.svg?branch=master" alt="Build Status">
+	</a>
+      </span>
+    </div>
+  </div>
+</nav>
+
+    </div><!-- container -->
+  </body>
+</html>

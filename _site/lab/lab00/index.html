@@ -1,0 +1,513 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- head.html; common header items for all layouts -->
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+
+<link rel="stylesheet" href="/w24/assets/css/main.css">
+  
+<script
+   src="https://code.jquery.com/jquery-3.3.1.min.js"
+   integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+   crossorigin="anonymous"></script>
+
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+<script src="//cdnjs.cloudflare.com/ajax/libs/mousetrap/1.4.6/mousetrap.min.js"></script>
+
+
+<script src="/w24/assets/js/site.js"></script>
+
+<script>
+var nav ={
+    
+    "offerings": {
+	"title" : "W24",
+	"url" : "/",
+	"baseurl" : "/w24",
+	"items" : [
+	    
+	    {
+		"title" : "W24-Home",
+		"url" : "/",
+		"baseurl" : "/w24",
+	    },
+	    
+	],
+    },
+    
+    
+    "offering_links": [
+	
+		{
+		    "title": "Assignments",		    
+		     "url": "/lab_list/", 		    
+		     "description": "Programming Assignments", 
+		    		    
+		},
+	
+		{
+		    "title": "Syllabus",		    
+		     "url": "/info/syllabus/", 		    
+		     "description": "Syllabus", 
+		    		    
+		},
+	
+		{
+		    "title": "Piazza",		    
+		     "url": "https://piazza.com/ucsb/winter2024/cmpsc24/resources", 		    
+		     "description": "Q&A Forum", 
+		    		    
+		},
+	
+		{
+		    "title": "Github",		    
+		    		    
+		    
+		    
+		    "dropdown" : [
+			
+			{
+			    "title": "ucsb-cs24-w24",		    
+			    "url": "https://github.com/ucsb-cs24-w24", 
+			    
+			},
+			
+		    ]
+		    		    
+		},
+	
+     
+    ],
+    
+        
+}
+;
+</script>
+
+
+
+
+
+
+    <title>lab00 - Getting started - </title>
+  </head>
+    <body id="page-top">
+      <div class="container">
+      
+
+<script>
+  console.log("site.url=http://localhost:4000");
+  console.log("site.baseurl=/w24");
+  console.log("site.data.navigation.home.url=/");
+  console.log("site.data.navigation.home.baseurl=/");
+  console.log("home_url=/");
+  console.log("home_url_final=https://ucsb-cs24.github.io/");
+</script>
+
+
+
+<script>
+  console.log("offering_url=/");
+  console.log("offering_baseurl=/w24");
+  console.log("offering_url_final=/w24/");
+  console.log("offering_title=W24-Home");
+</script>
+
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+
+  <a class="navbar-brand" href="https://ucsb-cs24.github.io/">UCSB CS24</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+    <ul class="navbar-nav mr-auto"><li class="nav-item dropdown">
+  <a class="nav-link dropdown-toggle" href="#" id="main-dropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    Resources
+  </a>
+  <div class="dropdown-menu" aria-labelledby="main-dropdown"><a class="dropdown-item" href="https://ucsb-cs24.github.io/topic_list/">Topics</a><a class="dropdown-item" href="https://ucsb-cs24.github.io/resources_list/">Resources</a></div>
+</li><li class="nav-item">
+  <a class="nav-link" href="/w24/">
+    W24-Home
+  </a>
+</li>
+<li class="nav-item"><a class="nav-link" href="/w24/lab_list/"title="Programming Assignments"data-term="" >Assignments</a>
+
+</li><li class="nav-item"><a class="nav-link" href="/w24/info/syllabus/"title="Syllabus"data-term="" >Syllabus</a>
+
+</li><li class="nav-item"><a class="nav-link" href="https://piazza.com/ucsb/winter2024/cmpsc24/resources"title="Q&A Forum"data-term="" >Piazza</a>
+
+</li><li class="nav-item dropdown " data-term="">
+  <a class="nav-link dropdown-toggle" href="#" id="navbar-offering-specific-dropdown-Github" data-toggle="dropdown" aria-haspopup="true"
+     aria-expanded="false">Github</a>
+    <div class="dropdown-menu" aria-labelledby="navbar-offering-specific-dropdown-Github"><a class="dropdown-item" href="https://github.com/ucsb-cs24-w24"data-term="" ><i class='fab fa-github' aria-hidden='true'></i>&nbsp;ucsb-cs24-w24</a>
+
+</div>
+</li>
+
+
+</ul>
+  </div>
+</nav>
+
+
+        <div id="content"  class="ui-content">
+          <h1>lab00 : Getting started</h1>
+          <table class="asn_table">
+            <!-- asn_table_header_row.html -->
+<tr>
+  <th class="asn_num"  >num</th>
+  <th class="asn_ready">ready?</th>
+  <th class="asn_desc" >description</th>
+  <th class="asn_date" >assigned</th>
+  <th class="asn_date" >due</th>
+</tr>
+
+
+            
+            <tr class="not-ready" >
+  <td class="asn_num"  ><a href="/w24/lab/lab00/" data-ajax="false">lab00</a></td>
+  <td class="asn_ready">false</td>
+  <td class="asn_desc" >Getting started</td>
+  <td class="asn_date" >Thu 01/11 09:00AM</td> 
+  <td class="asn_date" >Wed 01/17 11:59PM</td>
+</tr>
+
+
+
+          </table>
+          <h1 id="introduction">Introduction</h1>
+
+<p>Your first lab for this week is an introduction to programming on CSIL and tools for this course. The intended outcomes are:</p>
+
+<ul>
+  <li>Get to know the course staff and help us get to know you</li>
+  <li>Learn about the tools you will be using in this class: gradescope and github</li>
+</ul>
+
+<p>This lab will count towards 1% of your total lab grade. All other labs are weighed equally.</p>
+
+<p>This lab must be completed INDIVIDUALLY.</p>
+
+<h1 id="get-setup-with-the-tools-for-this-course">Get setup with the tools for this course</h1>
+
+<h2 id="check-your-coe-account">Check your CoE account</h2>
+
+<p>We encourage you to complete all programming assignments by logging in to the machines in the Computer Science labs, or to connect remotely. To do this you will need a <strong>College of Engineering (CoE) account</strong>.</p>
+
+<p>Everyone enrolled in CS24 should already have an account.
+If your account was created when you took CS16, use that account (there is nothing else you need to do).
+Otherwise, check your email for an invitation from the college of Engineering Help Desk.</p>
+
+<p>If you still don’t have an account, use the links below to either request one or reset your password.</p>
+
+<ul>
+  <li>CoE account creation portal: <a href="https://accounts.engr.ucsb.edu/create">https://accounts.engr.ucsb.edu/create</a></li>
+  <li>New Community Member info: </li>
+</ul>
+<p><a href="https://ucsb-engr.atlassian.net/wiki/spaces/EPK/pages/575373516/New+UCSB+Community+Member+Information?src=search">https://ucsb-engr.atlassian.net/wiki/spaces/EPK/pages/575373516/New+UCSB+Community+Member+Information?src=search</a></p>
+<ul>
+  <li>maintain portal (also password reset link with UCSBnetID): <a href="https://accounts.engr.ucsb.edu/maintain/login">https://accounts.engr.ucsb.edu/maintain/login</a></li>
+</ul>
+
+<h2 id="get-setup-with-github">Get setup with github</h2>
+
+<p>We will be using github.com in this course.   We have created an organization called ucsb-cs24-w24 on github.com where you can create repositories (repos) for your assignments in this course.   The advantage of creating private repos under that organization is that the course staff (your instructors, TAs and mentors) will be able to see your code and provide you with help, without you having to do anything special.</p>
+
+<p>To join this organization, you need to do three things.</p>
+
+<ol>
+  <li>
+    <p>If you don’t already have a github.com account, create one on the “free” plan. Visit <a href="https://github.com/">www.github.com</a></p>
+  </li>
+  <li>
+    <p>If you don’t already have your @umail.ucsb.edu email address associated with your github.com account. go to “settings”, add that email, and confirm that email address.</p>
+  </li>
+  <li>
+    <p>Visit our <a href="https://ucsb-cs-github-linker.herokuapp.com/">Github Sign Up Tool: https://ucsb-cs-github-linker.herokuapp.com/</a>, login with your github.com account, click “Home”, find the CS24 W24 course, and click the “join course button”.   That will automatically send you an invitation to join the course organization on github.</p>
+  </li>
+  <li>
+    <p>Accept the invitation that appears in your browser (from step 3) or log into your account on <a href="https://github.com/">www.github.com</a> to accept the invitation.</p>
+  </li>
+</ol>
+
+<h2 id="get-setup-with-gradescope">Get setup with gradescope</h2>
+
+<p>We will use gradescope to grade all your homeworks, exams and lab/programming assignments. You should have received an email notification with instructions about logging into gradescope.</p>
+
+<p>Log into our class site on <a href="https://www.gradescope.com/">www.gradescope.com</a>: CS24 Winter 2024    and navigate to the lab00 assignment</p>
+
+<h1 id="implement-and-submit-a-simple-c-program">Implement and submit a simple C++ program</h1>
+
+<h2 id="download-and-install-vscode-on-your-local-computer">Download and install VSCode on your local computer</h2>
+
+<p>Download and VSCode at this link: <a href="https://code.visualstudio.com/download">https://code.visualstudio.com/download</a></p>
+
+<p>If you have MAC OS or Linux with g++ installed, skip to Step 1A below</p>
+
+<p>If you have a Windows system and don’t have a g++ compiler, follow this tutorial to use your local version of VSCode with the g++ compiler on the CSIL Servers: <a href="https://code.visualstudio.com/docs/remote/ssh-tutorial">https://code.visualstudio.com/docs/remote/ssh-tutorial</a></p>
+
+<p>If you would like to use vim or emacs instead of VSCode follow the instructions in the next section.</p>
+
+<h2 id="open-a-terminal-and-ssh-into-csil-servers">Open a Terminal and ssh into CSIL Servers</h2>
+
+<p>Open a <strong>terminal window</strong>, which will be the environment you use to write, compile, and run your programs.</p>
+
+<p>If you are working on your laptop, whether Windows, Mac or Linux, the instructions below will tell you how to connect to <code class="language-plaintext highlighter-rouge">csil.cs.ucsb.edu</code>.</p>
+
+<p>If you are on a Mac laptop, open a terminal and type the 
+following ssh command to connect to one of the servers remotely</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ssh -X yourCoEaccount@csil.cs.ucsb.edu
+</code></pre></div></div>
+<p>If you are using a Windows, you will need to install the program
+<a href="https://mobaxterm.mobatek.net/">MobaXterm</a>
+If your ssh command is hanging, try using <code class="language-plaintext highlighter-rouge">cstl.cs.ucsb.edu</code> with the following command</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ssh -X yourCoEaccount@cstl.cs.ucsb.edu
+</code></pre></div></div>
+
+<h2 id="step-1a-do-some-initial-one-time-git-configurations">Step 1a: Do some initial ONE-TIME git configurations</h2>
+
+<p>To create your CS24 directory, use the <b>mkdir</b> command, then change into that directory:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ mkdir cs24
+$ cd cs24
+</code></pre></div></div>
+<ul>
+  <li>In your ~/cs24 directory, type the following commands, replacing Alex Triton with your name and atriton@cs.ucsb.edu with your email address.</li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git config --global user.name "Alex Triton"
+
+git config --global user.email "atriton@cs.ucsb.edu"
+</code></pre></div></div>
+
+<ul>
+  <li>Next, generate a private/public key pair and upload your public key to your github account. Refer to this tutorial: <a href="https://ucsb-cs56-pconrad.github.io/topics/github_ssh_keys/">https://ucsb-cs56-pconrad.github.io/topics/github_ssh_keys/</a>. In the process of setting up your key pair, when asked for a passphrase <strong>just press enter</strong>. By doing this step you will avoid having to enter a password or passphrase everytime you push your code to git.</li>
+</ul>
+
+<h2 id="step-1b-create-a-new-repo-and-clone-it-on-your-local-machine">Step 1b: Create a new repo and clone it on your local machine</h2>
+<p>For this lab and all subsequent programming assignments, you should start by creating a repo in the ucsb-cs24-w24 organization following these steps</p>
+
+<ul>
+  <li>
+    <p>Navigate to your dashboard on <a href="https://github.com">https://github.com</a>. From the left drop down menu, select the class organization as shown in the figure below:
+<img src="select-org.png" alt="select-org" height="500px" /></p>
+  </li>
+  <li>
+    <p>Click on the green “New repository” button to create a new repository.</p>
+  </li>
+  <li>
+    <p>Type the name of your repo following the naming convention lab00_your-github-username. For example if your github username is jgaucho, you should name your repo as lab00_jgaucho. If you are working with a partner, include your partner’s github username in the name of the repo. e.g. lab00_jgaucho_alily</p>
+  </li>
+  <li>
+    <p>Select the “Private” visibility option so that other students in the org cannot view your code.</p>
+  </li>
+  <li>
+    <p>Add the C++ .ignore option from the frop down menu and click on “Create repository”. See screenshot below.</p>
+  </li>
+</ul>
+
+<p><img src="enter-org/pic5.png" alt="new-repo" height="500px" /></p>
+
+<ul>
+  <li>Clone the repo on your local machine: Navigate to your repo on github. If your repo is named lab00_jgaucho, then you have to go to to the link:
+https://github.com/ucsb-cs24-w24/lab00_jgaucho. Click on the green “clone or download” button. Then click on the address of your repo as shown in the figure below:</li>
+</ul>
+
+<p><img src="/lab/lab01/clone-repo.png" alt="submit" height="500px" /></p>
+
+<ul>
+  <li>In your cs24 directory, then paste the address you just copied to the terminal following the git clone command. Here is an example of the steps</li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git clone git@github.com:ucsb-cs24-w24/lab00_jgaucho.git
+</code></pre></div></div>
+
+<ul>
+  <li>The above command will create a new directory with the same name as your git repo. Change into that directory. For our example repo we need to type</li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cd lab00_jgaucho
+</code></pre></div></div>
+
+<p>You will write all the code for this assignment in this directory</p>
+
+<h2 id="step-1c-complete-the-assignment">Step 1c: Complete the assignment</h2>
+
+<p>Create a new file called <code>hello.cpp</code> using an editor of your choice (either vim or emacs)</p>
+
+<p>Useful links related to emacs</p>
+
+<ul>
+  <li>
+    <p><a href="https://www.gnu.org/software/emacs/tour/" target="_blank">emacs tour from the GNU organization (makers of emacs)</a></p>
+  </li>
+  <li>
+    <p><a href="https://www.gnu.org/software/emacs/refcards/pdf/refcard.pdf" target="_blank">emacs commands - a handy reference card</a></p>
+  </li>
+  <li>
+    <p><a href="http://www.jesshamrick.com/2012/09/10/absolute-beginners-guide-to-emacs" target="_blank">a beginner’s guide to emacs</a></p>
+  </li>
+</ul>
+
+<p>Useful information related to <b>vim</b> for UNIX-based OS</p>
+
+<ul>
+  <li>To customize your vim environment for a better coding experience with C/C++ copy this .vimrc file from the instructor folder to your home folder using the following command:</li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cp /cs/faculty/dimirza/vim-configuration/example_dotvimrc/.vimrc ~/
+</code></pre></div></div>
+
+<ul>
+  <li>
+    <p><a href="http://www.vim.org/about.php" target="_blank">About vim</a></p>
+  </li>
+  <li>
+    <p><a href="http://tnerual.eriogerg.free.fr/vimqrc.html" target="_blank">vim commands - a handy reference card</a></p>
+  </li>
+  <li>
+    <p><a href="https://www.fprintf.net/vimCheatSheet.html" target="_blank">another reference cheat sheet for vim</a></p>
+  </li>
+</ul>
+
+<p>This assignment only needs you to write a program in hello.cpp that prints out two lines on the display, and nothing else. <strong>The output should look exactly as follows</strong> (no space before or after each line, except the 2 newlines):</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Hello, world!
+I am ready for CS24!
+</code></pre></div></div>
+
+<h2 id="step-1d-push-your-code-to-github">Step 1d: Push your code to github</h2>
+
+<p>In furture labs we will refer to all the steps in this section as “push your code to github”. What we really mean is that you sync up a current version of your code with your repo on https://github.com. Follow these steps to sync the current version of your code:</p>
+
+<ul>
+  <li>Check the status of the files that changed since the last time you synced your repo. Just type git status as follows:</li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git status
+</code></pre></div></div>
+
+<p>You should see the following output:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>On branch main
+Your branch is up to date with 'origin/main'.
+
+Untracked files:
+(use "git add ..." to include in what will be committed)
+
+hello.cpp
+
+nothing added to commit but untracked files present (use "git add" to track)
+</code></pre></div></div>
+
+<ul>
+  <li>Now add the files that were modified since the last sync using git add</li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git add hello.cpp
+</code></pre></div></div>
+<p>OR</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git add .
+</code></pre></div></div>
+
+<p>Type git status again and you should see that the file appears in green. This means it is ready to be “saved” locally as a new version of your project.</p>
+
+<ul>
+  <li>Save the current version of your code as follows:</li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git commit -m "Initial version of lab00"
+</code></pre></div></div>
+
+<ul>
+  <li>Finally sync your latest changes with your repo on https://github.com using git push</li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git push origin main
+</code></pre></div></div>
+
+<p>Navigate to your repo and refresh your browser. You should see the new file that you added to your repo appear in your repo online.
+You may find this <a href="https://education.github.com/git-cheat-sheet-education.pdf">cheatsheet of git commands</a> handy.</p>
+
+<p><strong>Your code is now accessible to the CS24 teaching staff for feedback.</strong> This is the primary reason we are using github in this class. As you write new code in your local repo, repeat the steps in this section to sync your changes with your repo on github.</p>
+
+<h2 id="submit-your-program-for-grading-to-gradescope">Submit your program for grading to gradescope</h2>
+
+<p>It’s time to submit your program to gradescope. Go to <a href="https://www.gradescope.com/">www.gradescope.com</a>. Log into your account and navigate to our course site. Select this assignment. Then click on the “Submit” button on the bottom right corner to make a submission.</p>
+
+<p>You will be given the option of directly uploading files from your local machine or submitting the code that is in a github repo. We recommend that you choose the latter option as shown in the figure below. This will ensure that our staff sees the version of code on github that you submitted to gradescope.</p>
+
+<p><img src="enter-org/gradescope-submission.png" alt="submit" height="500px" /></p>
+
+<p>You should receive 50 points on this part of the assignment.</p>
+
+<p>Congratulations on completing the workflow for CS24 programming assignments using the tools that we will be using in this class i.e. gradescope and github.</p>
+
+<h1 id="find-a-partner-for-lab01">Find a partner for lab01</h1>
+
+<p>Please read the information below. Then, use the dedicated Piazza thread called <strong>Search for Teammates</strong> to find a partner for the next lab. Refrain from creating new threads to avoid clutter on Piazza. You can also try to find a partner by connecting with students in your section on Thursday.</p>
+
+<h2 id="about-pair-programming-in-the-real-world">About pair programming in the real world</h2>
+
+<p><em>Note: this is also in the syllabus!</em></p>
+
+<p>Most of the programming work in this course will be done using a style of programming known as "pair programming". This is where two people (in rare cases, three) work together at the same terminal to solve a programming problem.
+It is similar, in some ways, to having a "lab partner" in a Biology, Chemistry or Physics course.
+For the assignments where pair programming is mentioned, it is optional. But here’s why we recommend it:</p>
+<ul>
+  <li>Pair programming is a real-world skill that is highly valued by employers.</li>
+  <li>Many companies use pair programming extensively, including several local area employers of UCSB CS graduates.</li>
+  <li>Companies that employ UCSB CS and CE grads tell us that our graduates have good technical skills but need better skills and working in pairs and groups to solve problems.</li>
+  <li>Incorporating  pair programming into our curriculum is part of our response to this "real-world" feedback.</li>
+  <li>Most students find it helpful and enjoyable—UCSB CS students from 2009-2010 that were surveyed about their pair programming experiences overwhelmingly reported positive results.</li>
+  <li>There is also evidence in the scientific literature that it improves student learning, and helps you get better grades.</li>
+  <li>To learn more about pair programming, watch the following video (it takes less than 10 minutes): <a href="http://bit.ly/pair-programming-video">http://bit.ly/pair-programming-video</a></li>
+</ul>
+
+<h2 id="about-pair-programming-in-cs24">About pair programming in CS24</h2>
+
+<p>For CS24 in particular, <strong>please read each lab carefully to learn how pair programming will work for that lab</strong>. Some labs may require you to work by yourself, others may require you to work with a partner, and still others may allow you to do either. In addition, some labs may allow you to work with a prior partner, while others may not.</p>
+
+<p>For all labs, you MUST</p>
+<ul>
+  <li>add your partner on Gradescope when submitting your work EACH TIME you submit your file(s). After uploading your file(s) on Gradescope, there is a “Group Members” link at the bottom (or “Add Group Member” under “Groups”) where you can select the partner you are working with. Whoever uploaded the submission must make sure your partner is part of your Group. Click on “Group Members” -&gt; “Add Member” and select your partner from the list.</li>
+  <li>write both your and your partner’s names and PERM numbers on each file submitted to Gradescope.</li>
+</ul>
+
+
+        </div><!-- content -->
+        
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light footer-navbar ">
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#footer-navbar-NavAltMarkup" aria-controls="footer-navbar-NavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="footer-navbar-NavAltMarkup">
+    <div class="navbar-nav">
+      <a class="nav-item nav-link" href="https://github.com/ucsb-cs24/w24">github site</a>
+      <a class="nav-item nav-link" href="https://github.com/ucsb-cs24/w24/edit/master/_lab/lab00.md">edit this page on github</a>
+      <span class="nav-item travis-ci-status "><a class="nav-link" href="https://travis-ci.org/ucsb-cs24/w24">
+	  <img src="https://travis-ci.org/ucsb-cs24/w24.svg?branch=master" alt="Build Status">
+	</a>
+      </span>
+    </div>
+  </div>
+</nav>
+
+      </div><!-- container -->
+  </body>
+</html>

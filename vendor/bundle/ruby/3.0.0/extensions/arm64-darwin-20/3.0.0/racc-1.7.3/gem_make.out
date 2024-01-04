@@ -1,0 +1,15 @@
+current directory: /Users/dibamirza/cs24/w24/vendor/bundle/ruby/3.0.0/gems/racc-1.7.3/ext/racc/cparse
+/Users/dibamirza/.rvm/rubies/ruby-3.0.3/bin/ruby -I /Users/dibamirza/.rvm/rubies/ruby-3.0.3/lib/ruby/3.0.0 -r ./siteconf20240101-9766-6c3kd8.rb extconf.rb
+creating Makefile
+
+current directory: /Users/dibamirza/cs24/w24/vendor/bundle/ruby/3.0.0/gems/racc-1.7.3/ext/racc/cparse
+make DESTDIR\= clean
+
+current directory: /Users/dibamirza/cs24/w24/vendor/bundle/ruby/3.0.0/gems/racc-1.7.3/ext/racc/cparse
+make DESTDIR\=
+compiling cparse.c
+linking shared-object racc/cparse.bundle
+
+current directory: /Users/dibamirza/cs24/w24/vendor/bundle/ruby/3.0.0/gems/racc-1.7.3/ext/racc/cparse
+make DESTDIR\= install
+/opt/homebrew/opt/coreutils/bin/ginstall -c -m 0755 cparse.bundle ./.gem.20240101-9766-urc42f/racc

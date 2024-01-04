@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- head.html; common header items for all layouts -->
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+
+<link rel="stylesheet" href="/w24/assets/css/main.css">
+  
+<script
+   src="https://code.jquery.com/jquery-3.3.1.min.js"
+   integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+   crossorigin="anonymous"></script>
+
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+<script src="//cdnjs.cloudflare.com/ajax/libs/mousetrap/1.4.6/mousetrap.min.js"></script>
+
+
+<script src="/w24/assets/js/site.js"></script>
+
+<script>
+var nav ={
+    
+    "offerings": {
+	"title" : "W24",
+	"url" : "/",
+	"baseurl" : "/w24",
+	"items" : [
+	    
+	    {
+		"title" : "W24-Home",
+		"url" : "/",
+		"baseurl" : "/w24",
+	    },
+	    
+	],
+    },
+    
+    
+    "offering_links": [
+	
+		{
+		    "title": "Assignments",		    
+		     "url": "/lab_list/", 		    
+		     "description": "Programming Assignments", 
+		    		    
+		},
+	
+		{
+		    "title": "Syllabus",		    
+		     "url": "/info/syllabus/", 		    
+		     "description": "Syllabus", 
+		    		    
+		},
+	
+		{
+		    "title": "Piazza",		    
+		     "url": "https://piazza.com/ucsb/winter2024/cmpsc24/resources", 		    
+		     "description": "Q&A Forum", 
+		    		    
+		},
+	
+		{
+		    "title": "Github",		    
+		    		    
+		    
+		    
+		    "dropdown" : [
+			
+			{
+			    "title": "ucsb-cs24-w24",		    
+			    "url": "https://github.com/ucsb-cs24-w24", 
+			    
+			},
+			
+		    ]
+		    		    
+		},
+	
+     
+    ],
+    
+        
+}
+;
+</script>
+
+
+
+
+
+
+    <!-- start custom head snippets -->
+
+<!-- insert favicons. use https://realfavicongenerator.net/ -->
+
+<!-- end custom head snippets -->
+    
+  <title> CS 24: Problem Solving with Computers-II , {{site.quarter}} |  CS24 Winter 2024</title>
+  </head>
+  <body id="page-top">
+    <div class="container">
+    
+
+<script>
+  console.log("site.url=http://localhost:4000");
+  console.log("site.baseurl=/w24");
+  console.log("site.data.navigation.home.url=/");
+  console.log("site.data.navigation.home.baseurl=/");
+  console.log("home_url=/");
+  console.log("home_url_final=https://ucsb-cs24.github.io/");
+</script>
+
+
+
+<script>
+  console.log("offering_url=/");
+  console.log("offering_baseurl=/w24");
+  console.log("offering_url_final=/w24/");
+  console.log("offering_title=W24-Home");
+</script>
+
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+
+  <a class="navbar-brand" href="https://ucsb-cs24.github.io/">UCSB CS24</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+    <ul class="navbar-nav mr-auto"><li class="nav-item dropdown">
+  <a class="nav-link dropdown-toggle" href="#" id="main-dropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    Resources
+  </a>
+  <div class="dropdown-menu" aria-labelledby="main-dropdown"><a class="dropdown-item" href="https://ucsb-cs24.github.io/topic_list/">Topics</a><a class="dropdown-item" href="https://ucsb-cs24.github.io/resources_list/">Resources</a></div>
+</li><li class="nav-item">
+  <a class="nav-link" href="/w24/">
+    W24-Home
+  </a>
+</li>
+<li class="nav-item"><a class="nav-link" href="/w24/lab_list/"title="Programming Assignments"data-term="" >Assignments</a>
+
+</li><li class="nav-item"><a class="nav-link" href="/w24/info/syllabus/"title="Syllabus"data-term="" >Syllabus</a>
+
+</li><li class="nav-item"><a class="nav-link" href="https://piazza.com/ucsb/winter2024/cmpsc24/resources"title="Q&A Forum"data-term="" >Piazza</a>
+
+</li><li class="nav-item dropdown " data-term="">
+  <a class="nav-link dropdown-toggle" href="#" id="navbar-offering-specific-dropdown-Github" data-toggle="dropdown" aria-haspopup="true"
+     aria-expanded="false">Github</a>
+    <div class="dropdown-menu" aria-labelledby="navbar-offering-specific-dropdown-Github"><a class="dropdown-item" href="https://github.com/ucsb-cs24-w24"data-term="" ><i class='fab fa-github' aria-hidden='true'></i>&nbsp;ucsb-cs24-w24</a>
+
+</div>
+</li>
+
+
+</ul>
+  </div>
+</nav>
+
+
+    <div id="content"  class="ui-content">
+      
+      
+        
+          
+      
+      <h3 id="about-cs24-problem-solving-with-computers-ii">About CS24: Problem Solving with Computers-II</h3>
+<!-- ![image](./image.jpg){: width=25%, style="float: left"  } -->
+
+<div style="text-align: left">
+
+  <p><img src="./image_2.jpg" alt="Image Credit: VisuAlgo" width="550" align="right" hspace="30" vspace="25" style="margin-top:10px" /> Welcome to CS24! The goal of this class is to solve problems efficiently using data structures and algorithms. You’ll learn about abstract data types e.g. stacks, queues, priority_queues,  sets,  and maps;  the concrete data structures used to implement them, e.g. vectors, and binary trees; and how to reason about the complexity of the operations performed on the data structures. Another goal is to become proficient with coding in C++ and using the C++ Standard Template Library (STL) well enough to succeed in technical coding interviews and future classes!</p>
+  <p style="clear: right; text-align: right; font-style: italic; color: gray; margin-top:0px ; margin-right:30px"> Photo credit: Visualgo <a href="https://visualgo.net/">https://visualgo.net/</a></p>
+
+  <ul>
+    <li><strong>Instructor</strong>:  Diba Mirza, office hours Mondays 2p - 3:30p, HFH 1155</li>
+    <li><strong>TAs</strong>: Joseph Ng, Nawel Aliouna, Shinda Huang, Xinlei Feng, Yaoyi Bai</li>
+    <li>
+      <p><strong>ULAs</strong>: Zack Glazewski, Ally Chu, Sanjana Shankar</p>
+    </li>
+    <li><strong>Lectures</strong>: MW 11:00a - 12:15p, TD-W 1701</li>
+    <li><strong>Sections</strong>: R: 2p, 3p, 4p, 5p, and 6p in Phelps 3525</li>
+  </ul>
+
+  <!-- * **Midterm exam**: Feb 14 (Wed) during class time
+* **Final exam**: Mar 21 (Thu), noon - 3p -->
+</div>
+<!-- <div style="text-align: left"><img src="./image.jpg" width="400"> 
+ 
+</div> -->
+
+<!--CS24, Winter 2024-->
+
+<!-- <p><a class="btn btn-primary dropdown-toggle"
+      data-toggle="collapse"
+      href="#info-list"
+      role="button"
+      aria-expanded="false"
+      aria-controls="collapseExample">Information</a></p>
+
+<div class="collapse" id="info-list">
+ <div class="card card-body">
+  <ul>
+  
+  <li><a href="/w24/info/calendar/">Calendar</a></li>
+  
+  <li><a href="/w24/info/staff/">Course Staff</a></li>
+  
+  <li><a href="/w24/info/syllabus/">Syllabus</a></li>
+  
+</ul>
+
+
+ </div>
+</div> -->
+
+<h3 id="lecture-schedule">Lecture schedule</h3>
+<!-- <p><a class="btn btn-primary dropdown-toggle"
+      data-toggle="collapse"
+      href="#lectures"
+      role="button"
+      aria-expanded="false"
+      aria-controls="collapseExample">Lectures</a></p>
+ -->
+<!-- <div class="collapse" id="lectures"> -->
+<div class="card card-body" id="lectures">
+  <table class="asn_table">
+
+<tr>
+  <th class="asn_desc">lecture date</th>
+  <th class="asn_num">link</th>
+  <!-- <th class="asn_ready">ready?</th> -->
+  <th class="asn_desc">description</th>
+</tr>
+
+
+ 
+<tr class="ready">
+  <td class="lect_num">2024-01-08</td>
+  <td class="lect_num"><a href="/w24/lectures/lect01/" data-ajax="false">lect01</a></td>
+  <!-- <td class="lect_ready">true</td> -->
+  <td class="lect_desc">Week 1: Course introduction, review of C16 concepts&nbsp;(<a href="/w24/lectures/CS24_Lecture1.pdf">slides</a>)</td>
+</tr>
+
+
+
+
+ 
+<tr class="not-ready">
+  <td class="lect_num">2024-01-15</td>
+  <td class="lect_num"><a href="/w24/lectures/no-lecture/" data-ajax="false"></a></td>
+  <!-- <td class="lect_ready">false</td> -->
+  <td class="lect_desc">No lecture - MLK Holiday</td>
+</tr>
+
+
+
+
+ 
+<tr class="not-ready">
+  <td class="lect_num">2024-02-14</td>
+  <td class="lect_num"><a href="/w24/lectures/no-lecture01/" data-ajax="false">e01</a></td>
+  <!-- <td class="lect_ready">false</td> -->
+  <td class="lect_desc">Midterm Exam: 11a - 12:15p</td>
+</tr>
+
+
+
+
+ 
+<tr class="not-ready">
+  <td class="lect_num">2024-02-19</td>
+  <td class="lect_num"><a href="/w24/lectures/no-lecture02/" data-ajax="false"></a></td>
+  <!-- <td class="lect_ready">false</td> -->
+  <td class="lect_desc">No lecture - President's Day Holiday</td>
+</tr>
+
+
+
+
+ 
+<tr class="not-ready">
+  <td class="lect_num">2024-03-21</td>
+  <td class="lect_num"><a href="/w24/lectures/no-lecture04/" data-ajax="false">e02</a></td>
+  <!-- <td class="lect_ready">false</td> -->
+  <td class="lect_desc">Final Exam: noon - 3p</td>
+</tr>
+
+
+
+
+</table>
+
+</div>
+
+<h3 id="programming-assignments">Programming Assignments</h3>
+
+<div class="card card-body" id="lab">
+  <table id="lab_table" class="asn_table">
+  <!-- asn_table_header_row.html -->
+<tr>
+  <th class="asn_num">num</th>
+  <th class="asn_ready">ready?</th>
+  <th class="asn_desc">description</th>
+  <th class="asn_date">assigned</th>
+  <th class="asn_date">due</th>
+</tr>
+
+
+  
+     
+     <tr class="not-ready">
+  <td class="asn_num"><a href="/w24/lab/lab00/" data-ajax="false">lab00</a></td>
+  <td class="asn_ready">false</td>
+  <td class="asn_desc">Getting started</td>
+  <td class="asn_date">Thu 01/11 09:00AM</td> 
+  <td class="asn_date">Wed 01/17 11:59PM</td>
+</tr>
+
+
+
+    
+  
+    
+  
+    
+  
+</table>
+
+</div>
+
+<!-- </div> -->
+
+<h3 id="office-hours-schedule">Office hours schedule</h3>
+
+<style>
+ iframe { width: 100%; height: 550px; }
+</style>
+
+<iframe src="https://calendar.google.com/calendar/embed?src=c_c7788493d2e424992c5a2393def31662bb2ccc39ccd03e51da61510f965f71e3%40group.calendar.google.com&amp;ctz=America%2FLos_Angeles" style="border: 0" width="800" height="600" frameborder="0" scrolling="no"></iframe>
+
+<!-- <iframe src="https://calendar.google.com/calendar/embed?src=c_c7788493d2e424992c5a2393def31662bb2ccc39ccd03e51da61510f965f71e3%40group.calendar.google.com&ctz=America%2FLos_Angeles&mode=WEEK&showTitle=0" style="border: 0" frameborder="0" scrolling="no"></iframe>
+ -->
+
+</div><!-- content -->
+    <!-- start custom footer snippets -->
+
+<!-- end custom footer snippets -->
+    
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light footer-navbar ">
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#footer-navbar-NavAltMarkup" aria-controls="footer-navbar-NavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="footer-navbar-NavAltMarkup">
+    <div class="navbar-nav">
+      <a class="nav-item nav-link" href="https://github.com/ucsb-cs24/w24">github site</a>
+      <a class="nav-item nav-link" href="https://github.com/ucsb-cs24/w24/edit/master/index.md">edit this page on github</a>
+      <span class="nav-item travis-ci-status "><a class="nav-link" href="https://travis-ci.org/ucsb-cs24/w24">
+	  <img src="https://travis-ci.org/ucsb-cs24/w24.svg?branch=master" alt="Build Status">
+	</a>
+      </span>
+    </div>
+  </div>
+</nav>
+
+    </div><!-- container -->
+  </body>
+</html>

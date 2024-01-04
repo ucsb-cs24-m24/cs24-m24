@@ -1,0 +1,16 @@
+current directory: /Users/dibamirza/cs24/w24/vendor/bundle/ruby/3.0.0/gems/unf_ext-0.0.9.1/ext/unf_ext
+/Users/dibamirza/.rvm/rubies/ruby-3.0.3/bin/ruby -I /Users/dibamirza/.rvm/rubies/ruby-3.0.3/lib/ruby/3.0.0 -r ./siteconf20240101-9766-ozcpxp.rb extconf.rb
+checking for -lstdc++... yes
+creating Makefile
+
+current directory: /Users/dibamirza/cs24/w24/vendor/bundle/ruby/3.0.0/gems/unf_ext-0.0.9.1/ext/unf_ext
+make DESTDIR\= clean
+
+current directory: /Users/dibamirza/cs24/w24/vendor/bundle/ruby/3.0.0/gems/unf_ext-0.0.9.1/ext/unf_ext
+make DESTDIR\=
+compiling unf.cc
+linking shared-object unf_ext.bundle
+
+current directory: /Users/dibamirza/cs24/w24/vendor/bundle/ruby/3.0.0/gems/unf_ext-0.0.9.1/ext/unf_ext
+make DESTDIR\= install
+/opt/homebrew/opt/coreutils/bin/ginstall -c -m 0755 unf_ext.bundle ./.gem.20240101-9766-m58kbq
