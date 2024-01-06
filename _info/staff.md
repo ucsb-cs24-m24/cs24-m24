@@ -30,3 +30,8 @@ Hello everyone! My name is Karanina Zim, but I go by Laszlo. I'm a third year ye
 
 Hey! My name is Torin Schlunk and I'm a 4th year Computer Engineering Major. I'm looking forward to getting to know you guys this quarter! Aside from coding, I enjoy building custom computer keyboards and designing my own PCBs for them! I love to answer questions and talk about all things computing so feel free to come talk to me at my office hours or post any questions on Piazza.
 
+## Xinlei Feng, TA
+
+<img src="../staff/CS24-W24-Xinlei-F.jpg" alt="Xinlei" width="150px" style="float: left; margin: 5px 10px 10px 10px;">
+
+Hello everyone! I'm Xinlei Feng, a second-year Master's student in CS, with a focus on iOS development. I have a deep love for national parks and photography, often combining these interests on adventurous trips. As a sports enthusiast, especially in table tennis, I enjoy both the energy of the game and the tech world. As your TA, I'm here to assist and make our course a great experience. Excited for the quarter ahead!
