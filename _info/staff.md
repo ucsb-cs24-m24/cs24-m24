@@ -30,3 +30,10 @@ Hello everyone! My name is Karanina Zim, but I go by Laszlo. I'm a third year ye
 
 Hey! My name is Torin Schlunk and I'm a 4th year Computer Engineering Major. I'm looking forward to getting to know you guys this quarter! Aside from coding, I enjoy building custom computer keyboards and designing my own PCBs for them! I love to answer questions and talk about all things computing so feel free to come talk to me at my office hours or post any questions on Piazza.
 
+<br>
+
+## Ally Chu, LA
+
+<img src="../staff/CS24-W24-Ally-C.png" alt="Ally" width="150px" style="float: left; margin: 5px 10px 10px 10px;">
+
+Hi everyone! My name is Ally Chu and I'm a third-year CS major and stats minor. I am excited to be your ULA for CS24, so don't hesitate to reach out with any questions. I'm here to help! When I am not knee-deep in CS, I enjoy baking, knitting, taking sunset walks, and playing tennis. Looking forward to a great quarter with everyone! 
