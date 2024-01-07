@@ -5,6 +5,11 @@ ready: true
 ---
 # Course Staff Profiles<a name="staff"></a>
 
+## Yaoyi Bai, TA
+
+<img src="../staff/CS24-W24-Yaoyi-B.JPG" alt="Yaoyi" width="150px" style="float: left; margin: 5px 10px 10px 10px;">
+
+Hello everyone! My name is Yaoyi Bai and I'm a 5th year PhD candidate. My research mainly focuses on computer graphics and rendering. Currently, C++ is still the most widely used programming language in renderers and our research. So I sincerely hope that I can help you throughout this quarter. Please feel free to reach out if you have any questions, or if you are also interested in computer graphics and games! I am looking forward to meeting you all!
 
 ## Zackary Glazewski, LA
 
