@@ -5,7 +5,7 @@ desc: "Abstract Data Type and Operator Overloading"
 ready: true
 pdfurl: /lectures/CS24_Lecture2.pdf
 annotatedpdfurl: /lectures/CS24_Lecture2_ann.pdf
-annotatedready: false
+annotatedready: true
 ---
 # Code from lecture
 
