@@ -1,7 +1,7 @@
 ---
 num: "lect02"
 lecture_date: 2024-01-09
-desc: "Abstract Data Type and Operator Overloading"
+desc: "Week 1: Abstract Data Types and operator overloading"
 ready: true
 pdfurl: /lectures/CS24_Lecture2.pdf
 annotatedpdfurl: /lectures/CS24_Lecture2_ann.pdf

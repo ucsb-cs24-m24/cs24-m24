@@ -7,7 +7,7 @@ var dates = [{
     "num" : "lab00",
     "assigned" : "2024-01-11 09:00:00 -0800",
     "due" : "2024-01-17 23:59:00 -0800",    
-    
+    "ready" : "true",
     "desc" : "Getting started",
     
 }
@@ -25,7 +25,19 @@ var dates = [{
 }
 ,{
     "type" : "lectures",
-    "url" :  "/w24/lectures/no-lecture/",	   
+    "url" :  "/w24/lectures/lect02/",	   
+    "num" : "lect02",
+    
+        
+    "ready" : "true",
+    "desc" : "Week 1: Abstract Data Types and operator overloading",
+    
+      "date" : "2024-01-09",
+    
+}
+,{
+    "type" : "lectures",
+    "url" :  "/w24/lectures/lect02b/",	   
     "num" : "",
     
         
@@ -33,6 +45,18 @@ var dates = [{
     "desc" : "No lecture - MLK Holiday",
     
       "date" : "2024-01-15",
+    
+}
+,{
+    "type" : "lectures",
+    "url" :  "/w24/lectures/lect03/",	   
+    "num" : "lect03",
+    
+        
+    "ready" : "true",
+    "desc" : "Week 2: Dynamic resource allocation and rule of three",
+    
+      "date" : "2024-01-17",
     
 }
 ,{

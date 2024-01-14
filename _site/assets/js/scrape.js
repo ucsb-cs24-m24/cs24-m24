@@ -75,8 +75,20 @@ var DEBUGGING_ONLY = {
 	        
 		{
 		   "collection" : "lectures",
-		   "url" : "/lectures/no-lecture/",
+		   "url" : "/lectures/lect02/",
+		   "num" : "lect02",
+		},
+	        
+		{
+		   "collection" : "lectures",
+		   "url" : "/lectures/lect02b/",
 		   "num" : "",
+		},
+	        
+		{
+		   "collection" : "lectures",
+		   "url" : "/lectures/lect03/",
+		   "num" : "lect03",
 		},
 	        
 		{
