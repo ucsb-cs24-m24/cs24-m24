@@ -12,6 +12,16 @@ var dates = [{
     
 }
 ,{
+    "type" : "lab",
+    "url" :  "/w24/lab/lab01/",	   
+    "num" : "lab01",
+    "assigned" : "2024-01-18 09:00:00 -0800",
+    "due" : "2024-01-24 23:59:00 -0800",    
+    "ready" : "true",
+    "desc" : "Objective Cars",
+    
+}
+,{
     "type" : "lectures",
     "url" :  "/w24/lectures/lect01/",	   
     "num" : "lect01",

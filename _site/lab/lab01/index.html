@@ -1,0 +1,527 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- head.html; common header items for all layouts -->
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+
+<link rel="stylesheet" href="/w24/assets/css/main.css">
+  
+<script
+   src="https://code.jquery.com/jquery-3.3.1.min.js"
+   integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+   crossorigin="anonymous"></script>
+
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+<script src="//cdnjs.cloudflare.com/ajax/libs/mousetrap/1.4.6/mousetrap.min.js"></script>
+
+
+<script src="/w24/assets/js/site.js"></script>
+
+<script>
+var nav ={
+    
+    "offerings": {
+	"title" : "W24",
+	"url" : "/",
+	"baseurl" : "/w24",
+	"items" : [
+	    
+	    {
+		"title" : "W24-Home",
+		"url" : "/",
+		"baseurl" : "/w24",
+	    },
+	    
+	],
+    },
+    
+    
+    "offering_links": [
+	
+		{
+		    "title": "Assignments",		    
+		     "url": "/lab_list/", 		    
+		     "description": "Programming Assignments", 
+		    		    
+		},
+	
+		{
+		    "title": "Syllabus",		    
+		     "url": "/info/syllabus/", 		    
+		     "description": "Syllabus", 
+		    		    
+		},
+	
+		{
+		    "title": "Piazza",		    
+		     "url": "https://piazza.com/ucsb/winter2024/cmpsc24/resources", 		    
+		     "description": "Q&A Forum", 
+		    		    
+		},
+	
+		{
+		    "title": "Github",		    
+		    		    
+		    
+		    
+		    "dropdown" : [
+			
+			{
+			    "title": "ucsb-cs24-w24",		    
+			    "url": "https://github.com/ucsb-cs24-w24", 
+			    
+			},
+			
+		    ]
+		    		    
+		},
+	
+     
+    ],
+    
+        
+}
+;
+</script>
+
+
+
+
+
+
+    <title>lab01 - Objective Cars - </title>
+  </head>
+    <body id="page-top">
+      <div class="container">
+      
+
+<script>
+  console.log("site.url=http://localhost:4000");
+  console.log("site.baseurl=/w24");
+  console.log("site.data.navigation.home.url=/");
+  console.log("site.data.navigation.home.baseurl=/");
+  console.log("home_url=/");
+  console.log("home_url_final=https://ucsb-cs24.github.io/");
+</script>
+
+
+
+<script>
+  console.log("offering_url=/");
+  console.log("offering_baseurl=/w24");
+  console.log("offering_url_final=/w24/");
+  console.log("offering_title=W24-Home");
+</script>
+
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+
+  <a class="navbar-brand" href="https://ucsb-cs24.github.io/">UCSB CS24</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+    <ul class="navbar-nav mr-auto"><li class="nav-item dropdown">
+  <a class="nav-link dropdown-toggle" href="#" id="main-dropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    Resources
+  </a>
+  <div class="dropdown-menu" aria-labelledby="main-dropdown"><a class="dropdown-item" href="https://ucsb-cs24.github.io/topic_list/">Topics</a><a class="dropdown-item" href="https://ucsb-cs24.github.io/resources_list/">Resources</a></div>
+</li><li class="nav-item">
+  <a class="nav-link" href="/w24/">
+    W24-Home
+  </a>
+</li>
+<li class="nav-item"><a class="nav-link" href="/w24/lab_list/"title="Programming Assignments"data-term="" >Assignments</a>
+
+</li><li class="nav-item"><a class="nav-link" href="/w24/info/syllabus/"title="Syllabus"data-term="" >Syllabus</a>
+
+</li><li class="nav-item"><a class="nav-link" href="https://piazza.com/ucsb/winter2024/cmpsc24/resources"title="Q&A Forum"data-term="" >Piazza</a>
+
+</li><li class="nav-item dropdown " data-term="">
+  <a class="nav-link dropdown-toggle" href="#" id="navbar-offering-specific-dropdown-Github" data-toggle="dropdown" aria-haspopup="true"
+     aria-expanded="false">Github</a>
+    <div class="dropdown-menu" aria-labelledby="navbar-offering-specific-dropdown-Github"><a class="dropdown-item" href="https://github.com/ucsb-cs24-w24"data-term="" ><i class='fab fa-github' aria-hidden='true'></i>&nbsp;ucsb-cs24-w24</a>
+
+</div>
+</li>
+
+
+</ul>
+  </div>
+</nav>
+
+
+        <div id="content"  class="ui-content">
+          <h1>lab01 : Objective Cars</h1>
+          <table class="asn_table">
+            <!-- asn_table_header_row.html -->
+<tr>
+  <th class="asn_num"  >num</th>
+  <th class="asn_ready">ready?</th>
+  <th class="asn_desc" >description</th>
+  <th class="asn_date" >assigned</th>
+  <th class="asn_date" >due</th>
+</tr>
+
+
+            
+            <tr class="ready" >
+  <td class="asn_num"  ><a href="/w24/lab/lab01/" data-ajax="false">lab01</a></td>
+  <td class="asn_ready">true</td>
+  <td class="asn_desc" >Objective Cars</td>
+  <td class="asn_date" >Thu 01/18 09:00AM</td> 
+  <td class="asn_date" >Wed 01/24 11:59PM</td>
+</tr>
+
+
+
+          </table>
+          <h1 id="collaboration-policy">Collaboration policy</h1>
+
+<p>This lab may be done solo</p>
+
+<h1 id="step-by-step-instructions">Step by Step Instructions</h1>
+
+<h2 id="step-1-getting-ready">Step 1: Getting Ready</h2>
+
+<p>Create a repo for this lab in our class organization and clone it to your local machine.</p>
+
+<h2 id="step-2-get-the-starter-code">Step 2: Get the starter code</h2>
+
+<p>The starter code is in this repo:</p>
+
+<ul>
+  <li><a href="https://github.com/ucsb-cs24-w24/STARTER-lab01">https://github.com/ucsb-cs24-w24/STARTER-lab01</a></li>
+</ul>
+
+<p>To get the starter code follow these steps</p>
+
+<h2 id="step-2a-create-an-emplty-lab01-repo-on-github-no-readme">Step 2a: Create an emplty lab01 repo on GitHub (no README)</h2>
+
+<p>Log into CSIL. Create a directory for all your cs24 code
+<code class="language-plaintext highlighter-rouge">mkdir cs24</code> then change into that directory <code class="language-plaintext highlighter-rouge">cd cs24</code></p>
+
+<p>Create an <strong>empty</strong> repo in our ucsb-cs24-w24 GitHub org under the name <code class="language-plaintext highlighter-rouge">lab01-YOUR-GITHUB-ID</code>. Remember not to include a README when you create the repo on GitHub.</p>
+
+<p>Following the steps outlined in a previous lab, please use the SSH address to clone this repo by typing the following on the terminal in CSIL, i.e.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git clone git@github.com:ucsb-cs24-w24/lab01-YOUR-GITHUB-ID.git
+</code></pre></div></div>
+
+<p>After that, you should have a directory under <code class="language-plaintext highlighter-rouge">cs24</code> called <code class="language-plaintext highlighter-rouge">lab01-YOUR-GITHUB-ID</code>.   Use the <code class="language-plaintext highlighter-rouge">cd</code> command to move into this directory:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cd lab01-YOUR-GITHUB-ID
+</code></pre></div></div>
+
+<p>You may want to practice moving between this directory and the parent directory a few times, and using the <code class="language-plaintext highlighter-rouge">ls</code> and <code class="language-plaintext highlighter-rouge">pwd</code> commands to understand what is happening:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cd ..
+pwd
+ls
+cd lab01-YOUR-GITHUB-ID
+pwd
+ls
+</code></pre></div></div>
+
+<p>Then, as a reminder, while in your <code class="language-plaintext highlighter-rouge">~/cs24/lab01-YOUR-GITHUB-ID</code> directory (remember that <code class="language-plaintext highlighter-rouge">~</code> stands for your home directory), use <code class="language-plaintext highlighter-rouge">ls -a</code> to see that while the directory 
+may appear empty, there is a hidden folder called <code class="language-plaintext highlighter-rouge">.git</code> that marks this folder as a git repository (or repo for short):</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ ls -a
+.  ..  .git
+$
+</code></pre></div></div>
+
+<h2 id="step-2b-create-the-main-branch-in-your-repo">Step 2b: Create the <code class="language-plaintext highlighter-rouge">main</code> branch in your repo</h2>
+
+<p>Every git repo can have multiple <em>branches</em> of code; this is useful on  projects where there are multiple programmers collaborating on a solution.  Multiple branches allow for
+different versions of the code to live side-by-side in a repository, and then be merged together at a later stage.</p>
+
+<ul>
+  <li>Courses that involve group work (such as CMPSC 148 and/or CMPSC 156) may cover the use of git with multiple branches.</li>
+  <li>However, in this course, to keep things simple, <strong>we’ll typically stick to just one branch</strong></li>
+</ul>
+
+<p>This single branch is sometimes called the <em>default branch</em>.</p>
+<ul>
+  <li>Prior to October 1, 2020, the usual name for that branch was <code class="language-plaintext highlighter-rouge">master</code>.</li>
+  <li>Starting October 1, 2020, GitHub started calling the default branch <code class="language-plaintext highlighter-rouge">main</code></li>
+</ul>
+
+<p>Not all <code class="language-plaintext highlighter-rouge">git</code> software is updated with this convention however.  Accordingly, when we clone a new repo, to align our local repo with GitHub,
+our first step is to set the current branch to <code class="language-plaintext highlighter-rouge">main</code>, with this command (please type this now in your <code class="language-plaintext highlighter-rouge">~/cs24/lab01-YOUR-GITHUB-ID</code> directory:)</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git checkout -b main
+</code></pre></div></div>
+
+<p>The <code class="language-plaintext highlighter-rouge">git checkout</code> command is the one that is used to switch from one branch to another, and the <code class="language-plaintext highlighter-rouge">-b</code> command says that we are creating a new
+branch in our local repo.</p>
+
+<p>For the time being, and probably throughout CS16, this is likely everything you need to know about branches (at least for the purposes of this course.)</p>
+
+<p>Now we are ready to pull in some starter code.</p>
+
+<h2 id="step-2c-add-a-remote-for-starter-code">Step 2c: Add a remote for starter code.</h2>
+
+<p>While in your <code class="language-plaintext highlighter-rouge">~/cs24/lab01-YOUR-GITHUB-ID</code> directory, type this command:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git remote -v
+</code></pre></div></div>
+
+<p>The <code class="language-plaintext highlighter-rouge">-v</code> here stands for <code class="language-plaintext highlighter-rouge">verbose</code>, and it means that the command will give lots of helpful information. The output should look like this:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ git remote -v
+origin	git@github.com:ucsb-cs24-w24/lab01-YOUR-GITHUB-ID.git (fetch)
+origin	git@github.com:ucsb-cs24-w24/lab01-YOUR-GITHUB-ID.git (push)
+$ 
+</code></pre></div></div>
+
+<p>Explanation:</p>
+<ul>
+  <li>The word <em>remote</em> refers here to a Git repo that lives on some other computer; in this case, a GitHub.com server.</li>
+  <li>The output above shows that you have one <em>remote</em> called <code class="language-plaintext highlighter-rouge">origin</code> and it shows the URL associated with that name <code class="language-plaintext highlighter-rouge">origin</code>.</li>
+  <li>By convention, the name <code class="language-plaintext highlighter-rouge">origin</code> is used for the GitHub repo from which you cloned the current repo, i.e. the one that came after <code class="language-plaintext highlighter-rouge">git clone</code> in a previous step.</li>
+</ul>
+
+<p>What we are doing to do next is add a second remote, called <code class="language-plaintext highlighter-rouge">starter</code>.  From this remote, you’ll be able to pull in some starter code; your lab solution will involve
+working with some of that starter code.</p>
+
+<p>The starter code lives in this repo, which you can visit in a web browser to look at the starter code:</p>
+<ul>
+  <li><a href="https://github.com/ucsb-cs24-w24/STARTER-lab01">https://github.com/ucsb-cs24-w24/STARTER-lab01</a></li>
+</ul>
+
+<p>To add a remote for this repo, we’ll use the ssh url, like this:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git remote add starter git@github.com:ucsb-cs24-w24/STARTER-lab01.git
+</code></pre></div></div>
+
+<p>To see if it worked, you can type the <code class="language-plaintext highlighter-rouge">git remote -v</code> command again. Output should look like this (with YOUR-GITHUB-ID replaced by your github id.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ git remote -v
+origin	git@github.com:ucsb-cs24-w24/lab01-YOUR-GITHUB-ID.git (fetch)
+origin	git@github.com:ucsb-cs24-w24/lab01-YOUR-GITHUB-ID.git (push)
+starter	git@github.com:ucsb-cs24-w24/STARTER-lab01.git (fetch)
+starter	git@github.com:ucsb-cs24-w24/STARTER-lab01.git (push)
+$ 
+</code></pre></div></div>
+
+<p>Note that if the URLs are wrong for either the <code class="language-plaintext highlighter-rouge">origin</code> or the <code class="language-plaintext highlighter-rouge">starter</code> remotes, you can fix that by doing this command to remove a remote:</p>
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">git remote remove origin</code> to remove the remote <code class="language-plaintext highlighter-rouge">origin</code></li>
+  <li><code class="language-plaintext highlighter-rouge">git remote remove starter</code> to remove the remote <code class="language-plaintext highlighter-rouge">starter</code></li>
+</ul>
+
+<p>Then you can add the remote back with the correct URL, e.g.:</p>
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">git remote add origin git@github.com:ucsb-cs24-w24/lab01-YOUR-GITHUB-ID.git</code></li>
+  <li><code class="language-plaintext highlighter-rouge">git remote add starter git@github.com:ucsb-cs24-w24/STARTER-lab01.git</code></li>
+</ul>
+
+<p>This can be used, for example, if you accidently cloned the repo using the <code class="language-plaintext highlighter-rouge">https</code> url instead of the one that starts with <code class="language-plaintext highlighter-rouge">git@github.com</code> (which is the SSH based URL).</p>
+
+<p>Assuming your remote for <code class="language-plaintext highlighter-rouge">starter</code> is now set up correctly, the next step is to pull in the starter code.</p>
+
+<h2 id="step-2d-pull-in-starter-code">Step 2d: Pull in Starter Code</h2>
+
+<p>To pull in the starter code, use:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git pull starter main
+</code></pre></div></div>
+
+<p>Then use an <code class="language-plaintext highlighter-rouge">ls</code> command, and you should see new files in your directory.  That should look something like this:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ ls
+$ git pull starter main
+remote: Enumerating objects: 10, done.
+remote: Counting objects: 100% (10/10), done.
+remote: Compressing objects: 100% (7/7), done.
+remote: Total 10 (delta 2), reused 7 (delta 2), pack-reused 0
+Unpacking objects: 100% (10/10), 2.45 KiB | 47.00 KiB/s, done.
+From github.com:https://github.com/ucsb-cs24/w24/STARTER-lab03
+ * branch            main       -&gt; FETCH_HEAD
+ * [new branch]      main       -&gt; starter/main
+$ls
+car.cpp  car.hpp  doors.hpp  perf.cpp  perf.hpp
+</code></pre></div></div>
+
+<h2 id="step-2e-push-the-initial-code-to-the-main-branch-of-the-origin-remote">Step 2e: Push the initial code to the main branch of the origin remote</h2>
+
+<p>To push the code to the main branch of your original remote (origin) type the command</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ git push origin main
+</code></pre></div></div>
+<p>This will sync up the commit history and files from your local repo with the main branch of the origin remote (which exists on github.com)</p>
+
+<p>You should see the following message:</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Enumerating objects: 10, done.
+Counting objects: 100% (10/10), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (9/9), done.
+Writing objects: 100% (10/10), 3.90 KiB | 1.95 MiB/s, done.
+Total 10 (delta 2), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (2/2), done.
+To github.com:ucsb-cs16-f22/llab03-YOUR-GITHUB-ID.git
+ * [new branch]      main -&gt; main
+[dimirza@csilvm-11 lab03_test]$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+nothing to commit, working tree clean
+</code></pre></div></div>
+
+<p>With these files in place, you are ready to start coding.</p>
+
+<p>If you don’t see those files, go back through the instructions and make sure you didn’t miss a step. From here on after you complete each part of the assignment you should add, commit and push your changes to origin main. For instructions on how to do this, scroll down and read the section on “Commit your code to GitHub”. If you still have trouble, ask your TA/ULAs for assistance.</p>
+
+<h2 id="step-2-understand-the-code-and-finish-carcpp">Step 2: Understand the Code and finish car.cpp</h2>
+
+<p>In this lab you will create a comprehensive <code class="language-plaintext highlighter-rouge">Car</code> class with</p>
+<ul>
+  <li>descriptive member variables,</li>
+  <li>constructor,</li>
+  <li>copy constructor,</li>
+  <li>destructor,</li>
+  <li>overloaded assignment operators, and</li>
+  <li>commonly used methods that manipulate member variables</li>
+</ul>
+
+<p>The definition of the <code class="language-plaintext highlighter-rouge">Car</code> class will be provided to you in the header file <code class="language-plaintext highlighter-rouge">car.hpp</code>. The member variables listed below are all private:</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>char*  manufacturer;
+char*  model;
+uint32_t  zeroToSixtyNs;
+float  headonDragCoeff;
+uint16_t  horsepower;
+DoorKind  backseatDoors;
+uint8_t  seatCount;
+</code></pre></div></div>
+
+<p>The functionalities of these variables can easily be inferred from their names. The <code class="language-plaintext highlighter-rouge">manufacturer</code> and <code class="language-plaintext highlighter-rouge">model</code> are of the type <code class="language-plaintext highlighter-rouge">string</code>, e.g. <code class="language-plaintext highlighter-rouge">manufacturer = "Audi\0"</code> and <code class="language-plaintext highlighter-rouge">model = "R8\0"</code>, which shall be dynamically managed. <code class="language-plaintext highlighter-rouge">zeroToSixtyNs</code> is the time taken to accelerate from 0 to 60 mph. There are also <code class="language-plaintext highlighter-rouge">headonDragCoeff</code>, <code class="language-plaintext highlighter-rouge">horsepower</code>, and <code class="language-plaintext highlighter-rouge">seatCount</code>. The <code class="language-plaintext highlighter-rouge">backseatDoors</code> is an enumeration whose declaration is in <code class="language-plaintext highlighter-rouge">doors.hpp</code>. It can take one of the four values:</p>
+<ol>
+  <li><code class="language-plaintext highlighter-rouge">None = 0</code>,</li>
+  <li><code class="language-plaintext highlighter-rouge">Hinge = 1</code>,</li>
+  <li><code class="language-plaintext highlighter-rouge">GullWing = 2</code>,</li>
+  <li><code class="language-plaintext highlighter-rouge">Sliding = 3</code></li>
+</ol>
+
+<p>The descriptions of the functionalities of the public methods are listed below:</p>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">Car()</code>
+    <ul>
+      <li>Default constructor. Initialize the pointer type variables with <code class="language-plaintext highlighter-rouge">NULL</code> and the numerical variables with <code class="language-plaintext highlighter-rouge">0</code>. <code class="language-plaintext highlighter-rouge">DoorKind</code> variable is also initialized with <code class="language-plaintext highlighter-rouge">None</code>.</li>
+    </ul>
+  </li>
+  <li><code class="language-plaintext highlighter-rouge">Car(char const* const manufacturerName, char const* const modelName, PerformanceStats perf, uint8_t numSeats, DoorKind backseatDoorDesign)</code>
+    <ul>
+      <li>Constructor. Initialize the member variables with specific values.</li>
+    </ul>
+  </li>
+  <li><code class="language-plaintext highlighter-rouge">Car(Car const&amp; o)</code>
+    <ul>
+      <li>Copy constructor. Initialize the member variables with the values in <code class="language-plaintext highlighter-rouge">o</code>.</li>
+    </ul>
+  </li>
+  <li><code class="language-plaintext highlighter-rouge">~Car()</code>
+    <ul>
+      <li>Destructor. Recycle the memory of variables.</li>
+    </ul>
+  </li>
+  <li><code class="language-plaintext highlighter-rouge">Car&amp; operator=(Car const&amp; o)</code>
+    <ul>
+      <li>Overloaded assignment operator <code class="language-plaintext highlighter-rouge">=</code>. Set the values of the variables in the current object to be those in <code class="language-plaintext highlighter-rouge">o</code>.</li>
+    </ul>
+  </li>
+  <li><code class="language-plaintext highlighter-rouge">char const* getManufacturer() const</code>
+    <ul>
+      <li>Get the string of <code class="language-plaintext highlighter-rouge">manufacturer</code>.</li>
+    </ul>
+  </li>
+  <li><code class="language-plaintext highlighter-rouge">char const* getModel() const</code>
+    <ul>
+      <li>Get the string of <code class="language-plaintext highlighter-rouge">model</code>.</li>
+    </ul>
+  </li>
+  <li><code class="language-plaintext highlighter-rouge">PerformanceStats getStats() const</code>
+    <ul>
+      <li><code class="language-plaintext highlighter-rouge">PerformanceStats</code> is a structure given to you in the head file <code class="language-plaintext highlighter-rouge">perf.hpp</code>. It summarizes the three parameters <code class="language-plaintext highlighter-rouge">horsepower</code>, <code class="language-plaintext highlighter-rouge">zeroToSixtyNs</code>, and <code class="language-plaintext highlighter-rouge">headonDragCoeff</code> together. This method gets their values and returns as the structure.</li>
+    </ul>
+  </li>
+  <li><code class="language-plaintext highlighter-rouge">uint8_t getSeatCount() const</code>
+    <ul>
+      <li>Get the number of seats in <code class="language-plaintext highlighter-rouge">seatCount</code>.</li>
+    </ul>
+  </li>
+  <li><code class="language-plaintext highlighter-rouge">DoorKind getBackseatDoors() const</code>
+    <ul>
+      <li>Get the type of the doors in <code class="language-plaintext highlighter-rouge">backseatDoors</code>.</li>
+    </ul>
+  </li>
+  <li><code class="language-plaintext highlighter-rouge">void manufacturerChange(char const* const newManufacturer)</code>
+    <ul>
+      <li>Change the name (string) in <code class="language-plaintext highlighter-rouge">manufacturer</code> to the new in <code class="language-plaintext highlighter-rouge">newManufacturer</code>. Since the name is of the type string in the memory, please care about the memory management and avoid the memory leak.</li>
+    </ul>
+  </li>
+  <li><code class="language-plaintext highlighter-rouge">void modelNameChange(char const* const newModelName)</code>
+    <ul>
+      <li>Change the name (also string) in <code class="language-plaintext highlighter-rouge">model</code> to the new in <code class="language-plaintext highlighter-rouge">newModelName</code>.</li>
+    </ul>
+  </li>
+  <li><code class="language-plaintext highlighter-rouge">void reevaluateStats(PerformanceStats newStats)</code>
+    <ul>
+      <li>Update the values of <code class="language-plaintext highlighter-rouge">zeroToSixtyNs</code>, <code class="language-plaintext highlighter-rouge">headonDragCoeff</code> and <code class="language-plaintext highlighter-rouge">horsepower</code> by using the new parameters in <code class="language-plaintext highlighter-rouge">newStats</code>.</li>
+    </ul>
+  </li>
+  <li><code class="language-plaintext highlighter-rouge">void recountSeats(uint8_t newSeatCount)</code>
+    <ul>
+      <li>Set the value of <code class="language-plaintext highlighter-rouge">seatCount</code> to be <code class="language-plaintext highlighter-rouge">newSeatCount</code>.</li>
+    </ul>
+  </li>
+  <li><code class="language-plaintext highlighter-rouge">void reexamineDoors(DoorKind newDoorKind)</code>
+    <ul>
+      <li>Set the kind of the doors in <code class="language-plaintext highlighter-rouge">backseatDoors</code> to be <code class="language-plaintext highlighter-rouge">newDoorKind</code>.</li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="step-3-test-your-code-and-upload-to-gradescope">Step 3: Test Your Code and Upload to Gradescope</h2>
+
+<p>The Autograder will use some test cases to check if your implementations are correct. In order to verify them, you’ll need to write your own test code, which can be a ‘main’ function to print out the results, before the submission. Then, write a Makefile to link all dependencies to make and run your test. 
+The lab assignment “lab01” should appear in your Gradescope dashboard in CS 24. If you haven’t submitted anything for this assignment yet, Gradescope will prompt you to upload your files. For this lab, you will only need to upload your modified file (i.e. <code class="language-plaintext highlighter-rouge">car.cpp</code>). 
+If you already submitted something on Gradescope, it will take you to their “Autograder Results” page. There is a “Resubmit” button on the bottom right that will allow you to update the files for your submission.
+For this lab, if everything is correct, you’ll see a successful submission passing all of the Autograder tests.</p>
+
+<p><strong>Remember to check if you can see the files uploaded correctly in Gradescope.</strong></p>
+
+
+        </div><!-- content -->
+        
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light footer-navbar ">
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#footer-navbar-NavAltMarkup" aria-controls="footer-navbar-NavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="footer-navbar-NavAltMarkup">
+    <div class="navbar-nav">
+      <a class="nav-item nav-link" href="https://github.com/ucsb-cs24/w24">github site</a>
+      <a class="nav-item nav-link" href="https://github.com/ucsb-cs24/w24/edit/master/_lab/lab01.md">edit this page on github</a>
+      <span class="nav-item travis-ci-status "><a class="nav-link" href="https://travis-ci.org/ucsb-cs24/w24">
+	  <img src="https://travis-ci.org/ucsb-cs24/w24.svg?branch=master" alt="Build Status">
+	</a>
+      </span>
+    </div>
+  </div>
+</nav>
+
+      </div><!-- container -->
+  </body>
+</html>
