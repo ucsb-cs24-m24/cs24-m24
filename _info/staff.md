@@ -44,10 +44,20 @@ Hey! My name is Torin Schlunk and I'm a 4th year Computer Engineering Major. I'm
 
 <br>
 
+
+## Nawel Alioua, TA
+
+<img src="../staff/CS24-W24-Nawel-A.jpg" alt="Nawel" width="150px" style="float: left; margin: 5px 10px 10px 10px;">
+
+
+Hi everyone! My name is Nawel, I am a 3rd year Ph.D. student in the CS department. I graduated with an Engineering/Master’s degree from the National School of Computer Science in my hometown of Algiers - Algeria. I then moved to Japan to pursue my second Master’s at the University of Tokyo, before joining Hitachi, Ltd. where I worked on various research projects. Feel free to reach out if you’d like to know more about any of the above, and of course, about C++ development. I look forward to working with you all!
+
+
 ## Shinda Huang
 
 <img src="./staff/CS24-W24-Shinda-H.JPG" alt="Shinda" width="150px" style="float: left; margin: 5px 10px 10px 10px;">
 
-Hello! My name is Shinda Huang, and I am a masters student studying Computer Sciece. I am exucted ti get to meet you all and helping you with whatever curiousities you may have. In my spare time, I like to look at the latest developments in AI and enjoy exploring new things, from attending concerts to trying out new escape rooms. I'd love to chat, pretty much about anything, so please don't be shy to approach me!
+Hello! My name is Shinda Huang, and I am a masters student studying Computer Sciece. I am excited to get to meet you all and helping you with whatever curiousities you may have. In my spare time, I like to look at the latest developments in AI and enjoy exploring new things, from attending concerts to trying out new escape rooms. I'd love to chat, pretty much about anything, so please don't be shy to approach me!
+
 
 
