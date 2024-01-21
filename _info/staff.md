@@ -5,6 +5,13 @@ ready: true
 ---
 # Course Staff Profiles<a name="staff"></a>
 
+### Ally Chu, LA
+
+<img src="../staff/CS24-W24-Ally-C.png" alt="Ally" width="150px" style="float: left; margin: 5px 10px 10px 10px;">
+
+Hi everyone! My name is Ally Chu and I'm a third-year CS major and stats minor. I am excited to be your ULA for CS24, so don't hesitate to reach out with any questions. I'm here to help! When I am not knee-deep in CS, I enjoy baking, knitting, taking sunset walks, and playing tennis. Looking forward to a great quarter with everyone! 
+
+<br>
 
 ### Sanjana Shankar, LA
 
@@ -63,9 +70,5 @@ Hello everyone! I'm Xinlei Feng, a second-year Master's student in CS, with a fo
 
 <br>
 
-### Ally Chu, LA
 
-<img src="../staff/CS24-W24-Ally-C.png" alt="Ally" width="150px" style="float: left; margin: 5px 10px 10px 10px;">
-
-Hi everyone! My name is Ally Chu and I'm a third-year CS major and stats minor. I am excited to be your ULA for CS24, so don't hesitate to reach out with any questions. I'm here to help! When I am not knee-deep in CS, I enjoy baking, knitting, taking sunset walks, and playing tennis. Looking forward to a great quarter with everyone! 
 
