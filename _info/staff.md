@@ -11,6 +11,15 @@ ready: true
 
 Hello everyone! My name is Yaoyi Bai and I'm a 5th year PhD candidate. My research mainly focuses on computer graphics and rendering. Currently, C++ is still the most widely used programming language in renderers and our research. So I sincerely hope that I can help you throughout this quarter. Please feel free to reach out if you have any questions, or if you are also interested in computer graphics and games! I am looking forward to meeting you all!
 
+## Sanjana Shankar, LA
+
+<img src="../staff/CS24-W24-Sanjana-S.jpg" alt="Sanjana" width="150px" style="float: left; margin: 5px 10px 10px 10px;">
+
+Hello everyone! My name is Sanjana Shankar and I am a 3rd year Computer Science major! This is my first time being a ULA for this course and I am looking forward to working with you all and helping you all learn about these fundamental computer science concepts that will be applied throughout your lives. Apart from coding, I enjoy singing and learning how to play my favorite songs on my acoustic guitar as well as dancing as I learned Indian classical dance for a majority of my life! This is my third quarter being a ULA at UCSB, so please feel free to approach me with any questions regarding student life, the computer science major and the classes offered, and quite literally anything as I enjoy getting to know you all! 
+
+<br>
+
+
 ## Zackary Glazewski, LA
 
 <img src="./staff/CS24-F23-Zackary-G.jpg" alt="Zack" width="150px" style="float: left; margin: 5px 10px 10px 10px;">
