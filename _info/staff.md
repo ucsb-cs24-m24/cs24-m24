@@ -17,7 +17,7 @@ Hi everyone! My name is Ally Chu and I'm a third-year CS major and stats minor. 
 
 <img src="../staff/CS24-W24-Sanjana-S.jpg" alt="Sanjana" width="150px" style="float: left; margin: 5px 10px 10px 10px;">
 
-Hello everyone! My name is Sanjana Shankar and I am a 3rd year Computer Science major! This is my first time being a ULA for this course and I am looking forward to working with you all and helping you all learn about these fundamental computer science concepts that will be applied throughout your lives. Apart from coding, I enjoy singing and learning how to play my favorite songs on my acoustic guitar as well as dancing as I learned Indian classical dance for a majority of my life! This is my third quarter being a ULA at UCSB, so please feel free to approach me with any questions regarding student life, the computer science major and the classes offered, and quite literally anything as I enjoy getting to know you all! 
+Hello everyone! My name is Sanjana Shankar and I am a 3rd year Computer Science major! This is my first time being a ULA for this course and I am looking forward to working with you all and helping you all learn about these fundamental computer science concepts that will be applied throughout your lives. Apart from coding, I enjoy singing and learning how to play my favorite songs on my acoustic guitar as well as dancing as I learned Indian classical dance for the majority of my life! This is my third quarter being a ULA at UCSB, so please feel free to approach me with any questions regarding student life, the computer science major and the classes offered, and quite literally anything as I enjoy getting to know you all! 
 
 <br>
 
@@ -45,6 +45,7 @@ Hey everyone, my name is Joseph Ng. I'm a 1st year CS Masters student and I'm ex
 
 <br>
 
+
 ### Nawel Alioua, TA
 
 <img src="../staff/CS24-W24-Nawel-A.jpg" alt="Nawel" width="150px" style="float: left; margin: 5px 10px 10px 10px;">
@@ -53,14 +54,15 @@ Hi everyone! My name is Nawel, I am a 3rd year Ph.D. student in the CS departmen
 
 <br>
 
+
 ### Shinda Huang, TA
 
 <img src="../staff/CS24-W24-Shinda-H.JPG" alt="Shinda" width="150px" style="float: left; margin: 5px 10px 10px 10px;">
 
 Hello! My name is Shinda Huang, and I am a masters student studying Computer Science. I am excited to get to meet you all and helping you with whatever curiosities you may have. In my spare time, I like to look at the latest developments in AI and enjoy exploring new things, from attending concerts to trying out new escape rooms. I'd love to chat, pretty much about anything, so please don't be shy to approach me!
 
-
 <br>
+
 
 ### Xinlei Feng, TA
 
