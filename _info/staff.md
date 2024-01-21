@@ -56,3 +56,12 @@ Hello! My name is Shinda Huang, and I am a masters student studying Computer Sci
 <img src="../staff/CS24-W24-Xinlei-F.jpg" alt="Xinlei" width="150px" style="float: left; margin: 5px 10px 10px 10px;">
 
 Hello everyone! I'm Xinlei Feng, a second-year Master's student in CS, with a focus on iOS development. I have a deep love for national parks and photography, often combining these interests on adventurous trips. As a sports enthusiast, especially in table tennis, I enjoy both the energy of the game and the tech world. As your TA, I'm here to assist and make our course a great experience. Excited for the quarter ahead!
+
+
+
+## Ally Chu, LA
+
+<img src="../staff/CS24-W24-Ally-C.png" alt="Ally" width="150px" style="float: left; margin: 5px 10px 10px 10px;">
+
+Hi everyone! My name is Ally Chu and I'm a third-year CS major and stats minor. I am excited to be your ULA for CS24, so don't hesitate to reach out with any questions. I'm here to help! When I am not knee-deep in CS, I enjoy baking, knitting, taking sunset walks, and playing tennis. Looking forward to a great quarter with everyone! 
+
