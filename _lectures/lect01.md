@@ -5,9 +5,12 @@ desc: "Week 1: Course introduction, review of C16 concepts"
 ready: true
 pdfurl: /lectures/CS24_Lecture1.pdf
 annotatedpdfurl: /lectures/CS24_Lecture1_ann.pdf
-annotatedready: false
+annotatedready: true
 ---
 
+## Code written in class
+
+[{{site.lect_repo}}/tree/main/{{page.num}}]({{site.lect_repo}}/tree/main/{{page.num}})
 
 # Topics
 * To respond to questions during lecture, use this link to join the iclicker course: <https://join.iclicker.com/GLRN>
