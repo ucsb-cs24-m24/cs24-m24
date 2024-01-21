@@ -45,6 +45,9 @@ offering_links:
   - title: Piazza
     url: https://piazza.com/ucsb/winter2024/cmpsc24/resources
     description: "Q&A Forum"
+  - title: Staff
+    url: /info/staff/
+    description: "Staff Profiles"
       
   - title: Github
     dropdown:
