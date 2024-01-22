@@ -14,5 +14,5 @@ annotatedready: false
 # Topics
 * Efficient search using binary search
 * Binary trees
-* Binary search trees (BST) - search tree property and supported operations (search, insert, min, max, predecessor, successor)
+* Binary search trees (BST) - search tree property and supported operations (search, insert, min, max)
 * Visualizing BST operations: <https://visualgo.net/en/bst>
