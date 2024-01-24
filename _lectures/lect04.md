@@ -5,7 +5,7 @@ desc: "Week 3: Efficient search and Binary Search Trees"
 ready: true
 pdfurl: /lectures/CS24_Lecture4.pdf
 annotatedpdfurl: /lectures/CS24_Lecture4_ann.pdf
-annotatedready: false
+annotatedready: true
 ---
 
 # Code from lecture
