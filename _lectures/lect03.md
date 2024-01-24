@@ -5,7 +5,7 @@ desc: "Week 2: Dynamic resource allocation and rule of three"
 ready: true
 pdfurl: /lectures/CS24_Lecture3.pdf
 annotatedpdfurl: /lectures/CS24_Lecture3_ann.pdf
-annotatedready: false
+annotatedready: true
 ---
 
 # Code from lecture
