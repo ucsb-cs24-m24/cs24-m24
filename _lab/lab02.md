@@ -212,4 +212,4 @@ Work through these additional problems on leetcode as practice for the upcoming 
 4. Construct a BST from Preorder Traversal (medium): <https://leetcode.com/problems/construct-binary-search-tree-from-preorder-traversal/description/>
 5. Lowest Common Ancestor (medium): <https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-search-tree/description/>
 6. Validate Binary Search Tree (medium): <https://leetcode.com/problems/validate-binary-search-tree/>
-7. Kth Smallest Element in a BST (medium - we worked through the solution in lecture 5): <https://leetcode.com/problems/kth-smallest-element-in-a-bst/>
+7. Kth Smallest Element in a BST (medium) - we worked through the solution in lecture 5: <https://leetcode.com/problems/kth-smallest-element-in-a-bst/>
