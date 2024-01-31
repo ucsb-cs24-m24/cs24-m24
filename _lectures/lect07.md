@@ -1,5 +1,5 @@
 ---
-lecture_date: 2023-10-30
+lecture_date: 2024-01-31
 num: "lect07"
 desc: "Space complexity, best/worst case analysis "
 ready: true
