@@ -1,7 +1,7 @@
 ---
 lecture_date: 2024-01-31
 num: "lect07"
-desc: "Space complexity, best/worst case analysis "
+desc: "Week 4: Space complexity, best/worst case analysis "
 ready: true
 pdfurl: /lectures/CS24_Lecture7.pdf
 annotatedpdfurl: /lectures/CS24_Lecture7_ann.pdf

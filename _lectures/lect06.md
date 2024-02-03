@@ -1,7 +1,7 @@
 ---
 lecture_date: 2024-01-29
 num: "lect06"
-desc: "Running time analysis"
+desc: "Week4: Running time analysis"
 ready: true
 pdfurl: /lectures/CS24_Lecture6.pdf
 annotatedpdfurl: /lectures/CS24_Lecture6_ann.pdf
