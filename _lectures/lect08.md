@@ -11,6 +11,4 @@ annotatedready: false
 [{{site.lect_repo}}/tree/main/{{page.num}}]({{site.lect_repo}}/tree/main/{{page.num}})
 
 # Topics
-* Big Omega and big theta
-* Define space complexity of an algorithm
-* Best case and worst case analysis of binary search, operations on sorted arrays, balanced and unbalanced BSTs
+* Stack - operations, implementation and why its useful
