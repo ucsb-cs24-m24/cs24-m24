@@ -1,7 +1,7 @@
 ---
 lecture_date: 2024-02-12
 num: "lect10"
-desc: "C++ set and map ADT (balanced BST), Iterators"
+desc: "Week 6: C++ set and map ADT (balanced BST), Iterators"
 ready: true
 pdfurl: /lectures/CS24_Lecture10.pdf
 annotatedpdfurl: /lectures/CS24_Lecture10_ann.pdf
