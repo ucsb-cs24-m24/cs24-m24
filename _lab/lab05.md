@@ -229,6 +229,5 @@ Submit your code on Gradescope. You must organize your program in the
 files: main_set.cpp,  main.cpp, card.cpp, tests.cpp, card.h, card_list.cpp and card_list.h, Makefile
   
   
-# Note
-Gradescope will grade 55 points out of the allocated 75 points before the deadline. After the deadline has passed we will assign another 20 points and update the results based on manual grading and any new test cases. Make sure that you have thought about all possible edge cases and memory leaks / invalid memory access scenarios to avoid segmentation fault. 
+
 
