@@ -112,7 +112,7 @@ from smallest to largest would be
 
 c a, c k, d 3, s 3, h 9, h j
 
-## Your approach for the first implementation
+## Your approach for the set-based implementation of the game
 
 At the start of the program, you will read in Alice and Bob's starting 
 hands from two files. The names of these files are provided as command 
@@ -168,7 +168,7 @@ h a
 
 Note: a=ace, k=king, q=queen, j=jack
 
-## Approach for the second implementation
+## Approach for the custom BST implementation of the game
 
 **In your second implementation of the game**, you must implement the binary search trees yourself in `card_list.h` and `card_list.cpp`. 
 Don't worry about balancing the binary search trees (though you can try 
@@ -182,7 +182,7 @@ suit, so storing the cards as strings is probably not the best approach.
 
 Once you have implemented the bst that represents a player's hand, you must use it and put it altogether in `main.cpp` that implements the game using your custom implementation (your logic for this program should be very similar to `main_set.cpp` except you should not use std::set and use your custom BST implementation instead).
 
-Correct output after running `make` and then running `./game alice_cards.txt bob_cards.txt` should be exactly the same as before.
+Correct output after running `make` and then running `./game alice_cards.txt bob_cards.txt` should produce the exact same output as before (when you ran `game_set` with the given input files).
 
 ## Testing your custom BST
 An additional requirement is that you write a set of unit tests for your 
