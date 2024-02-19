@@ -295,7 +295,7 @@ Second, report on **specific running times achieved by your solution** on *each*
 You will be graded for the efficiency of your algorithms but also the clarity and correctness of your analysis. 
 
 Here are runtime plots of three different types of solutions. These runtimes were gathered on the csil machines on the input files `input_76920_random.csv`, recording the running time to compute the result for the first `m` prefixes in `prefix_large.txt` to get each data point in the plot. If you want to get a proper runtime comparison, please run your code on csil. 
-* **Full credit will be given to solutions with an efficiency similar to `Mystery Implementation #2`**
+* **Full credit will be given to solutions with an efficiency similar to `Mystery Implementation #4`**
 
 * The students who achieve the top 5 runtimes will receive **extra credit**
 
