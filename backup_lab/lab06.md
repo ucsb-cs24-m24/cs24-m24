@@ -34,10 +34,13 @@ In this assignment, you will
 
 Refer to lab01 for instructions on how to set up a GitHub repository and 
 pull the starter code for this lab.
-Obtain the starter code from this repo: <https://github.com/ucsb-cs24-f23/STARTER-pa02>
+Obtain the starter code from this repo: <https://github.com/ucsb-cs24-w24/STARTER-lab06>
 
 ### Contents
 * `main.cpp`: driver code to read in movies from input files
+* `movies.h` and `movies.cpp`: empty files
+* `utilities.h` and `utilities.cpp`: empty files
+* `Makefile`: this file generates the executable `runMovies`, and please do not revise it
 * `input_20_ordered.csv`
 * `input_20_random.csv`
 * `input_100_ordered.csv`
@@ -107,7 +110,7 @@ money train,5.4
 * `movies.cpp, movies.h`: these files should contain any abstractions that you need to define. 
 	* We strongly discourage implementing any data structure available in the C++ STL from scratch. However, you are encouraged to think creatively about improving the running time efficiency of your solution and implement your own data structure if those provided in the STL are insufficient to meet your needs.
 * `main.cpp`: this file should read in the movies from input files and produce the expected output.
-* `Makefile`: this file generates the executable `runMovies` 
+* (Optional) `utilities.h` and `utilities.cpp`: you can place other helper functions, structs, and classes in these files.
 
 ## Problem statement
 This assignment has three parts. You should **separate your algorithm for part 1 from your algorithm for part 2** because in part 3, you need to analyze the running time complexity of your solution to **part 2 only**.
@@ -293,10 +296,10 @@ You will be graded for the efficiency of your algorithms but also the clarity an
 
 Here are runtime plots of three different types of solutions. These runtimes were gathered on the csil machines on the input files `input_76920_random.csv`, recording the running time to compute the result for the first `m` prefixes in `prefix_large.txt` to get each data point in the plot. If you want to get a proper runtime comparison, please run your code on csil. 
 * **Full credit will be given to solutions with an efficiency similar to `Mystery Implementation #2`**
-* Note that ** `Mystery Implementation #1` and `#4` use different data structures but have almost the same running times.
+
 * The students who achieve the top 5 runtimes will receive **extra credit**
 
-<img src="./Part2RuntimeBenchmarks.svg" alt="Part2" width="80%" style="display:block; margin: 5px 10px 10px 10px;">
+<img src="instruction_perf.jpg" alt="Part2" style="display:block; margin: 5px 10px 10px 10px;">
 
 
 ### Part 3b: Analyze space complexity
@@ -339,4 +342,3 @@ For this programming assignment, you will have a lot of flexibility on your impl
 * Your code should be readable
 * Your classes should define clear interfaces and hide implementation details as much as possible. 
 * You must include your space and time complexity analyses (part 3) in `main.cpp`, as a commented block under the `main()` function
-* Your `Makefile` must produce an executable called `runMovies` from the `make` command.
