@@ -2,8 +2,8 @@
 num: lab05
 ready: true
 desc: "Card game using Binary Search Trees"
-assigned: 2024-02-15 09:00:00.00-8
-due: 2024-02-21 23:59:00.00-8
+assigned: 2024-02-14 09:00:00.00-8
+due: 2024-02-23 23:59:00.00-8
 ---
 
 # Collaboration policy
