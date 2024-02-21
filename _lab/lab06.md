@@ -3,7 +3,7 @@ num: lab06
 ready: false
 desc: "Application of data structures to a movie dataset"
 assigned: 2024-02-21 9:00:00.00-8
-due: 2024-1022-28 23:59:59.00-8
+due: 2024-03-01 23:59:59.00-8
 ---
 
 # Collaboration policy
