@@ -1,0 +1,544 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- head.html; common header items for all layouts -->
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+
+<link rel="stylesheet" href="/w24/assets/css/main.css">
+  
+<script
+   src="https://code.jquery.com/jquery-3.3.1.min.js"
+   integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+   crossorigin="anonymous"></script>
+
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+<script src="//cdnjs.cloudflare.com/ajax/libs/mousetrap/1.4.6/mousetrap.min.js"></script>
+
+
+<script src="/w24/assets/js/site.js"></script>
+
+<script>
+var nav ={
+    
+    "offerings": {
+	"title" : "W24",
+	"url" : "/",
+	"baseurl" : "/w24",
+	"items" : [
+	    
+	    {
+		"title" : "W24-Home",
+		"url" : "/",
+		"baseurl" : "/w24",
+	    },
+	    
+	],
+    },
+    
+    
+    "offering_links": [
+	
+		{
+		    "title": "Assignments",		    
+		     "url": "/lab_list/", 		    
+		     "description": "Programming Assignments", 
+		    		    
+		},
+	
+		{
+		    "title": "Syllabus",		    
+		     "url": "/info/syllabus/", 		    
+		     "description": "Syllabus", 
+		    		    
+		},
+	
+		{
+		    "title": "Piazza",		    
+		     "url": "https://piazza.com/ucsb/winter2024/cmpsc24/resources", 		    
+		     "description": "Q&A Forum", 
+		    		    
+		},
+	
+		{
+		    "title": "Staff",		    
+		     "url": "/info/staff/", 		    
+		     "description": "Staff Profiles", 
+		    		    
+		},
+	
+		{
+		    "title": "Github",		    
+		    		    
+		    
+		    
+		    "dropdown" : [
+			
+			{
+			    "title": "ucsb-cs24-w24",		    
+			    "url": "https://github.com/ucsb-cs24-w24", 
+			    
+			},
+			
+		    ]
+		    		    
+		},
+	
+     
+    ],
+    
+        
+}
+;
+</script>
+
+
+
+
+
+
+    <title>lab03 - Implementing a linked list- OOP style - </title>
+  </head>
+    <body id="page-top">
+      <div class="container">
+      
+
+<script>
+  console.log("site.url=http://localhost:4000");
+  console.log("site.baseurl=/w24");
+  console.log("site.data.navigation.home.url=/");
+  console.log("site.data.navigation.home.baseurl=/");
+  console.log("home_url=/");
+  console.log("home_url_final=https://ucsb-cs24.github.io/");
+</script>
+
+
+
+<script>
+  console.log("offering_url=/");
+  console.log("offering_baseurl=/w24");
+  console.log("offering_url_final=/w24/");
+  console.log("offering_title=W24-Home");
+</script>
+
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+
+  <a class="navbar-brand" href="https://ucsb-cs24.github.io/">UCSB CS24</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+    <ul class="navbar-nav mr-auto"><li class="nav-item dropdown">
+  <a class="nav-link dropdown-toggle" href="#" id="main-dropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    Resources
+  </a>
+  <div class="dropdown-menu" aria-labelledby="main-dropdown"><a class="dropdown-item" href="https://ucsb-cs24.github.io/topic_list/">Topics</a><a class="dropdown-item" href="https://ucsb-cs24.github.io/resources_list/">Resources</a></div>
+</li><li class="nav-item">
+  <a class="nav-link" href="/w24/">
+    W24-Home
+  </a>
+</li>
+<li class="nav-item"><a class="nav-link" href="/w24/lab_list/"title="Programming Assignments"data-term="" >Assignments</a>
+
+</li><li class="nav-item"><a class="nav-link" href="/w24/info/syllabus/"title="Syllabus"data-term="" >Syllabus</a>
+
+</li><li class="nav-item"><a class="nav-link" href="https://piazza.com/ucsb/winter2024/cmpsc24/resources"title="Q&A Forum"data-term="" >Piazza</a>
+
+</li><li class="nav-item"><a class="nav-link" href="/w24/info/staff/"title="Staff Profiles"data-term="" >Staff</a>
+
+</li><li class="nav-item dropdown " data-term="">
+  <a class="nav-link dropdown-toggle" href="#" id="navbar-offering-specific-dropdown-Github" data-toggle="dropdown" aria-haspopup="true"
+     aria-expanded="false">Github</a>
+    <div class="dropdown-menu" aria-labelledby="navbar-offering-specific-dropdown-Github"><a class="dropdown-item" href="https://github.com/ucsb-cs24-w24"data-term="" ><i class='fab fa-github' aria-hidden='true'></i>&nbsp;ucsb-cs24-w24</a>
+
+</div>
+</li>
+
+
+</ul>
+  </div>
+</nav>
+
+
+        <div id="content"  class="ui-content">
+          <h1>lab03 : Implementing a linked list- OOP style</h1>
+          <table class="asn_table">
+            <!-- asn_table_header_row.html -->
+<tr>
+  <th class="asn_num"  >num</th>
+  <th class="asn_ready">ready?</th>
+  <th class="asn_desc" >description</th>
+  <th class="asn_date" >assigned</th>
+  <th class="asn_date" >due</th>
+</tr>
+
+
+            
+            <tr class="ready" >
+  <td class="asn_num"  ><a href="/w24/lab/lab03/" data-ajax="false">lab03</a></td>
+  <td class="asn_ready">true</td>
+  <td class="asn_desc" >Implementing a linked list- OOP style</td>
+  <td class="asn_date" >Thu 01/25 09:00AM</td> 
+  <td class="asn_date" >Wed 02/07 11:59PM</td>
+</tr>
+
+
+
+          </table>
+          <h2 id="collaboration-policy">Collaboration policy</h2>
+<p>This lab may be done with a partner or solo.</p>
+
+<h1 id="goals-for-this-lab">Goals for this lab</h1>
+
+<p>By the time you have completed this lab, you should be able to</p>
+
+<ul>
+  <li>Explain the meaning of a “self-referential” data structure</li>
+  <li>Create, use, and manage memory for simple linked lists</li>
+  <li>Implement functions that process linked lists</li>
+</ul>
+
+<h1 id="academic-honesty">Academic Honesty</h1>
+<p>All work submitted for this lab should be your own and your partners. If you are using any hints from a previous offering of this course that was posted publicly by a CS24 instructor, you must cite your source.</p>
+
+<h1 id="step-by-step-instructions">Step by Step Instructions</h1>
+
+<h2 id="step-1-create-a-directory-and-get-files">Step 1: Create a directory and get files</h2>
+
+<p>Follow the instructions from lab01 to set up your GitHub repo and get the starter code into your local repository.</p>
+
+<p>Below is the link for the starter code for this lab:
+<a href="https://github.com/ucsb-cs24-w24/STARTER-lab03">https://github.com/ucsb-cs24-w24/STARTER-lab03</a></p>
+
+<p>Once you have the starter code set up in your local repo, you should see a listing of several C++ files.</p>
+
+<p>Typing the list (ls) command should show you the following files in your current directory:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>-bash-4.2$ ls
+intlist.cpp  intlist.h  Makefile  README.md  testlist.cpp  testrest.cpp
+-bash-4.2$  make all
+g++ -c -g testlist.cpp
+g++ -c -g intlist.cpp
+g++ -g -o testlist testlist.o intlist.o
+g++ -c -g testrest.cpp
+g++ -g -o testrest testrest.o intlist.o
+</code></pre></div></div>
+
+<p>We will discuss these files in Step 3. But first some practice.</p>
+
+<h2 id="step-2-practice-using-linked-structures-optional">Step 2: Practice using linked structures (Optional)</h2>
+
+<p>You can go to the website, “www.cpp.sh”, to get practice with linked structures. (Or any other online cpp shell)
+Type or copy/paste the simple program shown below (in bold) at the code area in cpp.sh (replacing the original sample code):</p>
+
+<div class="language-cpp highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">struct</span> <span class="nc">Node</span> <span class="p">{</span>
+  <span class="kt">int</span> <span class="n">info</span><span class="p">;</span>
+  <span class="n">Node</span> <span class="o">*</span><span class="n">next</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<p>The structure, ‘Node’, you just created, incorporates a way for an object of its type to point to another object of the same type - it is a self-referential structure. The idea is to point the <code class="language-plaintext highlighter-rouge">next</code> field of a Node to another Node, or in other words, the <code class="language-plaintext highlighter-rouge">next</code> field of a Node stores the memory address of the next Node. In this way, we can build lists of Nodes, with each Node pointing to the next one. We also maintain a separate pointer that points to the first node in the list - often we call this pointer the “list” because it is the way we can access the list’s elements.</p>
+
+<p>But before we do all that, let’s just make a Node object, set its fields, and display its contents:</p>
+
+<div class="language-cpp highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">#include &lt;iostream&gt;
+</span>
+<span class="k">struct</span> <span class="nc">Node</span> <span class="p">{</span><span class="kt">int</span> <span class="n">info</span><span class="p">;</span> <span class="n">Node</span> <span class="o">*</span><span class="n">next</span><span class="p">;};</span>
+
+<span class="kt">int</span> <span class="nf">main</span><span class="p">()</span>
+<span class="p">{</span>
+  <span class="n">Node</span> <span class="n">item</span><span class="p">;</span>
+  <span class="n">item</span><span class="p">.</span><span class="n">info</span> <span class="o">=</span> <span class="mi">9</span><span class="p">;</span>
+  <span class="n">item</span><span class="p">.</span><span class="n">next</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+  <span class="n">std</span><span class="o">::</span><span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">"This node holds a number: "</span> <span class="o">&lt;&lt;</span> <span class="n">item</span><span class="p">.</span><span class="n">info</span> <span class="o">&lt;&lt;</span> <span class="s">"</span><span class="se">\n</span><span class="s">"</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<p>Now click on the “Run” button below the code area.
+You will see the output at the bottom.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>This node holds a number: 9
+</code></pre></div></div>
+
+<p>The Node named <code class="language-plaintext highlighter-rouge">item</code> stores a 9 as its information, and its next field (a.k.a. “link”) does not point to anything (the address 0 is reserved to mean “no address” in C++, and it is also the value of the symbolic constant <code class="language-plaintext highlighter-rouge">NULL</code> that is defined in cstdlib. It can also be called nil). Usually, a node with a null link is used to indicate the end of a linked list.</p>
+
+<p>Now, let’s use the structure of a Node to build an actual linked list storing three integers. First, we will declare a pointer named <code class="language-plaintext highlighter-rouge">list</code> that points to the first node in the list (or null if the list is empty). We initialize this pointer to a dynamically allocated first node, using the C++ keyword new (which returns a pointer/memory address). The remaining steps will create two more nodes, store values in each node, and properly link them all together as a list.</p>
+
+<div class="language-cpp highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">#include &lt;iostream&gt;
+</span>
+<span class="k">struct</span> <span class="nc">Node</span> <span class="p">{</span><span class="kt">int</span> <span class="n">info</span><span class="p">;</span> <span class="n">Node</span> <span class="o">*</span><span class="n">next</span><span class="p">;};</span>
+
+<span class="kt">int</span> <span class="nf">main</span><span class="p">()</span>
+<span class="p">{</span>
+  <span class="n">Node</span><span class="o">*</span> <span class="n">list</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Node</span><span class="p">;</span>
+  <span class="n">list</span><span class="o">-&gt;</span><span class="n">info</span> <span class="o">=</span> <span class="mi">10</span><span class="p">;</span>
+  <span class="n">list</span><span class="o">-&gt;</span><span class="n">next</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Node</span><span class="p">;</span>
+  <span class="n">list</span><span class="o">-&gt;</span><span class="n">next</span><span class="o">-&gt;</span><span class="n">info</span> <span class="o">=</span> <span class="mi">20</span><span class="p">;</span>
+  <span class="n">list</span><span class="o">-&gt;</span><span class="n">next</span><span class="o">-&gt;</span><span class="n">next</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+  
+  <span class="n">Node</span><span class="o">*</span> <span class="n">temp</span> <span class="o">=</span> <span class="n">list</span><span class="p">;</span>
+  <span class="n">list</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Node</span><span class="p">;</span>
+  <span class="n">list</span><span class="o">-&gt;</span><span class="n">info</span> <span class="o">=</span> <span class="mi">5</span><span class="p">;</span>
+  <span class="n">list</span><span class="o">-&gt;</span><span class="n">next</span> <span class="o">=</span> <span class="n">temp</span><span class="p">;</span>
+  
+  <span class="k">for</span> <span class="p">(</span><span class="n">Node</span><span class="o">*</span> <span class="n">n</span> <span class="o">=</span> <span class="n">list</span><span class="p">;</span> <span class="n">n</span> <span class="o">!=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">n</span> <span class="o">=</span> <span class="n">n</span><span class="o">-&gt;</span><span class="n">next</span><span class="p">)</span> <span class="p">{</span>
+    <span class="n">std</span><span class="o">::</span><span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">"</span><span class="se">\n</span><span class="s">This node is at address: "</span> <span class="o">&lt;&lt;</span> <span class="n">n</span> <span class="o">&lt;&lt;</span> <span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span>
+    <span class="n">std</span><span class="o">::</span><span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">"It holds a number: "</span> <span class="o">&lt;&lt;</span> <span class="n">n</span><span class="o">-&gt;</span><span class="n">info</span> <span class="o">&lt;&lt;</span> <span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span>
+    <span class="n">std</span><span class="o">::</span><span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">"Moving to the next node whose address is "</span> <span class="o">&lt;&lt;</span> <span class="n">n</span><span class="o">-&gt;</span><span class="n">next</span> <span class="o">&lt;&lt;</span> <span class="s">"..."</span> <span class="o">&lt;&lt;</span> <span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<p>Now click the “Run” button below the code area.
+You will see the output at the bottom.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>This node is at address: 0x16359e0
+It holds a number: 5
+Moving to the next node whose address is 0x16359a0...
+
+This node is at address: 0x16359a0
+It holds a number: 10
+Moving to the next node whose address is 0x16359c0...
+
+This node is at address: 0x16359c0
+It holds a number: 20
+Moving to the next node whose address is 0...
+</code></pre></div></div>
+
+<p>The for loop continues as long as <code class="language-plaintext highlighter-rouge">n</code> is pointing to a node. At the end of each loop iteration, <code class="language-plaintext highlighter-rouge">n</code> is changed to point to the next node in the list. Study this loop, and be sure to understand it - discuss it with your partner to make sure you both understand it.</p>
+
+<p>As one more illustration, let’s use a while loop to count the nodes in a list like this one. Make sure you understand the following loop too, in which the while loop condition is just the node pointer itself – it becomes 0 at the end. ;-)</p>
+
+<div class="language-cpp highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">#include &lt;iostream&gt;
+</span>
+<span class="k">struct</span> <span class="nc">Node</span> <span class="p">{</span><span class="kt">int</span> <span class="n">info</span><span class="p">;</span> <span class="n">Node</span> <span class="o">*</span><span class="n">next</span><span class="p">;};</span>
+
+<span class="kt">int</span> <span class="nf">main</span><span class="p">()</span>
+<span class="p">{</span>
+  <span class="n">Node</span><span class="o">*</span> <span class="n">list</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Node</span><span class="p">;</span>
+  <span class="n">list</span><span class="o">-&gt;</span><span class="n">info</span> <span class="o">=</span> <span class="mi">10</span><span class="p">;</span>
+  <span class="n">list</span><span class="o">-&gt;</span><span class="n">next</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Node</span><span class="p">;</span>
+  <span class="n">list</span><span class="o">-&gt;</span><span class="n">next</span><span class="o">-&gt;</span><span class="n">info</span> <span class="o">=</span> <span class="mi">20</span><span class="p">;</span>
+  <span class="n">list</span><span class="o">-&gt;</span><span class="n">next</span><span class="o">-&gt;</span><span class="n">next</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+  
+  <span class="n">Node</span><span class="o">*</span> <span class="n">temp</span> <span class="o">=</span> <span class="n">list</span><span class="p">;</span>
+  <span class="n">list</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Node</span><span class="p">;</span>
+  <span class="n">list</span><span class="o">-&gt;</span><span class="n">info</span> <span class="o">=</span> <span class="mi">5</span><span class="p">;</span>
+  <span class="n">list</span><span class="o">-&gt;</span><span class="n">next</span> <span class="o">=</span> <span class="n">temp</span><span class="p">;</span>
+  
+  <span class="n">Node</span><span class="o">*</span> <span class="n">n</span> <span class="o">=</span> <span class="n">list</span><span class="p">;</span>
+  <span class="k">while</span> <span class="p">(</span><span class="n">n</span><span class="p">)</span> <span class="p">{</span>
+    <span class="n">std</span><span class="o">::</span><span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">"</span><span class="se">\n</span><span class="s">This node is at address: "</span> <span class="o">&lt;&lt;</span> <span class="n">n</span> <span class="o">&lt;&lt;</span> <span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span>
+    <span class="n">std</span><span class="o">::</span><span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">"It holds a number: "</span> <span class="o">&lt;&lt;</span> <span class="n">n</span><span class="o">-&gt;</span><span class="n">info</span> <span class="o">&lt;&lt;</span> <span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span>
+    <span class="n">std</span><span class="o">::</span><span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">"Moving to the next node whose address is "</span> <span class="o">&lt;&lt;</span> <span class="n">n</span><span class="o">-&gt;</span><span class="n">next</span> <span class="o">&lt;&lt;</span> <span class="s">"..."</span> <span class="o">&lt;&lt;</span> <span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span>
+    
+    <span class="n">n</span> <span class="o">=</span> <span class="n">n</span><span class="o">-&gt;</span><span class="n">next</span><span class="p">;</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<p>One big issue in the above program is memory leak.</p>
+
+<p>Since we dynamically allocated the memory for three nodes, we should free that memory before exiting the program and proceeding to Step 3. Also, according to convention, we set the list pointer to null - it is now an empty list:</p>
+
+<div class="language-cpp highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">#include &lt;iostream&gt;
+</span>
+<span class="k">struct</span> <span class="nc">Node</span> <span class="p">{</span><span class="kt">int</span> <span class="n">info</span><span class="p">;</span> <span class="n">Node</span> <span class="o">*</span><span class="n">next</span><span class="p">;};</span>
+
+<span class="kt">int</span> <span class="nf">main</span><span class="p">()</span>
+<span class="p">{</span>
+  <span class="n">Node</span><span class="o">*</span> <span class="n">list</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Node</span><span class="p">;</span>
+  <span class="n">list</span><span class="o">-&gt;</span><span class="n">info</span> <span class="o">=</span> <span class="mi">10</span><span class="p">;</span>
+  <span class="n">list</span><span class="o">-&gt;</span><span class="n">next</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Node</span><span class="p">;</span>
+  <span class="n">list</span><span class="o">-&gt;</span><span class="n">next</span><span class="o">-&gt;</span><span class="n">info</span> <span class="o">=</span> <span class="mi">20</span><span class="p">;</span>
+  <span class="n">list</span><span class="o">-&gt;</span><span class="n">next</span><span class="o">-&gt;</span><span class="n">next</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+  
+  <span class="k">delete</span> <span class="n">list</span><span class="o">-&gt;</span><span class="n">next</span><span class="p">;</span> <span class="c1">// Why we free list-&gt;next firstly?</span>
+  <span class="k">delete</span> <span class="n">list</span><span class="p">;</span>
+  <span class="n">list</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="c1">// Can we put this line before delete line?</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<h2 id="step-3-learn-how-to-encapsulate-list-nodes">Step 3: Learn how to encapsulate list nodes</h2>
+
+<p>Now that you have a feel for list nodes, you should know that such structures are not usually manipulated directly by application programs - not in C++ anyway (although it is common in C programming). Instead, applications normally use objects of a List class, and the class itself is the only part of the program that accesses list nodes.</p>
+
+<p>In the rest of this lab, you will help build such a list class. The class definition is stored in <code class="language-plaintext highlighter-rouge">intlist.h</code> - please study it to know its parts:</p>
+
+<p>The public declarations show what a client program can do with an <code class="language-plaintext highlighter-rouge">IntList</code> object. Notice, however, that the list node structure definition is in the private area. Clients can’t directly use or even refer to such nodes, but all that clients should care about are the values stored in these nodes anyway! Also, notice that every list object will have one node pointer that points to the first node in the list or at 0 if the list is empty.
+Now, look at <code class="language-plaintext highlighter-rouge">intlist.cpp</code>. The functions that you need to implement are marked in that file. Some of the methods of the class are implemented at the bottom of the file - do not change what is done.</p>
+
+<p>An application file would create <code class="language-plaintext highlighter-rouge">IntList</code> objects and use them to solve problems. For this lab, we have two application files, both of which are testing programs - <code class="language-plaintext highlighter-rouge">testlist.cpp</code> and <code class="language-plaintext highlighter-rouge">testrest.cpp</code>. First, look <code class="language-plaintext highlighter-rouge">testlist.cpp</code>. Two <code class="language-plaintext highlighter-rouge">IntList</code> objects are created; then, numbers read from the command line are appended to one of the lists; and finally, the methods are tested for each list.</p>
+
+<p>You can use the provided <code class="language-plaintext highlighter-rouge">Makefile</code> to help you complile the program.</p>
+
+<h2 id="step-4-implement-linked-list-functions">Step 4: Implement linked list functions</h2>
+
+<p>You should be able to run the program now (assuming you compiled it in Step 3) - it requires you to enter a starter list of integers on the command line, which means the program will throw an error if we don’t provide the list of input integers when running the program:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>-bash-4.2$ ./testlist
+error: need at least one int arg on command line
+usage: ./testlist int [int ...]
+</code></pre></div></div>
+
+<p>This time, we’ll run it properly. The <code class="language-plaintext highlighter-rouge">contains</code> method is used to checke for three values that ought to be in the list, plus one value that should not appear in the list. Here is a sample run with initial values of 5, 7, 9 and 11:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>./testlist 5 7 9 11
+List 1:
+   [5 7 9 11]
+   count: 4
+   sum: 0
+   contains 5 ? no
+   contains 7 ? no
+   contains 11 ? no
+   contains 0 ? no
+   max: 0
+   average: 0.000
+   List after insertFirst(sum):
+   [5 7 9 11]
+Empty list 2:
+   []
+   count: 0
+   sum: 0
+   contains 1 ? no
+   max: 0
+   average: 0.000
+   List 2 after insertFirst(3), then insertFirst(1):
+   []
+</code></pre></div></div>
+<p>See that <code class="language-plaintext highlighter-rouge">append</code>, <code class="language-plaintext highlighter-rouge">print</code> and <code class="language-plaintext highlighter-rouge">count</code> all work. But the others need to be fixed.</p>
+
+<p>Use an editor (e.g., emacs, vim, or VS Code) to make the following changes to <code class="language-plaintext highlighter-rouge">intlist.cpp</code> - do not change any of the other files.</p>
+
+<ul>
+  <li>Fix the comment at the top to show your name and the date.</li>
+  <li>Implement the <code class="language-plaintext highlighter-rouge">sum</code> method. See the count method for guidance.</li>
+  <li>Save, and then test your <code class="language-plaintext highlighter-rouge">sum</code> implementation - compile and execute <code class="language-plaintext highlighter-rouge">testlist</code> again. Verify <code class="language-plaintext highlighter-rouge">sum</code> is working before going on.</li>
+  <li>Push your code to github using the <code class="language-plaintext highlighter-rouge">git add .</code>, <code class="language-plaintext highlighter-rouge">git commit</code>, and <code class="language-plaintext highlighter-rouge">git push</code> commands</li>
+  <li>Then implement the <code class="language-plaintext highlighter-rouge">contains</code> method, save again and test again.</li>
+  <li>Continue with the other three functions in the same way: implement and test one at a time. Don’t implement the copy constructor, destructor, and assignment operator yet.</li>
+</ul>
+
+<p>Push your code to github often.</p>
+
+<p>Here are correct results for the same sample data as above:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>List 1:
+   [5 7 9 11]
+   count: 4
+   sum: 32
+   contains 5 ? yes
+   contains 7 ? yes
+   contains 11 ? yes
+   contains 32 ? no
+   max: 11
+   average: 8.000
+   List after insertFirst(sum):
+   [32 5 7 9 11]
+Empty list 2:
+   []
+   count: 0
+   sum: 0
+   contains 1 ? no
+   max: 0
+   average: 0.000
+   List 2 after insertFirst(3), then insertFirst(1):
+   [1 3]
+</code></pre></div></div>
+
+<p>Ask yourself: With just the automatic copy constructor and assignment operator, won’t copies be shallow?</p>
+
+<p>You will fix this problem by overloading the copy constructor and assignment operator. You should also implement the destructor. However, before you begin, examine <code class="language-plaintext highlighter-rouge">testrest.cpp</code>. This file tests the functions your are about to implement.</p>
+
+<p>Run the test program with argument 1 (to test your copy constructor) before implementing the above functions.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ ./testrest 1
+Segmentation fault (core dumped)
+</code></pre></div></div>
+<p>Now run the program with the same argument in <code class="language-plaintext highlighter-rouge">gdb</code> and try to figure out exactly why it crashed.</p>
+
+<ul>
+  <li>Implement the copy constructor in <code class="language-plaintext highlighter-rouge">intlist.cpp</code>. Compile with <code class="language-plaintext highlighter-rouge">make</code> and run <code>$ ./testrest 1</code>. Repeat this process until the test passes. However, its not enough to just pass the test. This is because when you are writing programs that work with dynamic data (on the heap), your program can have memory leaks that are not captured by unit tests. To check for leaks, you should run your program in <code class="language-plaintext highlighter-rouge">valgrind</code> as follows:</li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ valgrind --leak-check=full ./testrest 1
+==5414== Memcheck, a memory error detector
+==5414== Copyright (C) 2002-2015, and GNU GPL'd, by Julian Seward et al.
+==5414== Using Valgrind-3.12.0 and LibVEX; rerun with -h for copyright info
+==5414== Command: ./testrest 1
+==5414== 
+PASSED copy constructor tests
+==5414== 
+==5414== HEAP SUMMARY:
+==5414==     in use at exit: 0 bytes in 0 blocks
+==5414==   total heap usage: 17 allocs, 17 frees, 73,968 bytes allocated
+==5414== 
+==5414== All heap blocks were freed -- no leaks are possible
+==5414== 
+==5414== For counts of detected and suppressed errors, rerun with: -v
+==5414== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+</code></pre></div></div>
+
+<p>The error summary should show 0 errors as shown above. If you have memory leaks, <code class="language-plaintext highlighter-rouge">valgrind</code> will let you know.</p>
+
+<ul>
+  <li>Implement the destructor, compile and run <code>$ ./testrest 2</code>. 
+You should see the following message:</li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ ./testrest 2
+Testing destructor, run in valgrind to check for leaks
+</code></pre></div></div>
+<p>Now run it in <code class="language-plaintext highlighter-rouge">valgrind</code> to make sure you don’t have any memory leaks</p>
+
+<ul>
+  <li>Finally implement the overloaded assignment operator in <code class="language-plaintext highlighter-rouge">intlist.cpp</code>. To test it run <code>$ ./testrest 3</code>. If it doesn’t crash, run it in <code class="language-plaintext highlighter-rouge">valgrind</code> to check for memory leaks</li>
+</ul>
+
+<h2 id="step-5-submit-intlistcpp-and-intlisth-if-you-have-modified-it">Step 5: Submit intlist.cpp and intlist.h (if you have modified it).</h2>
+
+<p>Log into your account on https://www.gradescope.com/ and navigate to our course site. Select this assignment. Then click on the “Submit” button on the bottom right corner to make a submission. You will be given the option of uploading files from your local machine or submitting the code that is in a github repo. Select the second option and select your github repo for this assignment. You should receive 100/100 for a completely correct program.</p>
+
+<p>Do beware that all parts must be working to earn any points at all from the Gradescope system.</p>
+
+<h2 id="evaluation-and-grading">Evaluation and Grading</h2>
+
+<p>Each student must accomplish the following to earn full credit for this lab:</p>
+
+<ul>
+  <li>[100 points] <code class="language-plaintext highlighter-rouge">intlist.cpp</code> is saved, it has your name(s) in a comment at the top, it compiles and executes properly, and has been submitted with a score of 100/100 to the Gradescope system.</li>
+</ul>
+
+
+        </div><!-- content -->
+        
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light footer-navbar ">
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#footer-navbar-NavAltMarkup" aria-controls="footer-navbar-NavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="footer-navbar-NavAltMarkup">
+    <div class="navbar-nav">
+      <a class="nav-item nav-link" href="https://github.com/ucsb-cs24/w24">github site</a>
+      <a class="nav-item nav-link" href="https://github.com/ucsb-cs24/w24/edit/master/_lab/lab03.md">edit this page on github</a>
+      <span class="nav-item travis-ci-status "><a class="nav-link" href="https://travis-ci.org/ucsb-cs24/w24">
+	  <img src="https://travis-ci.org/ucsb-cs24/w24.svg?branch=master" alt="Build Status">
+	</a>
+      </span>
+    </div>
+  </div>
+</nav>
+
+      </div><!-- container -->
+  </body>
+</html>

@@ -271,14 +271,5 @@ For all labs, you MUST
 * add your partner on Gradescope when submitting your work EACH TIME you submit your file(s). After uploading your file(s) on Gradescope, there is a “Group Members” link at the bottom (or “Add Group Member” under “Groups”) where you can select the partner you are working with. Whoever uploaded the submission must make sure your partner is part of your Group. Click on “Group Members” -> “Add Member” and select your partner from the list.
 * write both your and your partner's names and PERM numbers on each file submitted to Gradescope.
 
-## Additional Practice 
-Every lab will have some additional practice problems that are not part of the lab grade. However, they are important to complete to succeed in the exams. Please signup for a free account on LeetCode <https://leetcode.com> and submit your solution there:
-
-1. Reverse a singly linked list: <https://leetcode.com/problems/reverse-linked-list/>
-2. Merge two sorted lists: <https://leetcode.com/problems/merge-two-sorted-lists/>
-3. Remove duplicates from sorted lists: <https://leetcode.com/problems/remove-duplicates-from-sorted-list/>
-4. Middle of the Linked List: <https://leetcode.com/problems/middle-of-the-linked-list/>
-
-Note that in lecture 1 we coded a recursive implementation for problem #1. Try solving the same problem iteratively. Also try to come up with a recursive implementation that is different from the one we implemented in lecture.
 
 

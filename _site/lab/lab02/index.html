@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- head.html; common header items for all layouts -->
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+
+<link rel="stylesheet" href="/w24/assets/css/main.css">
+  
+<script
+   src="https://code.jquery.com/jquery-3.3.1.min.js"
+   integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+   crossorigin="anonymous"></script>
+
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+<script src="//cdnjs.cloudflare.com/ajax/libs/mousetrap/1.4.6/mousetrap.min.js"></script>
+
+
+<script src="/w24/assets/js/site.js"></script>
+
+<script>
+var nav ={
+    
+    "offerings": {
+	"title" : "W24",
+	"url" : "/",
+	"baseurl" : "/w24",
+	"items" : [
+	    
+	    {
+		"title" : "W24-Home",
+		"url" : "/",
+		"baseurl" : "/w24",
+	    },
+	    
+	],
+    },
+    
+    
+    "offering_links": [
+	
+		{
+		    "title": "Assignments",		    
+		     "url": "/lab_list/", 		    
+		     "description": "Programming Assignments", 
+		    		    
+		},
+	
+		{
+		    "title": "Syllabus",		    
+		     "url": "/info/syllabus/", 		    
+		     "description": "Syllabus", 
+		    		    
+		},
+	
+		{
+		    "title": "Piazza",		    
+		     "url": "https://piazza.com/ucsb/winter2024/cmpsc24/resources", 		    
+		     "description": "Q&A Forum", 
+		    		    
+		},
+	
+		{
+		    "title": "Staff",		    
+		     "url": "/info/staff/", 		    
+		     "description": "Staff Profiles", 
+		    		    
+		},
+	
+		{
+		    "title": "Github",		    
+		    		    
+		    
+		    
+		    "dropdown" : [
+			
+			{
+			    "title": "ucsb-cs24-w24",		    
+			    "url": "https://github.com/ucsb-cs24-w24", 
+			    
+			},
+			
+		    ]
+		    		    
+		},
+	
+     
+    ],
+    
+        
+}
+;
+</script>
+
+
+
+
+
+
+    <title>lab02 - Binary Search Tree - </title>
+  </head>
+    <body id="page-top">
+      <div class="container">
+      
+
+<script>
+  console.log("site.url=http://localhost:4000");
+  console.log("site.baseurl=/w24");
+  console.log("site.data.navigation.home.url=/");
+  console.log("site.data.navigation.home.baseurl=/");
+  console.log("home_url=/");
+  console.log("home_url_final=https://ucsb-cs24.github.io/");
+</script>
+
+
+
+<script>
+  console.log("offering_url=/");
+  console.log("offering_baseurl=/w24");
+  console.log("offering_url_final=/w24/");
+  console.log("offering_title=W24-Home");
+</script>
+
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+
+  <a class="navbar-brand" href="https://ucsb-cs24.github.io/">UCSB CS24</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+    <ul class="navbar-nav mr-auto"><li class="nav-item dropdown">
+  <a class="nav-link dropdown-toggle" href="#" id="main-dropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    Resources
+  </a>
+  <div class="dropdown-menu" aria-labelledby="main-dropdown"><a class="dropdown-item" href="https://ucsb-cs24.github.io/topic_list/">Topics</a><a class="dropdown-item" href="https://ucsb-cs24.github.io/resources_list/">Resources</a></div>
+</li><li class="nav-item">
+  <a class="nav-link" href="/w24/">
+    W24-Home
+  </a>
+</li>
+<li class="nav-item"><a class="nav-link" href="/w24/lab_list/"title="Programming Assignments"data-term="" >Assignments</a>
+
+</li><li class="nav-item"><a class="nav-link" href="/w24/info/syllabus/"title="Syllabus"data-term="" >Syllabus</a>
+
+</li><li class="nav-item"><a class="nav-link" href="https://piazza.com/ucsb/winter2024/cmpsc24/resources"title="Q&A Forum"data-term="" >Piazza</a>
+
+</li><li class="nav-item"><a class="nav-link" href="/w24/info/staff/"title="Staff Profiles"data-term="" >Staff</a>
+
+</li><li class="nav-item dropdown " data-term="">
+  <a class="nav-link dropdown-toggle" href="#" id="navbar-offering-specific-dropdown-Github" data-toggle="dropdown" aria-haspopup="true"
+     aria-expanded="false">Github</a>
+    <div class="dropdown-menu" aria-labelledby="navbar-offering-specific-dropdown-Github"><a class="dropdown-item" href="https://github.com/ucsb-cs24-w24"data-term="" ><i class='fab fa-github' aria-hidden='true'></i>&nbsp;ucsb-cs24-w24</a>
+
+</div>
+</li>
+
+
+</ul>
+  </div>
+</nav>
+
+
+        <div id="content"  class="ui-content">
+          <h1>lab02 : Binary Search Tree</h1>
+          <table class="asn_table">
+            <!-- asn_table_header_row.html -->
+<tr>
+  <th class="asn_num"  >num</th>
+  <th class="asn_ready">ready?</th>
+  <th class="asn_desc" >description</th>
+  <th class="asn_date" >assigned</th>
+  <th class="asn_date" >due</th>
+</tr>
+
+
+            
+            <tr class="ready" >
+  <td class="asn_num"  ><a href="/w24/lab/lab02/" data-ajax="false">lab02</a></td>
+  <td class="asn_ready">true</td>
+  <td class="asn_desc" >Binary Search Tree</td>
+  <td class="asn_date" >Wed 01/24 09:00AM</td> 
+  <td class="asn_date" >Wed 01/31 11:59PM</td>
+</tr>
+
+
+
+          </table>
+          <h1 id="goals-for-this-lab">Goals for this lab</h1>
+
+<p>By the time you have completed this lab, you should be able to</p>
+
+<ul>
+  <li>Know how to navigate a binary tree data structure</li>
+  <li>Implement recursive functions for binary trees</li>
+  <li>Implement binary search tree functions</li>
+</ul>
+
+<h2 id="collaboration-policy">Collaboration policy</h2>
+<p>This lab must be done solo</p>
+
+<h2 id="academic-integrity">Academic Integrity</h2>
+<p>All work submitted for this lab should be your own. If you are using any hints from a previous offering of this course that was posted publicly by a CS24 instructor, you must cite your source.</p>
+
+<h2 id="step-by-step-instructions">Step by Step Instructions</h2>
+
+<h2 id="step-0-create-a-git-repo-and-get-the-starter-code">Step 0: Create a git repo and get the starter code</h2>
+<p>Refer to lab01 for instructions on how to set up a GitHub repository and pull the starter code for this lab. Here is the link for this lab’s starter code: &lt;   <a href="https://github.com/ucsb-cs24-w24/STARTER-lab02">https://github.com/ucsb-cs24-w24/STARTER-lab02</a></p>
+
+<h2 id="step-0a-get-the-starter-code-and-create-a-makefile">Step 0a: Get the starter code and create a Makefile</h2>
+
+<p>There are three required files to copy from the class account this week. After pulling the starter code, you should be able to type the command <code class="language-plaintext highlighter-rouge">ls</code> and see the following files in your directory.</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>-bash-4.3$ ls
+intbst.cpp  intbst.h  testbst.cpp
+</code></pre></div></div>
+
+<p>**The first thing you should do is create a simple Makefile that compiles intbst.cpp and testbst.cpp **</p>
+
+<p>A binary search tree class for integers, class IntBST is defined in intbst.h - please study this file for details of the class’s features:</p>
+
+<ul>
+  <li>In Step 1, the constructor, destructor, clear and insert methods are to be implemented in intbst.cpp. Notice the insert method will return false to indicate an attempt to insert a duplicate value; otherwise it inserts the value and returns true.</li>
+  <li>In Step 2, you will implement the three print methods, pre-order, in-order, and post-order.</li>
+  <li>In Step 3 you will implement the sum, count, contains, and getNodeFor methods.</li>
+  <li>In Step 4, you will implement the predecessor, successor, and remove methods. Step 4 will likely take you the most time BY FAR, so plan accordingly.
+The binary tree node structure is defined in the private area. The only instance variable is a node pointer, to point at the root node of the tree or at 0 if the tree is empty.
+Several utility functions are declared in the private area too. These functions can be recursive (by virtue of their Node* parameters), and the public methods can use them. See how the destructor might use clear, for example, and how the insert method would use the overloaded version of insert, each by passing the root pointer to the corresponding utility function. Also take note of the definition of getNodeFor, which will be useful in several of the functions you need to implement. Consider implementing this function immediately after the print functions, and think about where you can reuse it.</li>
+</ul>
+
+<h1 id="step-1---constructor-insert-destructor-clear">Step 1 - Constructor, Insert, Destructor, Clear</h1>
+
+<p>Use an editor to make the following changes to intbst.cpp - do not change any of the other files.
+First and foremost: fix the comment at the top to show your name and the date.</p>
+
+<p>Assuming you successfuly compiled in step 0a, you should be able to run testbst now:</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>-bash-4.3$ ./testbst
+Choice of tests:
+  0. all tests
+  1. just printInOrder
+  2. just printPostOrder
+  3. just sum
+  4. just count
+  5. just contains
+Enter choice:
+0
+BST:
+  pre-order:
+  in-order:
+  post-order:
+  sum: 0
+  count: 0
+  contains 64? N
+  contains 4? N
+  contains 16? N
+  contains 128? N
+  contains 17? N
+  contains 512? N
+  . . .
+Empty BST:
+  pre-order:
+  in-order:
+  post-order:
+  sum: 0
+  count: 0
+  contains 16? N
+
+</code></pre></div></div>
+
+<p>As you can see, none of the functions do anything at the moment, but you can start by implementing the constructor and insert methods since these will server as the foundation for future testing.</p>
+<ul>
+  <li>Constructor: Even though the IntBST class may have many member functions associated with it, its only member variable is a Node* type called root.</li>
+  <li>Insert: Think about the properties of a binary search tree and traverse the tree accordingly. Note there is a private helper function for insert declared in intbst.h</li>
+</ul>
+
+<p>Next, the destructor function, which uses a helper function called clear.</p>
+<ul>
+  <li>Clear: this method should remove all nodes in the binary search tree without creating memory leaks.</li>
+  <li>Destructor: When the object’s scope ends, the destructor should take care of any memory allocation during its lifetime.</li>
+</ul>
+
+<h1 id="step-2-implement-pre-order-in-order-and-post-order-binary-tree-printing">Step 2: Implement pre-order, in-order, and post-order binary tree printing</h1>
+
+<p>Now that we have the foundations for creating an object of IntBST, scroll to the print functions. Inside IntBST.h, you will notice there are both public and private implementations of the functions printPreOrder, printInOrder and printPostOrder. The private functions will be used as helpers to their public counterparts. Your job in this step is to implement all of them, public and private.
+After you finish, save and then test your print implementations: compile and execute testbst again, choosing either all tests or just one of your print functions to test.
+Here are the correct results (abbreviated to show just the print orders):</p>
+
+<p>BST:</p>
+
+<p>pre-order: 64 8 4 32 16 128 512 256</p>
+
+<p>in-order: 4 8 16 32 64 128 256 512</p>
+
+<p>post-order: 4 16 32 8 256 512 128 64</p>
+
+<p>By the way, you should be able to draw the tree now, both by tracing the order of the inserts, or by interpreting the three orders above. Take a minute to try that now on a piece of scratch paper since it may be very helpful when implementing the remaining functions.</p>
+
+<h1 id="step-3-implement-three-more-binary-search-tree-functions">Step 3: Implement three more binary search tree functions</h1>
+
+<p>First: switch roles between pilot and navigator if you did not already do that.</p>
+
+<p>You may do these tasks in any order. Check the results of each part as you complete it.</p>
+
+<ul>
+  <li>Implement the helper function getNodeFor() - this function will be helpful for future functions.</li>
+  <li>Implement the helper function for sum() - notice the public method just returns the result of the helper function. We suggest you use recursion to do so. Think about these questions before starting to code: What’s the base case? What should be returned in the base case? What should be returned in the general (recursive) case?</li>
+  <li>Implement the helper function for count() - this is very similar to the sum() function.</li>
+  <li>Implement the public contains method, either recursively or iteratively - both are about the same level of difficulty in this case. If you decide to use recursion, you can use getNodeFor() in your implementation of contains(). You won’t need this utility function to solve the problem iteratively. In either case, remember the tree is a binary search tree, and so your solution should run in O(log n) time.</li>
+</ul>
+
+<p>Here are the results of all tests from our solution - you should verify that your results match:</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>BST:
+  pre-order: 64 8 4 32 16 128 512 256
+  in-order: 4 8 16 32 64 128 256 512
+  post-order: 4 16 32 8 256 512 128 64
+  sum: 1020
+  count: 8
+  contains 64? Y
+  contains 4? Y
+  contains 16? Y
+  contains 128? Y
+  contains 17? N
+  contains 512? Y
+  . . .
+Empty BST:
+  pre-order:
+  in-order:
+  post-order:
+  sum: 0
+  count: 0
+  contains 16? N
+</code></pre></div></div>
+
+<p>Be aware, however, that more rigorous testing will be done when your work is submitted (a different program is used for testing your functions, some with random data).</p>
+
+<h1 id="step-4-implement-predecessor-successor-and-remove">Step 4: Implement predecessor, successor, and remove</h1>
+
+<p>Your final task for this lab is to implement getPredecessor(), getSuccessor(), and remove(). The predecessor of a value is the next lowest value, while the successor is the next highest. Note that these functions should be implemented using the inherent structure of the binary tree, not by an exhaustive search for the next value. It will very likely be helpful to draw out the tree (the pre-order print can help you with this) when understanding how to implement getPredecessor() and getSuccessor(). If the element passed to the function is the first (for predecessor) or last (for successor) element in the tree, the function should return 0. It should also return 0 if the value is not present in the tree. Both of these functions will likely be harder to implement than any of the prior functions in this lab. However, correct implementations of getPredecessor() and getSuccessor look VERY similar, so you will likely be able to reuse a lot of your logic.</p>
+
+<p>Finally, move on to remove(), which is likely the hardest algorithm you will be asked to implement this quarter. It is not excessively complicated in principle, but getting it completely right can take a while. Consider switching off pilot and navigator as you are debugging your implementation. You will probably find it helpful to use either getPredecessor() or getSuccessor() in remove(). You can also use remove() inside of itself, though it should NOT be a recursive function–the difference being that only one additional call of remove() should EVER occur. As with predecessors and successors, drawing the tree will be very helpful.</p>
+
+<p>A correct implementation of all functions should produce the following output from testbst when selecting option 0:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>BST:
+  pre-order: 64 8 4 32 16 128 512 256
+  in-order: 4 8 16 32 64 128 256 512
+  post-order: 4 16 32 8 256 512 128 64
+  sum: 1020
+  count: 8
+  contains 64? Y
+  contains 4? Y
+  contains 16? Y
+  contains 128? Y
+  contains 17? N
+  contains 512? Y
+  predecessor of 64 is: 32
+  predecessor of 512 is: 256
+  predecessor of 4 is: 0
+  successor of 64 is: 128
+  successor of 512 is: 0
+  successor of 4 is: 8
+  removing 4
+  removing 64
+  removing 128
+  contains 64? N
+  contains 4? N
+  contains 16? Y
+  contains 128? N
+  contains 17? N
+  contains 512? Y
+  in-order: 8 16 32 256 512
+Empty BST:
+  pre-order:
+  in-order:
+  post-order:
+  sum: 0
+  count: 0
+  contains 16? N
+</code></pre></div></div>
+<h1 id="step-5-create-a-testbench-in-a-file-test_intbstcpp">Step 5: Create a testbench in a file test_intbst.cpp</h1>
+
+<p>In a file named test_intbst.cpp, include code to test all the functions that you implemented in intbst.cpp. Make sure that this file is compilable.</p>
+
+<h1 id="step-6-submit-your-revised-intbstcpp-test_intbstcpp-and-intbsth">Step 6: Submit your revised intbst.cpp, test_intbst.cpp and intbst.h</h1>
+
+<p>You are allowed to modify intbst.h, though you should not need to, so submit both intbst.cpp and intbst.h to Gradescope for a grade out of 100.</p>
+
+
+        </div><!-- content -->
+        
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light footer-navbar ">
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#footer-navbar-NavAltMarkup" aria-controls="footer-navbar-NavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="footer-navbar-NavAltMarkup">
+    <div class="navbar-nav">
+      <a class="nav-item nav-link" href="https://github.com/ucsb-cs24/w24">github site</a>
+      <a class="nav-item nav-link" href="https://github.com/ucsb-cs24/w24/edit/master/_lab/lab02.md">edit this page on github</a>
+      <span class="nav-item travis-ci-status "><a class="nav-link" href="https://travis-ci.org/ucsb-cs24/w24">
+	  <img src="https://travis-ci.org/ucsb-cs24/w24.svg?branch=master" alt="Build Status">
+	</a>
+      </span>
+    </div>
+  </div>
+</nav>
+
+      </div><!-- container -->
+  </body>
+</html>

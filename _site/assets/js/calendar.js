@@ -22,6 +22,56 @@ var dates = [{
     
 }
 ,{
+    "type" : "lab",
+    "url" :  "/w24/lab/lab02/",	   
+    "num" : "lab02",
+    "assigned" : "2024-01-24 09:00:00 -0800",
+    "due" : "2024-01-31 23:59:00 -0800",    
+    "ready" : "true",
+    "desc" : "Binary Search Tree",
+    
+}
+,{
+    "type" : "lab",
+    "url" :  "/w24/lab/lab03/",	   
+    "num" : "lab03",
+    "assigned" : "2024-01-25 09:00:00 -0800",
+    "due" : "2024-02-07 23:59:00 -0800",    
+    "ready" : "true",
+    "desc" : "Implementing a linked list- OOP style",
+    
+}
+,{
+    "type" : "lab",
+    "url" :  "/w24/lab/lab04/",	   
+    "num" : "lab04",
+    "assigned" : "2024-01-31 09:00:00 -0800",
+    "due" : "2024-02-07 23:59:00 -0800",    
+    "ready" : "true",
+    "desc" : "Big O practice",
+    
+}
+,{
+    "type" : "lab",
+    "url" :  "/w24/lab/lab05/",	   
+    "num" : "lab05",
+    "assigned" : "2024-02-15 09:00:00 -0800",
+    "due" : "2024-02-21 23:59:00 -0800",    
+    "ready" : "true",
+    "desc" : "Card game using Binary Search Trees",
+    
+}
+,{
+    "type" : "lab",
+    "url" :  "/w24/lab/lab06/",	   
+    "num" : "lab06",
+    "assigned" : "2024-02-21 09:00:00 -0800",
+    "due" : "2024-03-01 23:59:59 -0800",    
+    "ready" : "true",
+    "desc" : "Application of data structures to a movie dataset",
+    
+}
+,{
     "type" : "lectures",
     "url" :  "/w24/lectures/lect01/",	   
     "num" : "lect01",
@@ -71,7 +121,91 @@ var dates = [{
 }
 ,{
     "type" : "lectures",
-    "url" :  "/w24/lectures/no-lecture01/",	   
+    "url" :  "/w24/lectures/lect04/",	   
+    "num" : "lect04",
+    
+        
+    "ready" : "true",
+    "desc" : "Week 3: Efficient search and Binary Search Trees",
+    
+      "date" : "2024-01-22",
+    
+}
+,{
+    "type" : "lectures",
+    "url" :  "/w24/lectures/lect05/",	   
+    "num" : "lect05",
+    
+        
+    "ready" : "true",
+    "desc" : "Week 3: Tree traversals and BST operations(contd.)",
+    
+      "date" : "2024-10-24",
+    
+}
+,{
+    "type" : "lectures",
+    "url" :  "/w24/lectures/lect06/",	   
+    "num" : "lect06",
+    
+        
+    "ready" : "true",
+    "desc" : "Week4: Running time analysis",
+    
+      "date" : "2024-01-29",
+    
+}
+,{
+    "type" : "lectures",
+    "url" :  "/w24/lectures/lect07/",	   
+    "num" : "lect07",
+    
+        
+    "ready" : "true",
+    "desc" : "Week 4: Space complexity, best/worst case analysis",
+    
+      "date" : "2024-01-31",
+    
+}
+,{
+    "type" : "lectures",
+    "url" :  "/w24/lectures/lect08/",	   
+    "num" : "lect08",
+    
+        
+    "ready" : "true",
+    "desc" : "Week 5: Stacks",
+    
+      "date" : "2024-02-05",
+    
+}
+,{
+    "type" : "lectures",
+    "url" :  "/w24/lectures/lect09/",	   
+    "num" : "lect09",
+    
+        
+    "ready" : "true",
+    "desc" : "Week 5: Queues",
+    
+      "date" : "2024-02-07",
+    
+}
+,{
+    "type" : "lectures",
+    "url" :  "/w24/lectures/lect10/",	   
+    "num" : "lect10",
+    
+        
+    "ready" : "true",
+    "desc" : "Week 6: C++ set and map ADT (balanced BST), Iterators",
+    
+      "date" : "2024-02-12",
+    
+}
+,{
+    "type" : "lectures",
+    "url" :  "/w24/lectures/lect10a/",	   
     "num" : "e01",
     
         
@@ -83,7 +217,7 @@ var dates = [{
 }
 ,{
     "type" : "lectures",
-    "url" :  "/w24/lectures/no-lecture02/",	   
+    "url" :  "/w24/lectures/lect10b/",	   
     "num" : "",
     
         
@@ -91,6 +225,18 @@ var dates = [{
     "desc" : "No lecture - President's Day Holiday",
     
       "date" : "2024-02-19",
+    
+}
+,{
+    "type" : "lectures",
+    "url" :  "/w24/lectures/lect11/",	   
+    "num" : "lect11",
+    
+        
+    "ready" : "true",
+    "desc" : "Week 7: Hashtables, C++ unordered_set and unordered_map ADT",
+    
+      "date" : "2024-02-21",
     
 }
 ,{
@@ -103,6 +249,36 @@ var dates = [{
     "desc" : "Final Exam: noon - 3p",
     
       "date" : "2024-03-21",
+    
+}
+,{
+    "type" : "pa",
+    "url" :  "/w24/pa/pa01/",	   
+    "num" : "pa01",
+    "assigned" : "2024-01-10 09:00:00 -0800",
+        
+    "ready" : "true",
+    "desc" : "Leetcode practice with linked lists",
+    
+}
+,{
+    "type" : "pa",
+    "url" :  "/w24/pa/pa02/",	   
+    "num" : "pa02",
+    "assigned" : "2024-01-24 09:00:00 -0800",
+        
+    "ready" : "true",
+    "desc" : "Leetcode practice with binary search trees",
+    
+}
+,{
+    "type" : "pa",
+    "url" :  "/w24/pa/pa03/",	   
+    "num" : "pa03",
+    "assigned" : "2024-02-21 09:00:00 -0800",
+        
+    "ready" : "true",
+    "desc" : "Leetcode practice with stacks and queues",
     
 }
 ,];

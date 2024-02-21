@@ -48,6 +48,11 @@ title: "CS 24: Problem Solving with Computers-II , {{site.quarter}}"
   {% include lab_table.html %}
  </div>
 
+### Leetcode Practice Problems
+
+ <div class="card card-body" id="pa" markdown="1">
+  {% include pa_table.html %}
+ </div>
 
 <!-- </div> -->
 

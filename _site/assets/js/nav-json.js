@@ -40,6 +40,13 @@
 		},
 	
 		{
+		    "title": "Staff",		    
+		     "url": "/info/staff/", 		    
+		     "description": "Staff Profiles", 
+		    		    
+		},
+	
+		{
 		    "title": "Github",		    
 		    		    
 		    

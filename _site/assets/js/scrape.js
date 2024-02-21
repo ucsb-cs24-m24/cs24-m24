@@ -65,6 +65,36 @@ var DEBUGGING_ONLY = {
 		   "num" : "lab01",
 		},
 	        
+		{
+		   "collection" : "lab",
+		   "url" : "/lab/lab02/",
+		   "num" : "lab02",
+		},
+	        
+		{
+		   "collection" : "lab",
+		   "url" : "/lab/lab03/",
+		   "num" : "lab03",
+		},
+	        
+		{
+		   "collection" : "lab",
+		   "url" : "/lab/lab04/",
+		   "num" : "lab04",
+		},
+	        
+		{
+		   "collection" : "lab",
+		   "url" : "/lab/lab05/",
+		   "num" : "lab05",
+		},
+	        
+		{
+		   "collection" : "lab",
+		   "url" : "/lab/lab06/",
+		   "num" : "lab06",
+		},
+	        
 	    ]
 	},
 	
@@ -99,14 +129,62 @@ var DEBUGGING_ONLY = {
 	        
 		{
 		   "collection" : "lectures",
-		   "url" : "/lectures/no-lecture01/",
+		   "url" : "/lectures/lect04/",
+		   "num" : "lect04",
+		},
+	        
+		{
+		   "collection" : "lectures",
+		   "url" : "/lectures/lect05/",
+		   "num" : "lect05",
+		},
+	        
+		{
+		   "collection" : "lectures",
+		   "url" : "/lectures/lect06/",
+		   "num" : "lect06",
+		},
+	        
+		{
+		   "collection" : "lectures",
+		   "url" : "/lectures/lect07/",
+		   "num" : "lect07",
+		},
+	        
+		{
+		   "collection" : "lectures",
+		   "url" : "/lectures/lect08/",
+		   "num" : "lect08",
+		},
+	        
+		{
+		   "collection" : "lectures",
+		   "url" : "/lectures/lect09/",
+		   "num" : "lect09",
+		},
+	        
+		{
+		   "collection" : "lectures",
+		   "url" : "/lectures/lect10/",
+		   "num" : "lect10",
+		},
+	        
+		{
+		   "collection" : "lectures",
+		   "url" : "/lectures/lect10a/",
 		   "num" : "e01",
 		},
 	        
 		{
 		   "collection" : "lectures",
-		   "url" : "/lectures/no-lecture02/",
+		   "url" : "/lectures/lect10b/",
 		   "num" : "",
+		},
+	        
+		{
+		   "collection" : "lectures",
+		   "url" : "/lectures/lect11/",
+		   "num" : "lect11",
 		},
 	        
 		{
@@ -123,6 +201,24 @@ var DEBUGGING_ONLY = {
 	    "label" : "pa",
 	    "items" : [
 		
+		{
+		   "collection" : "pa",
+		   "url" : "/pa/pa01/",
+		   "num" : "pa01",
+		},
+	        
+		{
+		   "collection" : "pa",
+		   "url" : "/pa/pa02/",
+		   "num" : "pa02",
+		},
+	        
+		{
+		   "collection" : "pa",
+		   "url" : "/pa/pa03/",
+		   "num" : "pa03",
+		},
+	        
 	    ]
 	},
 	
@@ -156,6 +252,20 @@ var DEBUGGING_ONLY = {
 	    "name" : "LICENSE"
 	    "basename" : "LICENSE"
 	    "extname" : ""	    
+	},
+	
+	{
+	    "path" : "/backup_lab/instruction_perf.jpg",
+	    "name" : "instruction_perf.jpg"
+	    "basename" : "instruction_perf"
+	    "extname" : ".jpg"	    
+	},
+	
+	{
+	    "path" : "/backup_lab/lab06/Part2RuntimeBenchmarks.svg",
+	    "name" : "Part2RuntimeBenchmarks.svg"
+	    "basename" : "Part2RuntimeBenchmarks"
+	    "extname" : ".svg"	    
 	},
 	
 	{

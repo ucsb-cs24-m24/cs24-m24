@@ -1,0 +1,586 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- head.html; common header items for all layouts -->
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+
+<link rel="stylesheet" href="/w24/assets/css/main.css">
+  
+<script
+   src="https://code.jquery.com/jquery-3.3.1.min.js"
+   integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+   crossorigin="anonymous"></script>
+
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+<script src="//cdnjs.cloudflare.com/ajax/libs/mousetrap/1.4.6/mousetrap.min.js"></script>
+
+
+<script src="/w24/assets/js/site.js"></script>
+
+<script>
+var nav ={
+    
+    "offerings": {
+	"title" : "W24",
+	"url" : "/",
+	"baseurl" : "/w24",
+	"items" : [
+	    
+	    {
+		"title" : "W24-Home",
+		"url" : "/",
+		"baseurl" : "/w24",
+	    },
+	    
+	],
+    },
+    
+    
+    "offering_links": [
+	
+		{
+		    "title": "Assignments",		    
+		     "url": "/lab_list/", 		    
+		     "description": "Programming Assignments", 
+		    		    
+		},
+	
+		{
+		    "title": "Syllabus",		    
+		     "url": "/info/syllabus/", 		    
+		     "description": "Syllabus", 
+		    		    
+		},
+	
+		{
+		    "title": "Piazza",		    
+		     "url": "https://piazza.com/ucsb/winter2024/cmpsc24/resources", 		    
+		     "description": "Q&A Forum", 
+		    		    
+		},
+	
+		{
+		    "title": "Staff",		    
+		     "url": "/info/staff/", 		    
+		     "description": "Staff Profiles", 
+		    		    
+		},
+	
+		{
+		    "title": "Github",		    
+		    		    
+		    
+		    
+		    "dropdown" : [
+			
+			{
+			    "title": "ucsb-cs24-w24",		    
+			    "url": "https://github.com/ucsb-cs24-w24", 
+			    
+			},
+			
+		    ]
+		    		    
+		},
+	
+     
+    ],
+    
+        
+}
+;
+</script>
+
+
+
+
+
+
+    <!-- start custom head snippets -->
+
+<!-- insert favicons. use https://realfavicongenerator.net/ -->
+
+<!-- end custom head snippets -->
+    
+  <title> CS24 Winter 2024</title>
+  </head>
+  <body id="page-top">
+    <div class="container">
+    
+
+<script>
+  console.log("site.url=http://localhost:4000");
+  console.log("site.baseurl=/w24");
+  console.log("site.data.navigation.home.url=/");
+  console.log("site.data.navigation.home.baseurl=/");
+  console.log("home_url=/");
+  console.log("home_url_final=https://ucsb-cs24.github.io/");
+</script>
+
+
+
+<script>
+  console.log("offering_url=/");
+  console.log("offering_baseurl=/w24");
+  console.log("offering_url_final=/w24/");
+  console.log("offering_title=W24-Home");
+</script>
+
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+
+  <a class="navbar-brand" href="https://ucsb-cs24.github.io/">UCSB CS24</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+    <ul class="navbar-nav mr-auto"><li class="nav-item dropdown">
+  <a class="nav-link dropdown-toggle" href="#" id="main-dropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    Resources
+  </a>
+  <div class="dropdown-menu" aria-labelledby="main-dropdown"><a class="dropdown-item" href="https://ucsb-cs24.github.io/topic_list/">Topics</a><a class="dropdown-item" href="https://ucsb-cs24.github.io/resources_list/">Resources</a></div>
+</li><li class="nav-item">
+  <a class="nav-link" href="/w24/">
+    W24-Home
+  </a>
+</li>
+<li class="nav-item"><a class="nav-link" href="/w24/lab_list/"title="Programming Assignments"data-term="" >Assignments</a>
+
+</li><li class="nav-item"><a class="nav-link" href="/w24/info/syllabus/"title="Syllabus"data-term="" >Syllabus</a>
+
+</li><li class="nav-item"><a class="nav-link" href="https://piazza.com/ucsb/winter2024/cmpsc24/resources"title="Q&A Forum"data-term="" >Piazza</a>
+
+</li><li class="nav-item"><a class="nav-link" href="/w24/info/staff/"title="Staff Profiles"data-term="" >Staff</a>
+
+</li><li class="nav-item dropdown " data-term="">
+  <a class="nav-link dropdown-toggle" href="#" id="navbar-offering-specific-dropdown-Github" data-toggle="dropdown" aria-haspopup="true"
+     aria-expanded="false">Github</a>
+    <div class="dropdown-menu" aria-labelledby="navbar-offering-specific-dropdown-Github"><a class="dropdown-item" href="https://github.com/ucsb-cs24-w24"data-term="" ><i class='fab fa-github' aria-hidden='true'></i>&nbsp;ucsb-cs24-w24</a>
+
+</div>
+</li>
+
+
+</ul>
+  </div>
+</nav>
+
+
+    <div id="content"  class="ui-content">
+      
+      
+        <p class="topic-summary">Application of data structures to a movie dataset</p>
+      
+        
+          
+      
+      <h1 id="collaboration-policy">Collaboration policy</h1>
+<p>This assignment may be completed in pairs using the pair-programming style of developing code described in previous assignments.</p>
+
+<h1 id="introduction">Introduction</h1>
+
+<p>Please read the entire writeup before beginning the PA. In particular, take a look at part 3a to understand your requirements for a full score before attempting to implement a solution. You are graded on the running time efficiency of your solution.</p>
+
+<p>In this assignment, you will</p>
+<ul>
+  <li>Use a container data structure from the C++ Standard Template Library (STL) where possible and/or write your own data structure to store and query data.</li>
+  <li>Analyze the time and space complexity of your algorithms.</li>
+</ul>
+
+<h1 id="goal-of-this-assignment">Goal of this assignment</h1>
+
+<ul>
+  <li>Use data structures from the C++ STL (STL) to solve a problem on a large, real-world dataset efficiently.</li>
+  <li>Analyze the complexity of your algorithms using Big-O notation</li>
+  <li>Explore the tradeoffs between time and space complexity.</li>
+  <li>Organize your project’s code independently (not just filling in a template).</li>
+</ul>
+
+<p><em>Note: The goals above are very important in the industry and interviews!</em></p>
+
+<h1 id="getting-started">Getting Started</h1>
+
+<h2 id="starter-code">Starter code</h2>
+
+<h3 id="github-repository">GitHub repository</h3>
+
+<p>Refer to lab01 for instructions on how to set up a GitHub repository and 
+pull the starter code for this lab.
+Obtain the starter code from this repo: <a href="https://github.com/ucsb-cs24-w24/STARTER-lab06">https://github.com/ucsb-cs24-w24/STARTER-lab06</a></p>
+
+<h3 id="contents">Contents</h3>
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">main.cpp</code>: driver code to read in movies from input files</li>
+  <li><code class="language-plaintext highlighter-rouge">movies.h</code> and <code class="language-plaintext highlighter-rouge">movies.cpp</code>: empty files</li>
+  <li><code class="language-plaintext highlighter-rouge">utilities.h</code> and <code class="language-plaintext highlighter-rouge">utilities.cpp</code>: empty files</li>
+  <li><code class="language-plaintext highlighter-rouge">Makefile</code>: this file generates the executable <code class="language-plaintext highlighter-rouge">runMovies</code>, and please do not revise it</li>
+  <li><code class="language-plaintext highlighter-rouge">input_20_ordered.csv</code></li>
+  <li><code class="language-plaintext highlighter-rouge">input_20_random.csv</code></li>
+  <li><code class="language-plaintext highlighter-rouge">input_100_ordered.csv</code></li>
+  <li><code class="language-plaintext highlighter-rouge">input_100_random.csv</code></li>
+  <li><code class="language-plaintext highlighter-rouge">input_1000_ordered.csv</code></li>
+  <li><code class="language-plaintext highlighter-rouge">input_1000_random.csv</code></li>
+  <li><code class="language-plaintext highlighter-rouge">input_76920_ordered.csv</code></li>
+  <li><code class="language-plaintext highlighter-rouge">input_76920_random.csv</code></li>
+  <li><code class="language-plaintext highlighter-rouge">prefix_small.txt</code></li>
+  <li><code class="language-plaintext highlighter-rouge">prefix_medium.txt</code></li>
+  <li><code class="language-plaintext highlighter-rouge">prefix_large.txt</code></li>
+</ul>
+
+<p>You are given eight datasets in CSV files. Each CSV file:</p>
+<ul>
+  <li>has either 20, 100, 1000, 76920 entries</li>
+  <li>is either ordered in alphabetical order of movie name or ordered randomly</li>
+</ul>
+
+<p><strong>Example of alphabetical order</strong>
+Below is a list of movie names  and their ratings, ordered alphabetically by movie name</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ace ventura: when nature calls,6.1
+balto,7.1
+casino,7.8
+cutthroat island,5.7
+dracula: dead and loving it,5.7
+father of the bride part ii,5.7
+four rooms,6.5
+goldeneye,6.6
+grumpier old men,6.5
+heat,7.7
+jumanji,6.9
+money train,5.4
+nixon,7.1
+sabrina,6.2
+sense and sensibility,7.2
+sudden death,5.5
+the american president,6.5
+tom and huck,5.4
+toy story,7.7
+waiting to exhale,6.1
+</code></pre></div></div>
+
+<p><strong>Example of random order</strong></p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>toy story,7.7
+jumanji,6.9
+grumpier old men,6.5
+waiting to exhale,6.1
+father of the bride part ii,5.7
+heat,7.7
+sabrina,6.2
+tom and huck,5.4
+sudden death,5.5
+goldeneye,6.6
+the american president,6.5
+dracula: dead and loving it,5.7
+balto,7.1
+nixon,7.1
+cutthroat island,5.7
+casino,7.8
+sense and sensibility,7.2
+four rooms,6.5
+ace ventura: when nature calls,6.1
+money train,5.4
+</code></pre></div></div>
+
+<h2 id="files-to-complete">Files to complete</h2>
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">movies.cpp, movies.h</code>: these files should contain any abstractions that you need to define.
+    <ul>
+      <li>We strongly discourage implementing any data structure available in the C++ STL from scratch. However, you are encouraged to think creatively about improving the running time efficiency of your solution and implement your own data structure if those provided in the STL are insufficient to meet your needs.</li>
+    </ul>
+  </li>
+  <li><code class="language-plaintext highlighter-rouge">main.cpp</code>: this file should read in the movies from input files and produce the expected output.</li>
+  <li>(Optional) <code class="language-plaintext highlighter-rouge">utilities.h</code> and <code class="language-plaintext highlighter-rouge">utilities.cpp</code>: you can place other helper functions, structs, and classes in these files.</li>
+</ul>
+
+<h2 id="problem-statement">Problem statement</h2>
+<p>This assignment has three parts. You should <strong>separate your algorithm for part 1 from your algorithm for part 2</strong> because in part 3, you need to analyze the running time complexity of your solution to <strong>part 2 only</strong>.</p>
+<ul>
+  <li>In part 1, your task is to print all movie names and ratings (from the CSV file) in alphabetical order of movie name.</li>
+  <li>In part 2, you are given <code class="language-plaintext highlighter-rouge">m</code> prefixes of movie names. Your task is to find the movies whose names start with each prefix and find the highest-rated movie for each prefix.</li>
+  <li>In part 3, you will analyze the time and space complexity of your solution for part 2.</li>
+</ul>
+
+<h2 id="command-line-arguments">Command-line arguments</h2>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>./runMovies movieFilename prefixFilename
+</code></pre></div></div>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">movieFilename</code> represents the input file containing movies and ratings (as described before).</li>
+  <li><code class="language-plaintext highlighter-rouge">prefixFilename</code> is an optional parameter which is the name of a .txt file that contains a list of prefixes, see <code class="language-plaintext highlighter-rouge">prefix_medium.txt</code> as an example.
+    <ul>
+      <li>There may be up to <code class="language-plaintext highlighter-rouge">m</code> such prefixes in the file.</li>
+      <li>Prefixes may include whitespace, see <code class="language-plaintext highlighter-rouge">prefix_medium.txt</code> for examples. Each line in the file corresponds to exactly one prefix.</li>
+    </ul>
+  </li>
+</ul>
+
+<h1 id="part-1-print-all-movie-names-and-ratings">Part 1: Print all movie names and ratings</h1>
+<p>Your program should print out all the movies in <strong>alphabetical order of movie name</strong>. You may use <strong>only one data structure</strong> of your choice to store the data from the CSV file. When testing this part, do not include the prefix file as a command-line argument!</p>
+
+<p><strong>Example with no prefixes</strong></p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>./runMovies input_20_random.csv 
+</code></pre></div></div>
+<p>This should produce the output</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ace ventura: when nature calls, 6.1
+balto, 7.1
+casino, 7.8
+cutthroat island, 5.7
+dracula: dead and loving it, 5.7
+father of the bride part ii, 5.7
+four rooms, 6.5
+goldeneye, 6.6
+grumpier old men, 6.5
+heat, 7.7
+jumanji, 6.9
+money train, 5.4
+nixon, 7.1
+sabrina, 6.2
+sense and sensibility, 7.2
+sudden death, 5.5
+the american president, 6.5
+tom and huck, 5.4
+toy story, 7.7
+waiting to exhale, 6.1
+</code></pre></div></div>
+
+<h2 id="part-2-find-movies-based-on-prefixes">Part 2: Find movies based on prefixes</h2>
+<p>In Part 2, the goal is to search for movies based on their prefixes. This involves finding movies whose titles begin with a particular set of letters or words. The search results will be limited to movies that match the specified prefix criteria.</p>
+
+<p>In this case, your program will take an extra command-line argument that specifies the name of a second file containing one or more prefixes.
+Then for each prefix, your program should:</p>
+<ul>
+  <li>Find the movies whose names start with that prefix.</li>
+  <li>Find the highest-rated movie for that prefix.</li>
+</ul>
+
+<p>You may use additional data structures from the C++ STL to help you solve this part of the assignment, or you may write your own structure.</p>
+
+<h3 id="part-2a-all-movies-starting-with-a-prefix">Part 2a: All movies starting with a prefix</h3>
+<p>First, for each prefix, your program should print out all the movies whose names start with that prefix in <strong>decreasing order of rating</strong>. If multiple movies have the same rating, print them in alphabetical order of movie name. For example, print <code class="language-plaintext highlighter-rouge">the american president, 6.5</code> before <code class="language-plaintext highlighter-rouge">the confessional, 6.5</code>. If no movie names start with that prefix, then print</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>No movies found with prefix &lt;prefix_value&gt;
+</code></pre></div></div>
+
+<h3 id="part-2b-highest-rated-movie-for-a-prefix">Part 2b: Highest-rated movie for a prefix</h3>
+<p>Second, for each prefix, your program should print the <strong>highest rated</strong> movie whose name starts with that prefix. If there is a tie for the highest-rated movie, then use the movie whose name comes first in alphabetical order.</p>
+
+<h3 id="examples">Examples</h3>
+<p><strong>Example with three prefixes and multiple movies with the same rating</strong></p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>./runMovies input_100_random.csv prefix_small.txt
+</code></pre></div></div>
+<p>This should produce the following output:</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>toy story, 7.7
+to die for, 6.7
+tom and huck, 5.4
+
+the usual suspects, 8.1
+the city of lost children, 7.6
+the postman, 7.6
+the white balloon, 7.5
+the journey of august king, 6.7
+things to do in denver when you're dead, 6.7
+the american president, 6.5
+the confessional, 6.5
+the crossing guard, 6.1
+the indian in the cupboard, 5.9
+the juror, 5.5
+the big green, 5.2
+
+wings of courage, 6.8
+white squall, 6.3
+waiting to exhale, 6.1
+when night is falling, 5.9
+
+Best movie with prefix to is: toy story with rating 7.7
+Best movie with prefix th is: the usual suspects with rating 8.1
+Best movie with prefix w is: wings of courage with rating 6.8
+</code></pre></div></div>
+
+<p><strong>Another example of multiple movies with the same rating</strong>
+<em>let prefix.txt be a file that contains the prefix “be”</em></p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>./runMovies input_1000_random.csv prefix.txt
+</code></pre></div></div>
+<p>should produce the output:</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>before sunrise, 7.7
+before the rain, 7.7
+beauty and the beast, 7.5
+belle de jour, 7.3
+beautiful girls, 6.6
+beyond rangoon, 6.4
+beat the devil, 6.2
+before and after, 5.8
+beverly hills cop iii, 5.5
+bed of roses, 5.1
+being human, 5.0
+beyond bedlam, 4.0
+
+Best movie with prefix be is: before sunrise with rating 7.7
+</code></pre></div></div>
+
+<p><strong>Example with no movies for a given prefix</strong>
+*Let prefix.txt be a file that contains the prefixes: “t” and “xyz”</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>./runMovies input_100_random.csv prefix.txt
+</code></pre></div></div>
+<p>should produce the output</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>the usual suspects, 8.1
+toy story, 7.7
+the city of lost children, 7.6
+the postman, 7.6
+the white balloon, 7.5
+twelve monkeys, 7.4
+the journey of august king, 6.7
+things to do in denver when you're dead, 6.7
+to die for, 6.7
+the american president, 6.5
+the confessional, 6.5
+the crossing guard, 6.1
+the indian in the cupboard, 5.9
+the juror, 5.5
+tom and huck, 5.4
+two bits, 5.4
+the big green, 5.2
+two if by sea, 4.5
+
+No movies found with prefix xyz
+
+Best movie with prefix t is: the usual suspects with rating 8.1
+</code></pre></div></div>
+
+<h2 id="part-3-analyze-the-time-and-space-complexity-of-your-algorithm-from-part-2">Part 3: Analyze the time and space complexity of your algorithm from part 2</h2>
+<p>Assume that</p>
+<ul>
+  <li>there are <code class="language-plaintext highlighter-rouge">n</code> movies in the dataset.</li>
+  <li>there are <code class="language-plaintext highlighter-rouge">m</code> prefixes specified in a given run of your program.</li>
+  <li>at most <code class="language-plaintext highlighter-rouge">k</code> movies begin with each prefix.</li>
+  <li><code class="language-plaintext highlighter-rouge">l</code> is the maximum number of characters in a moview name</li>
+</ul>
+
+<h3 id="part-3a-analyze-time-complexity">Part 3a: Analyze time complexity</h3>
+<p>Analyze the worst-case Big-O time complexity of your algorithm from part 2 of the assignment. You may assume that</p>
+<ul>
+  <li>all <code class="language-plaintext highlighter-rouge">n</code> movies are already stored in your data structure.</li>
+  <li>all <code class="language-plaintext highlighter-rouge">m</code> prefixes are already stored in an array.</li>
+</ul>
+
+<p>First, provide the time complexity analysis as a <strong>commented block</strong> right after your <code class="language-plaintext highlighter-rouge">main()</code> function in <code class="language-plaintext highlighter-rouge">main.cpp</code>. Note that</p>
+
+<ul>
+  <li>select the parameters that could affect the running time complexity of your algorithm among <code class="language-plaintext highlighter-rouge">n</code>, <code class="language-plaintext highlighter-rouge">m</code>, <code class="language-plaintext highlighter-rouge">k</code>, and <code class="language-plaintext highlighter-rouge">l</code>.</li>
+  <li>express your final Big-O running time in terms of the relevant parameters.</li>
+  <li>your final answer will depend on your data structure and algorithm choices.</li>
+</ul>
+
+<p>Second, report on <strong>specific running times achieved by your solution</strong> on <em>each</em> random input file: <code class="language-plaintext highlighter-rouge">input_20_random.csv</code>, <code class="language-plaintext highlighter-rouge">input_100_random.csv</code>, <code class="language-plaintext highlighter-rouge">input_1000_random.csv</code>, and <code class="language-plaintext highlighter-rouge">input_76920_random.csv</code>, using <code class="language-plaintext highlighter-rouge">prefix_large.txt</code> as the second parameter.</p>
+
+<p>. Write down the number of milliseconds it takes for your solution to run on each input. Only report on the randomized datasets.</p>
+
+<ul>
+  <li>Be sure to check that the trend in your proposed time complexity from (1) somewhat matches with trends in your runtimes from (2)</li>
+</ul>
+
+<p>You will be graded for the efficiency of your algorithms but also the clarity and correctness of your analysis.</p>
+
+<p>Here are runtime plots of three different types of solutions. These runtimes were gathered on the csil machines on the input files <code class="language-plaintext highlighter-rouge">input_76920_random.csv</code>, recording the running time to compute the result for the first <code class="language-plaintext highlighter-rouge">m</code> prefixes in <code class="language-plaintext highlighter-rouge">prefix_large.txt</code> to get each data point in the plot. If you want to get a proper runtime comparison, please run your code on csil.</p>
+<ul>
+  <li>
+    <p><strong>Full credit will be given to solutions with an efficiency similar to <code class="language-plaintext highlighter-rouge">Mystery Implementation #4</code></strong></p>
+  </li>
+  <li>
+    <p>The students who achieve the top 5 runtimes will receive <strong>extra credit</strong></p>
+  </li>
+</ul>
+
+<p><img src="instruction_perf.jpg" alt="Part2" style="display:block; margin: 5px 10px 10px 10px;" /></p>
+
+<h3 id="part-3b-analyze-space-complexity">Part 3b: Analyze space complexity</h3>
+<p>Analyze the worst case Big-O space complexity of your algorithm from part 2 of the assignment. You may assume that</p>
+<ul>
+  <li>all <code class="language-plaintext highlighter-rouge">n</code> movies are already stored in your data structure.</li>
+  <li>all <code class="language-plaintext highlighter-rouge">m</code> prefixes are already stored in an array.</li>
+</ul>
+
+<p>You must provide the space complexity analysis as a <strong>commented block</strong> under your time complexity analysis. Note that</p>
+<ul>
+  <li>select the parameters that could affect the space complexity of your algorithm among <code class="language-plaintext highlighter-rouge">n</code>, <code class="language-plaintext highlighter-rouge">m</code>, <code class="language-plaintext highlighter-rouge">k</code>, and <code class="language-plaintext highlighter-rouge">l</code>.</li>
+  <li>express your final Big-O space complexity in terms of the relevant parameters.</li>
+  <li>your final answer will depend on your data structure and algorithm choices.</li>
+</ul>
+
+<p>You will be graded for the efficiency of your algorithms but also the clarity and correctness of your analysis. However, we are not giving you a target Big-O space complexity.</p>
+
+<h3 id="part-3c-explore-tradeoffs-between-timespace-complexity">Part 3c: Explore tradeoffs between time/space complexity</h3>
+<p>Briefly state how you designed your algorithm from part 2 of the assignment for the task at hand. More specifically, answer this question:</p>
+<ul>
+  <li>Did you design your algorithm for a low time complexity, a low space complexity, or both? What were your target complexities?</li>
+</ul>
+
+<p>Based on your answer to the question above, answer one of the following:</p>
+<ol>
+  <li>If you designed your algorithm for a low time complexity,
+    <ul>
+      <li>Were you able to achieve a low space complexity as well?</li>
+      <li>Why or why not?</li>
+    </ul>
+  </li>
+  <li>If you designed your algorithm for a low space complexity,
+    <ul>
+      <li>Were you able to achieve a low time complexity as well?</li>
+      <li>Why or why not?</li>
+    </ul>
+  </li>
+  <li>If you designed your algorithm for both,
+    <ul>
+      <li>Were you able to achieve both?</li>
+      <li>Why or why not?</li>
+      <li>Which was harder to achieve: low time complexity or low space complexity?</li>
+    </ul>
+  </li>
+</ol>
+
+<p>You must provide these answers as a <strong>commented block</strong> under your space complexity analysis.</p>
+
+<p>You will be graded for the clarity and thoughtfulness of your analysis.</p>
+
+<h2 id="requirements">Requirements</h2>
+<p>For this programming assignment, you will have a lot of flexibility on your implementation (which just means we won’t be providing a code framework for you to fill in). However, there are a few requirements that you need to keep in mind as you think about your solution:</p>
+
+<ul>
+  <li>You must make appropriate use of data structures from the STL where possible, and implement your own only when needed. For example, if you need a bst, just use the implementation provided in the STL instead of implementing it from scratch.</li>
+  <li>First, try to come up with a correct implementation, then think of how to optimize it.</li>
+  <li>Your code should be readable</li>
+  <li>Your classes should define clear interfaces and hide implementation details as much as possible.</li>
+  <li>You must include your space and time complexity analyses (part 3) in <code class="language-plaintext highlighter-rouge">main.cpp</code>, as a commented block under the <code class="language-plaintext highlighter-rouge">main()</code> function</li>
+</ul>
+</div><!-- content -->
+    <!-- start custom footer snippets -->
+
+<!-- end custom footer snippets -->
+    
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light footer-navbar ">
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#footer-navbar-NavAltMarkup" aria-controls="footer-navbar-NavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="footer-navbar-NavAltMarkup">
+    <div class="navbar-nav">
+      <a class="nav-item nav-link" href="https://github.com/ucsb-cs24/w24">github site</a>
+      <a class="nav-item nav-link" href="https://github.com/ucsb-cs24/w24/edit/master/backup_lab/lab06.md">edit this page on github</a>
+      <span class="nav-item travis-ci-status "><a class="nav-link" href="https://travis-ci.org/ucsb-cs24/w24">
+	  <img src="https://travis-ci.org/ucsb-cs24/w24.svg?branch=master" alt="Build Status">
+	</a>
+      </span>
+    </div>
+  </div>
+</nav>
+
+    </div><!-- container -->
+  </body>
+</html>

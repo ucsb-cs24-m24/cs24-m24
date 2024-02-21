@@ -1,6 +1,6 @@
 ---
 lecture_date: 2024-02-21
-num: "lect10"
+num: "lect11"
 desc: "Week 7: Hashtables, C++ unordered_set and unordered_map ADT"
 ready: true
 pdfurl: /lectures/CS24_Lecture11.pdf
