@@ -16,5 +16,6 @@ annotatedready: false
 * Size of graphs, dense vs. sparse graphs
 * Representation: adjacency matrix vs. adjacency list (space complexity)
 * Connections to implementing a neural network (topic for lab06)
+* Lab07 starter code for in class activity: <https://github.com/ucsb-cs24-w24/STARTER-lab07>
 
 
