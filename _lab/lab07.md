@@ -222,6 +222,7 @@ Why do we use DFT for back-propagation? There are a couple of reasons:
 
 
 ![NeuralNetwork Example](assets/generic_neural_net.svg)
+
 Here is an example, referring back to our original neural network: suppose we are currently at node 3
 
 1. Iterate through all your neighbors. For each neighbor:
@@ -292,6 +293,6 @@ Here are some great resources to help you out. I would say that statquest has gr
 - 3Blue1Brown - <https://youtu.be/aircAruvnKk?si=KZt2AsbD7URc58-L>
 
 ### Credits
-Thanks to the UCSB CS24 teaching staff for their feedback on this assignment: Joseph Ng, Nawel Alioua, Shinda Huang, Xinlei Feng, Yaoyi Bai, Ally Chu, Sanjana Shankar, Torin Schlunk, Mehak Dhaliwal.
+Thanks to the UCSB CS24 teaching staff for their feedback on this assignment: Joseph Ng, Nawel Alioua, Shinda Huang, Xinlei Feng, Yaoyi Bai, Ally Chu, Sanjana Shankar, Torin Schlunk, Mehak Dhaliwal, and Diba Mirza.
 
-CC BY-NC-SA 2.0 <https://creativecommons.org/licenses/by-nc-sa/2.0/>, created by Zackery Glazewski, UCSB CS ULA, Feb 2024.
+[CC BY-NC-SA 2.0](https://creativecommons.org/licenses/by-nc-sa/2.0/), Zackery Glazewski, UCSB CS ULA, Feb 2024.
