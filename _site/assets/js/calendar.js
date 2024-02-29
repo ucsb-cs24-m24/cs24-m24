@@ -268,7 +268,7 @@ var dates = [{
     
         
     "ready" : "true",
-    "desc" : "Breadth First Search",
+    "desc" : "Week 8: Graph serach and Breadth First Traversal",
     
       "date" : "2024-02-28",
     
