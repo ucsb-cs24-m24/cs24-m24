@@ -5,6 +5,7 @@ desc: "Application of graphs to machine learning"
 assigned: 2024-02-28 9:00:00.00-8
 due: 2024-03-12 23:59:59.00-8
 ---
+{% include mathjax.html %}
 
 ### Lab Goals
 This lab is designed to offer a real-life application of graphs for a very relevant field of computer science: machine learning, by implementing the underlying graph algorithms of a neural network. 

@@ -195,7 +195,26 @@ var nav ={
 
 
           </table>
-          <h3 id="lab-goals">Lab Goals</h3>
+          <script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    jax: ["input/TeX","input/MathML","output/SVG", "output/CommonHTML"],
+extensions: ["tex2jax.js","mml2jax.js","MathMenu.js","MathZoom.js", "CHTML-preview.js"],
+TeX: {
+  extensions: ["AMSmath.js","AMSsymbols.js","noErrors.js","noUndefined.js"]
+},
+  tex2jax: {
+      inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+      displayMath: [ ['$$','$$'], ["\\[","\\]"] ],
+      processEscapes: true,
+      processEnvironments: true
+    },
+    "HTML-CSS": { availableFonts: ["TeX"] }
+  });
+</script>
+
+<script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML-full"></script>
+
+<h3 id="lab-goals">Lab Goals</h3>
 <p>This lab is designed to offer a real-life application of graphs for a very relevant field of computer science: machine learning, by implementing the underlying graph algorithms of a neural network.</p>
 
 <h6 id="what-this-lab-is-not-about">What this Lab IS NOT about</h6>
