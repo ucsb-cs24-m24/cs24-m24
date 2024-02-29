@@ -72,6 +72,16 @@ var dates = [{
     
 }
 ,{
+    "type" : "lab",
+    "url" :  "/w24/lab/lab07/",	   
+    "num" : "lab07",
+    "assigned" : "2024-02-28 09:00:00 -0800",
+    "due" : "2024-03-12 23:59:59 -0800",    
+    "ready" : "true",
+    "desc" : "Application of graphs to machine learning",
+    
+}
+,{
     "type" : "lectures",
     "url" :  "/w24/lectures/lect01/",	   
     "num" : "lect01",
@@ -150,7 +160,7 @@ var dates = [{
     
         
     "ready" : "true",
-    "desc" : "Week4: Running time analysis",
+    "desc" : "Week 4: Running time analysis",
     
       "date" : "2024-01-29",
     
@@ -237,6 +247,30 @@ var dates = [{
     "desc" : "Week 7: Hashtables, C++ unordered_set and unordered_map ADT",
     
       "date" : "2024-02-21",
+    
+}
+,{
+    "type" : "lectures",
+    "url" :  "/w24/lectures/lect12/",	   
+    "num" : "lect12",
+    
+        
+    "ready" : "true",
+    "desc" : "Week 8: Graph representation with applications to Neural Networks",
+    
+      "date" : "2024-02-26",
+    
+}
+,{
+    "type" : "lectures",
+    "url" :  "/w24/lectures/lect13/",	   
+    "num" : "lect13",
+    
+        
+    "ready" : "true",
+    "desc" : "Breadth First Search",
+    
+      "date" : "2024-02-28",
     
 }
 ,{

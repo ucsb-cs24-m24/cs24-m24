@@ -1,0 +1,580 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- head.html; common header items for all layouts -->
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+
+<link rel="stylesheet" href="/w24/assets/css/main.css">
+  
+<script
+   src="https://code.jquery.com/jquery-3.3.1.min.js"
+   integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+   crossorigin="anonymous"></script>
+
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+<script src="//cdnjs.cloudflare.com/ajax/libs/mousetrap/1.4.6/mousetrap.min.js"></script>
+
+
+<script src="/w24/assets/js/site.js"></script>
+
+<script>
+var nav ={
+    
+    "offerings": {
+	"title" : "W24",
+	"url" : "/",
+	"baseurl" : "/w24",
+	"items" : [
+	    
+	    {
+		"title" : "W24-Home",
+		"url" : "/",
+		"baseurl" : "/w24",
+	    },
+	    
+	],
+    },
+    
+    
+    "offering_links": [
+	
+		{
+		    "title": "Assignments",		    
+		     "url": "/lab_list/", 		    
+		     "description": "Programming Assignments", 
+		    		    
+		},
+	
+		{
+		    "title": "Syllabus",		    
+		     "url": "/info/syllabus/", 		    
+		     "description": "Syllabus", 
+		    		    
+		},
+	
+		{
+		    "title": "Piazza",		    
+		     "url": "https://piazza.com/ucsb/winter2024/cmpsc24/resources", 		    
+		     "description": "Q&A Forum", 
+		    		    
+		},
+	
+		{
+		    "title": "Staff",		    
+		     "url": "/info/staff/", 		    
+		     "description": "Staff Profiles", 
+		    		    
+		},
+	
+		{
+		    "title": "Github",		    
+		    		    
+		    
+		    
+		    "dropdown" : [
+			
+			{
+			    "title": "ucsb-cs24-w24",		    
+			    "url": "https://github.com/ucsb-cs24-w24", 
+			    
+			},
+			
+		    ]
+		    		    
+		},
+	
+     
+    ],
+    
+        
+}
+;
+</script>
+
+
+
+
+
+
+    <title>lab07 - Application of graphs to machine learning - </title>
+  </head>
+    <body id="page-top">
+      <div class="container">
+      
+
+<script>
+  console.log("site.url=http://localhost:4000");
+  console.log("site.baseurl=/w24");
+  console.log("site.data.navigation.home.url=/");
+  console.log("site.data.navigation.home.baseurl=/");
+  console.log("home_url=/");
+  console.log("home_url_final=https://ucsb-cs24.github.io/");
+</script>
+
+
+
+<script>
+  console.log("offering_url=/");
+  console.log("offering_baseurl=/w24");
+  console.log("offering_url_final=/w24/");
+  console.log("offering_title=W24-Home");
+</script>
+
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+
+  <a class="navbar-brand" href="https://ucsb-cs24.github.io/">UCSB CS24</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+    <ul class="navbar-nav mr-auto"><li class="nav-item dropdown">
+  <a class="nav-link dropdown-toggle" href="#" id="main-dropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    Resources
+  </a>
+  <div class="dropdown-menu" aria-labelledby="main-dropdown"><a class="dropdown-item" href="https://ucsb-cs24.github.io/topic_list/">Topics</a><a class="dropdown-item" href="https://ucsb-cs24.github.io/resources_list/">Resources</a></div>
+</li><li class="nav-item">
+  <a class="nav-link" href="/w24/">
+    W24-Home
+  </a>
+</li>
+<li class="nav-item"><a class="nav-link" href="/w24/lab_list/"title="Programming Assignments"data-term="" >Assignments</a>
+
+</li><li class="nav-item"><a class="nav-link" href="/w24/info/syllabus/"title="Syllabus"data-term="" >Syllabus</a>
+
+</li><li class="nav-item"><a class="nav-link" href="https://piazza.com/ucsb/winter2024/cmpsc24/resources"title="Q&A Forum"data-term="" >Piazza</a>
+
+</li><li class="nav-item"><a class="nav-link" href="/w24/info/staff/"title="Staff Profiles"data-term="" >Staff</a>
+
+</li><li class="nav-item dropdown " data-term="">
+  <a class="nav-link dropdown-toggle" href="#" id="navbar-offering-specific-dropdown-Github" data-toggle="dropdown" aria-haspopup="true"
+     aria-expanded="false">Github</a>
+    <div class="dropdown-menu" aria-labelledby="navbar-offering-specific-dropdown-Github"><a class="dropdown-item" href="https://github.com/ucsb-cs24-w24"data-term="" ><i class='fab fa-github' aria-hidden='true'></i>&nbsp;ucsb-cs24-w24</a>
+
+</div>
+</li>
+
+
+</ul>
+  </div>
+</nav>
+
+
+        <div id="content"  class="ui-content">
+          <h1>lab07 : Application of graphs to machine learning</h1>
+          <table class="asn_table">
+            <!-- asn_table_header_row.html -->
+<tr>
+  <th class="asn_num"  >num</th>
+  <th class="asn_ready">ready?</th>
+  <th class="asn_desc" >description</th>
+  <th class="asn_date" >assigned</th>
+  <th class="asn_date" >due</th>
+</tr>
+
+
+            
+            <tr class="ready" >
+  <td class="asn_num"  ><a href="/w24/lab/lab07/" data-ajax="false">lab07</a></td>
+  <td class="asn_ready">true</td>
+  <td class="asn_desc" >Application of graphs to machine learning</td>
+  <td class="asn_date" >Wed 02/28 09:00AM</td> 
+  <td class="asn_date" >Tue 03/12 11:59PM</td>
+</tr>
+
+
+
+          </table>
+          <h3 id="lab-goals">Lab Goals</h3>
+<p>This lab is designed to offer a real-life application of graphs for a very relevant field of computer science: machine learning, by implementing the underlying graph algorithms of a neural network.</p>
+
+<h6 id="what-this-lab-is-not-about">What this Lab IS NOT about</h6>
+<ul>
+  <li>
+    <p>You will <strong>NOT</strong> be expected to learn and understand the theoretical inner workings of a neural network.</p>
+  </li>
+  <li>
+    <p>You will <strong>NOT</strong> need to implement everything in the neural network - the heavy lifting is done for you.</p>
+  </li>
+  <li>
+    <p>You will <strong>NOT</strong> need to worry about the architecture and design of the neural network.</p>
+  </li>
+</ul>
+
+<h6 id="what-this-lab-is-about">What this Lab IS about</h6>
+<ul>
+  <li>Applying graph algorithms to a graph data structure.</li>
+  <li>Learning and understanding the underlying graph structure of a neural network.</li>
+  <li>Implementing the basic class methods.</li>
+</ul>
+
+<h3 id="collaboration-policy">Collaboration Policy</h3>
+<p>You may work on this programming assignment with a partner. Make sure you add both your names at the top of main.cpp along with your perm numbers. Partnering is highly encouraged: working in groups is a highly beneficial skill to have moving forward as well as in the industry.</p>
+
+<h3 id="academic-integrity">Academic Integrity</h3>
+<p>All work submitted for this programming assignment must be your own, or from your partner.</p>
+
+<h3 id="tips">Tips</h3>
+<ul>
+  <li>Don’t be intimidated by the nature of the lab: focus on what you know about graphs and class structure and apply your skills as necessary. The neural network is meant to expose you to upper-division concepts earlier on and hopefully excite you for future classes.</li>
+  <li>Start early and ask questions! It may take some time to understand what we are requiring you to do. This project is larger than normal. There is a lot of code involved, but try to focus on the subset of code you are required to implement.</li>
+  <li><strong>The purpose of this lab is to write algorithms to traverse graphs (Breadth-First and DepthFirst) in an applied way. Please read the specifications closely to see which functions require which algorithm. We have done the heavy lifting for you in terms of the neural network implementation and abstracted the math away behind visit functions. So, your plan should be to write a BFT and DFT algorithm and decide where to place these visit functions within them. First and foremost, this is a Graph centered lab in the context of neural networks, not a neural network-centered lab.</strong></li>
+</ul>
+
+<h3 id="project-structure">Project Structure</h3>
+<p>The files you will work in are <code class="language-plaintext highlighter-rouge">NeuralNetwork.cpp</code> and <code class="language-plaintext highlighter-rouge">Graph.cpp</code>.
+<code class="language-plaintext highlighter-rouge">Graph.cpp/hpp</code> contains the following classes:</p>
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">NodeInfo</code>: contains information of a node.</li>
+  <li><code class="language-plaintext highlighter-rouge">Connection</code>: contains information about a connection between two nodes.</li>
+  <li><code class="language-plaintext highlighter-rouge">Graph</code>: contains the base graph structure you learned about in class, using an adjacency list.</li>
+</ul>
+
+<p><code class="language-plaintext highlighter-rouge">NeuralNetwork.cpp/hpp</code> contains the following class:</p>
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">NeuralNetwork</code>: Inherits the graph structure and exposes other neural network methods.</li>
+</ul>
+
+<p>Other important classes/files that are part of the project are:</p>
+
+<ul>
+  <li>
+    <p><code class="language-plaintext highlighter-rouge">DataLoader</code> contains an implementation for an object that contains a dataset and is used to send data into the neural network.</p>
+  </li>
+  <li>
+    <p><code class="language-plaintext highlighter-rouge">utility</code> contains miscellaneous functions to aid the neural network.</p>
+  </li>
+</ul>
+
+<h6 id="graph-structure">Graph Structure</h6>
+<p>This particular graph structure maintains an adjacency list. The adjacency list uses <strong>integer identifiers</strong> to refer to each NodeInfo object. So, there is a <code class="language-plaintext highlighter-rouge">std::vector&lt;NodeInfo&gt; nodes</code> member variable which maps an identifier to its corresponding NodeInfo. The adjacency list is of type: <code class="language-plaintext highlighter-rouge">std::vector&lt;std::unordered_map&lt;int, Connection&gt;&gt;</code>, that is, a vector of hashmaps.</p>
+
+<h3 id="neuralnetwork-structure">NeuralNetwork Structure</h3>
+<p>This class inherits from the graph class. You have not learned what this means, but for now, it means you can access graph members within the NeuralNetwork class. This is because a NeuralNetwork is a specific type of graph, much like how a binary tree is a type of graph.</p>
+
+<p>A neural network is a specific type of graph, just like a binary tree is a type of graph. Here are the specifications of the neural network structure:</p>
+
+<ul>
+  <li>The Neural Network consists of “layers” which collectively partition the graph’s nodes. Every node is part of a layer, and layers may not share the same node. Layers are sequential.</li>
+  <li>There is at least one input layer and one output layer. Every other layer is a “hidden” layer.</li>
+  <li>The layers are ordered such that the input layer is first, and the output layer is last, each hidden layer specifically has a predecessor layer and a successor layer.</li>
+  <li>Every node in one layer has an outgoing connection to every node in the successor layer. A node may never have an outgoing connection to a layer not in the successor layer.</li>
+  <li>Every node can be “activated” with an activation function, which transforms the value held within the node.</li>
+  <li>Nodes in the input layer may not have incoming connections. Nodes in the output layer may not have outgoing connections.</li>
+  <li>Every connection is weighted.</li>
+  <li>Every node, except for nodes in the input layer, contains a term called the “bias”.</li>
+</ul>
+
+<p>Here is a diagram which outlines the structure of a neural network with three layers:
+<img src="assets/generic_neural_net.svg" alt="NeuralNetwork Example" /></p>
+
+<p>The purpose of a neural network is to find a pattern of some training dataset in order to make accurate predictions on new, unseen data. In the image above, each $w_i$ and $b_i$ represent something called a weight and bias, respectively.</p>
+
+<h2 id="step-by-step-instructions">Step by Step Instructions</h2>
+<h4 id="step-0-create-a-git-repo-and-get-the-starter-code">Step 0: Create a Git Repo and get the starter code</h4>
+<p>Refer to lab01 for instructions on how to set up a GitHub repository and pull the starter code for this lab. Here is the link for this lab’s starter code: <strong>TBD - Need to insert link to starter code</strong></p>
+
+<h4 id="step-1-run-the-executable">Step 1: Run the executable</h4>
+<p>Review the Makefile provided and look on top of each file to understand how the code is organized. If you are having trouble, take a look at this Makefile tutorial guide: <a href="https://zackglazewski.github.io/UCSBCS24-MakefileIntroduction/">https://zackglazewski.github.io/UCSBCS24-MakefileIntroduction/</a></p>
+
+<p>We provided a simple test suite in <code class="language-plaintext highlighter-rouge">test_neuralnet.cpp</code>. For now, running <code class="language-plaintext highlighter-rouge">./test_neuralnet</code> will fail, this is because some important functions have not been initialized yet. Once you implement steps 2 and 3, try playing around with <code class="language-plaintext highlighter-rouge">main.cpp</code> which will load and test the accuracy of a pretrained neural network model.</p>
+
+<p>After compiling the code, run <code class="language-plaintext highlighter-rouge">./test_neuralnet 4</code>.
+You should see the following output:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>test_structure
+Attempting to update node with id: 0 but node does not exist
+Attempting to update node with id: 1 but node does not exist
+Attempting to update node with id: 2 but node does not exist
+Attempting to update node with id: 3 but node does not exist
+Attempting to update node with id: 4 but node does not exist
+Attempting to update node with id: 5 but node does not exist
+Attempting to update node with id: 6 but node does not exist
+Attempting to update node with id: 7 but node does not exist
+Attempting to update node with id: 8 but node does not exist
+Attempting to update node with id: 9 but node does not exist
+Attempting to update node with id: 10 but node does not exist
+Attempting to update node with id: 11 but node does not exist
+Attempting to update connection between 0 and 9 with weight -1.40287 but 0 does not exist
+</code></pre></div></div>
+
+<h4 id="step-2-implement-getters-and-setters">Step 2: Implement Getters and Setters</h4>
+<p>Your first step is implementing the getters and setters for the <code class="language-plaintext highlighter-rouge">Graph</code> and <code class="language-plaintext highlighter-rouge">NeuralNetwork</code> classes.</p>
+
+<p>The following getters and setters need to be completed:</p>
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">void NeuralNetwork::eval()</code></li>
+  <li><code class="language-plaintext highlighter-rouge">void NeuralNetwork::train()</code></li>
+  <li><code class="language-plaintext highlighter-rouge">void NeuralNetwork::setLearningRate(double lr)</code></li>
+  <li><code class="language-plaintext highlighter-rouge">void NeuralNetwork::setInputNodeIds(std::vector&lt;int&gt; inputNodeIds)</code></li>
+  <li><code class="language-plaintext highlighter-rouge">void NeuralNetwork::setOutputNodeIds(std::vector&lt;int&gt; outputNodeIds)</code></li>
+  <li><code class="language-plaintext highlighter-rouge">std::vector&lt;int&gt; NeuralNetwork::getInputNodeIds() const</code></li>
+  <li><code class="language-plaintext highlighter-rouge">std::vector&lt;int&gt; NeuralNetwork::getOutputNodeIds() const</code></li>
+</ul>
+
+<p>Despite the name <code class="language-plaintext highlighter-rouge">NeuralNetwork::eval()</code> and <code class="language-plaintext highlighter-rouge">NeuralNetwork::train()</code>, these functions actually work to set the <code class="language-plaintext highlighter-rouge">evaluating</code> member in <code class="language-plaintext highlighter-rouge">NeuralNetwork</code>. When <code class="language-plaintext highlighter-rouge">NeuralNetwork::eval</code> is called, the neural network should be put in “evaluation mode”, where <code class="language-plaintext highlighter-rouge">evaluating</code> is set to true. Likewise, when <code class="language-plaintext highlighter-rouge">NeuralNetwork::train</code> is called, the neural network should be put in “training mode”, where <code class="language-plaintext highlighter-rouge">evaluating</code> is set to false.</p>
+
+<h4 id="step-3-implement-graph-methods">Step 3: Implement Graph methods</h4>
+<p>The next step is implementing some of the class methods for the <code class="language-plaintext highlighter-rouge">Graph</code> class.</p>
+
+<p>Notice the function <code class="language-plaintext highlighter-rouge">void Graph::resize(int size)</code>. Before adding or updating any part of the structure, <code class="language-plaintext highlighter-rouge">resize</code> must be called first.</p>
+
+<p>For example, calling <code class="language-plaintext highlighter-rouge">resize(20)</code> will initialize <code class="language-plaintext highlighter-rouge">nodes</code> to be a vector of size 20, where every element is a <code class="language-plaintext highlighter-rouge">nullptr</code>. Likewise, <code class="language-plaintext highlighter-rouge">adjacencyList</code> will be a vector of 20 empty maps. When writing these functions, assume that resize <strong>has already been called</strong>: it happens in the NeuralNetwork’s constructors.</p>
+
+<p>You will need to implement the following functions:</p>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">void Graph::updateNode(int id, NodeInfo n)</code>
+    <ul>
+      <li>Allocates a NodeInfo object on the heap and updates it in <code class="language-plaintext highlighter-rouge">nodes</code>.</li>
+    </ul>
+  </li>
+  <li><code class="language-plaintext highlighter-rouge">NodeInfo* Graph::getNode(int id) const</code>
+    <ul>
+      <li>This method should return a pointer to the NodeInfo object at the index <code class="language-plaintext highlighter-rouge">id</code>.</li>
+    </ul>
+  </li>
+  <li><code class="language-plaintext highlighter-rouge">void Graph::updateConnection(int v, int u, double w)</code>
+    <ul>
+      <li>This method takes in a source id: <code class="language-plaintext highlighter-rouge">v</code>, a destination id: <code class="language-plaintext highlighter-rouge">u</code> and a weight <code class="language-plaintext highlighter-rouge">w</code>. The input represents a weighted and directed edge in the graph (from v to u). Update the adjacency list to reflect this update. Connections do not need to be allocated on the heap. If the connection already exists, just update the weight.</li>
+    </ul>
+  </li>
+  <li><code class="language-plaintext highlighter-rouge">void Graph::clear()</code>
+    <ul>
+      <li>This method should deallocate any allocated memory from the heap.</li>
+    </ul>
+  </li>
+</ul>
+
+<p>One indication that you have implemented the functions so far correctly is that the test_structure test case should pass, i.e. running <code class="language-plaintext highlighter-rouge">./test_neuralnet 4</code> should give you the output:</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>test_structure
+        PASSED: test_structure
+</code></pre></div></div>
+
+<h4 id="step-4-implement-predict-with-bft">Step 4: Implement Predict with BFT</h4>
+<p>The next two steps will be the most challenging part of the programming assignment. We recommend taking the self-test assignment on Gradescope before implementing these functions.</p>
+
+<p>You will need to implement a BFT (Breadth First Traversal) algorithm for:</p>
+<ul>
+  <li>
+    <p><code class="language-plaintext highlighter-rouge">std::vector&lt;double&gt; predict(DataInstance instance)</code></p>
+
+    <ul>
+      <li>This function takes an input training example, <code class="language-plaintext highlighter-rouge">instance</code>, and returns the neural network’s prediction (a vector, in the case where a neural network is defined to have more than one output).</li>
+    </ul>
+  </li>
+</ul>
+
+<p>A BFT is required for this function because of how input flows through a neural network, which will be discussed further down below.</p>
+
+<p>We have provided you two important functions that take care of the math for you:</p>
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">NeuralNetwork::visitPredictNode(int vId)</code>:
+    <ul>
+      <li>takes care of the neural network math for visiting a node during the prediction phase. Computation will be performed on the NodeInfo whose id is <code class="language-plaintext highlighter-rouge">vId</code>.</li>
+    </ul>
+  </li>
+  <li><code class="language-plaintext highlighter-rouge">NeuralNetwork::visitPredictNeighbor(Connection c)</code>:
+    <ul>
+      <li>takes care of the neural network math for visiting a connection during the prediction phase. Computation will be performed on the nodes that make up the connection <code class="language-plaintext highlighter-rouge">c</code>.</li>
+    </ul>
+  </li>
+</ul>
+
+<p>Your job is to write the BFT algorithm that visits nodes and connections in the right order.</p>
+
+<p>Here is a rundown of how the prediction algorithm works.</p>
+
+<p><img src="assets/generic_neural_net.svg" alt="NeuralNetwork Example" /></p>
+
+<p>For a neural network, the collections of weights and biases serve as the model or - the mechanism in which we make a prediction. We insert the input into each node of the input layer. This diagram takes in two inputs; since there are two nodes in the input layer, each node gets a different input. The value is then transformed by each weight as it “flows” to the next layer. Once it reaches the next layer, it again gets transformed by the bias and activation function - in that order. After this, the same process happens as it flows to the next layer. In this example, it flows until it has been transformed by the output layer, which leaves the value in a state we interpret as a prediction. For any given layer, we first visit all the nodes and connections to the next layer before visiting the nodes and connections of the next layer. Here is an example of how input flows from the input layer to the hidden layer in our example:</p>
+
+<ol>
+  <li>Assume the node with id 1 contains the input value $x_1$, and the node with id 2 contains the input value $x_2$.</li>
+  <li>To compute the value for node 3: $h_1$, we first accumulate the weighted sum:
+\(h_1 = x_1w_1 + x_2w_4\)</li>
+  <li>Next, we add the bias term:
+\(h_1 = x_1w_1 + x_2w_4 + b_1\)</li>
+  <li>Finally, activate the node with the activation function for its layer, which we will call <code class="language-plaintext highlighter-rouge">activate</code>:</li>
+</ol>
+
+\[h_1 = activate(x_1w_1 + x_2w_4 + b_1)\]
+
+<p>Using these steps, we can compute the value for every other node, including the output node ($y_1$), which will be our prediction.</p>
+<ul>
+  <li>$h_2 = activate(x_1w_2 + x_2w_5 + b_2)$</li>
+  <li>$h_3 = activate(x_1w_3 + x_2w_6 + b_3)$</li>
+  <li>$y_1 = activate(h_1w_7 + h_2w_8 + h_3w_9 + b_4)$</li>
+</ul>
+
+<p><strong>NOTE</strong>: Keep these two facts in mind when writing your prediction algorithm.</p>
+<ul>
+  <li>visiting a connection accumulates a part of the weighted sum.
+    <ul>
+      <li>for example: visiting the connection with $w_5$ is responsible for calculating the $x_2w_5$ term.</li>
+    </ul>
+  </li>
+  <li>visiting a node adds the bias and activates.</li>
+</ul>
+
+<p>The other important thing to realize is that a layer must wait for the computation of the previous layer to finish, hence the need for a BFT traversal.</p>
+
+<h4 id="step-5-implement-contribute-with-dfs">Step 5: Implement Contribute with DFS</h4>
+
+<p>Your next task is to implement a DFT (Depth First Traversal) algorithm for:</p>
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">bool NeuralNetwork::contribute(double y, double p);</code>
+    <ul>
+      <li>This is the main, public version of this function. <code class="language-plaintext highlighter-rouge">y</code> is the ground truth label and <code class="language-plaintext highlighter-rouge">p</code> was the neural network’s prediction.</li>
+    </ul>
+  </li>
+  <li><code class="language-plaintext highlighter-rouge">double NeuralNetwork::contribute(int nodeId, const double&amp; y, const double&amp; p);</code>
+    <ul>
+      <li>This is the recursive helper function for the main contribute function. <code class="language-plaintext highlighter-rouge">y</code> and <code class="language-plaintext highlighter-rouge">p</code> remain the same throughout each call, <code class="language-plaintext highlighter-rouge">nodeId</code> indicates the node that is currently being visited.</li>
+    </ul>
+  </li>
+</ul>
+
+<p>A DFT is required for this process because of how errors are “back-propagated” through the neural network.</p>
+
+<p>When a neural network makes a prediction, there is a sense of “how bad” the prediction was. The neural network has a mechanism for finding this out, which we’ve abstracted behind the visit functions. Curious students are encouraged to check the info in EXTRA.md for more details, but it is not required to understand this lab.</p>
+
+<p>Changing our weights and biases causes a different prediction, and the question to be answered is: how do we change these weights and biases to make a better prediction?</p>
+
+<p>The error begins in the output layer. The output layer uses fancy math to figure out how much to change its weights and biases. Then, a part of that error is passed down to the previous layer, which performs the same procedure. This “back-propagation” continues until we reach the input layer and its weights are updated.</p>
+
+<p>Here is a helpful gif to illustrate both the prediction flow and back-propagation flow:</p>
+
+<p><img src="assets/backprop.gif" alt="Prediction and Backprop" /></p>
+
+<p>Why do we use DFT for back-propagation? There are a couple of reasons:</p>
+<ol>
+  <li>The error received in one layer depends on some new error that the next layer computes and passes down. The error a node receives from its out-neighbors is an “incoming contribution” and the error that a node passes down to its in-neighbors is its “outgoing contribution”.</li>
+  <li>The connections are only forward-directed; you cannot traverse backward in the network without the help of a recursive call.</li>
+</ol>
+
+<p><img src="assets/generic_neural_net.svg" alt="NeuralNetwork Example" />
+Here is an example, referring back to our original neural network: suppose we are currently at node 3</p>
+
+<ol>
+  <li>Iterate through all your neighbors. For each neighbor:
+    <ul>
+      <li>get the neighbor’s incoming contribution by recursively calling contribute on node 6.</li>
+      <li>Using that incoming contribution, visit the connection corresponding to that neighbor.</li>
+      <li>In this case, we visit the connection with weight $w_7$.</li>
+    </ul>
+  </li>
+  <li>Visit node 3 and pass in your running outgoing contribution to be updated.</li>
+</ol>
+
+<p>Now, an example using node 1:</p>
+<ol>
+  <li>Get contribution from node 3, and visit the connection with $w_1$.</li>
+  <li>Get contribution from node 4, and visit the connection with $w_2$.</li>
+  <li>Get contribution from node 5, and visit the connection with $w_3$.</li>
+  <li>Visit node 1 and pass in your running outgoing contribution to be updated.</li>
+</ol>
+
+<p>We have provided you with two important functions that take care of the math for you:</p>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">void visitContributeNode(int vId, double&amp; outgoingContribution)</code>:
+    <ul>
+      <li>Updates outgoingContribution and computes the contribution of the nodes <code class="language-plaintext highlighter-rouge">delta</code> term.</li>
+    </ul>
+  </li>
+  <li><code class="language-plaintext highlighter-rouge">void visitContributeNeighbor(Connection&amp; c, double&amp; incomingContribution, double&amp; outgoingContribution)</code>:
+    <ul>
+      <li>Updates outgoingContribution and computes the contribution to the connection’s <code class="language-plaintext highlighter-rouge">delta</code> term.</li>
+    </ul>
+  </li>
+</ul>
+
+<p>Notice <code class="language-plaintext highlighter-rouge">incomingContribution</code> and <code class="language-plaintext highlighter-rouge">outgoingContribution</code> defined in the function. During your DFT, <code class="language-plaintext highlighter-rouge">incomingContribution</code> will represent what comes from the recursive result of calling <code class="language-plaintext highlighter-rouge">contribute</code> on a neighbor. <code class="language-plaintext highlighter-rouge">outgoingContribution</code> will be updated throughout the duration of the recursive call and, eventually, be returned - becoming the new <code class="language-plaintext highlighter-rouge">incomingContribution</code> for the previous layer.</p>
+
+<p>In place of a “found” set, there is a map called <code class="language-plaintext highlighter-rouge">contributions</code>. This acts as a way to keep track of nodes that we have already visited, as well as store their previously computed contributions.</p>
+
+<p>Your job is to write the DFT algorithm that visits nodes and connections in the right order.</p>
+
+<p>When you are ready to proceed with this step, see the following section, which will give a brief background of back-propagation:</p>
+
+<h4 id="step-6-implement-update">Step 6: Implement Update</h4>
+
+<p>After calling contribute, the update function assumes (precondition) that the <code class="language-plaintext highlighter-rouge">delta</code> of every node and connection has been accumulated. Now, each delta must be applied to every node’s bias and every connection’s weight.</p>
+
+<p>Your goal in the update is to traverse the graph (in any way you want) to update every weight and bias. A single call to <code class="language-plaintext highlighter-rouge">update</code> affects every node and connection.</p>
+
+<p>For each update, follow these steps:</p>
+<ol>
+  <li>To update the bias: $bias_{new} = bias_{old} - (lr * delta)$</li>
+  <li>To update the weight: $weight_{new} = weight_{old} - (lr * delta)$</li>
+</ol>
+
+<p>where $lr$ is the learning rate (a member variable of NeuralNetwork), and controls how impactful we consider contributions to be.</p>
+
+<h4 id="step-7-test-and-submit">Step 7: Test and Submit</h4>
+<p><code class="language-plaintext highlighter-rouge">test_neuralnet.cpp</code> has been given as a brief way to check your neural network. Please test your code against this file and make sure you pass all the tests before trying to submit to gradescope.</p>
+
+<p>If you are having issues, it is helpful to run a debugger like gdb to make sure your code is following the logic described above.</p>
+
+<h4 id="step-8-rest">Step 8: Rest</h4>
+<p>Take a break! You’ve done well.</p>
+
+<h3 id="external-resources">External Resources</h3>
+
+<h6 id="graphviz">Graphviz</h6>
+<p>The graph class overloads the « operator and outputs the graph in dot format. Copy the portion that looks like:
+<code class="language-plaintext highlighter-rouge">digraph G {...}</code>
+and paste it <a href="https://dreampuf.github.io/GraphvizOnline/#digraph%20G%20%7B%0A%0A%20%20subgraph%20cluster_0%20%7B%0A%20%20%20%20style%3Dfilled%3B%0A%20%20%20%20color%3Dlightgrey%3B%0A%20%20%20%20node%20%5Bstyle%3Dfilled%2Ccolor%3Dwhite%5D%3B%0A%20%20%20%20a0%20-%3E%20a1%20-%3E%20a2%20-%3E%20a3%3B%0A%20%20%20%20label%20%3D%20%22process%20%231%22%3B%0A%20%20%7D%0A%0A%20%20subgraph%20cluster_1%20%7B%0A%20%20%20%20node%20%5Bstyle%3Dfilled%5D%3B%0A%20%20%20%20b0%20-%3E%20b1%20-%3E%20b2%20-%3E%20b3%3B%0A%20%20%20%20label%20%3D%20%22process%20%232%22%3B%0A%20%20%20%20color%3Dblue%0A%20%20%7D%0A%20%20start%20-%3E%20a0%3B%0A%20%20start%20-%3E%20b0%3B%0A%20%20a1%20-%3E%20b3%3B%0A%20%20b2%20-%3E%20a3%3B%0A%20%20a3%20-%3E%20a0%3B%0A%20%20a3%20-%3E%20end%3B%0A%20%20b3%20-%3E%20end%3B%0A%0A%20%20start%20%5Bshape%3DMdiamond%5D%3B%0A%20%20end%20%5Bshape%3DMsquare%5D%3B%0A%7D">here</a> to visualize the graph:</p>
+
+<h6 id="bfs-and-dfs">BFS and DFS</h6>
+<ul>
+  <li>GeeksForGeeks BFS: <a href="https://www.geeksforgeeks.org/breadth-first-search-or-bfs-for-a-graph/">https://www.geeksforgeeks.org/breadth-first-search-or-bfs-for-a-graph/</a></li>
+  <li>GeeksForGeeks DFS: <a href="https://www.geeksforgeeks.org/depth-first-search-or-dfs-for-a-graph/">https://www.geeksforgeeks.org/depth-first-search-or-dfs-for-a-graph/</a></li>
+</ul>
+
+<h6 id="neural-networks">Neural Networks</h6>
+<p>Here are some great resources to help you out. I would say that statquest has great videos to understand the implementation of neural network structures, whereas 3blue1brown is more conceptual based:</p>
+<ul>
+  <li>StatQuest - Neural Network Basics (great for understanding the prediction algorithm): <a href="https://youtu.be/CqOfi41LfDw?si=8waS2U01uMWcpH2i">https://youtu.be/CqOfi41LfDw?si=8waS2U01uMWcpH2i</a></li>
+  <li>StatQuest - Back Propagation (great for understanding the contribute algorithm): <a href="https://youtu.be/IN2XmBhILt4?si=bnDft-3T4DQ2iO9X">https://youtu.be/IN2XmBhILt4?si=bnDft-3T4DQ2iO9X</a></li>
+  <li>3Blue1Brown - <a href="https://youtu.be/aircAruvnKk?si=KZt2AsbD7URc58-L">https://youtu.be/aircAruvnKk?si=KZt2AsbD7URc58-L</a></li>
+</ul>
+
+<h3 id="credits">Credits</h3>
+<p>Thanks to the UCSB CS24 teaching staff for their feedback on this assignment: Joseph Ng, Nawel Alioua, Shinda Huang, Xinlei Feng, Yaoyi Bai, Ally Chu, and Sanjana Shankar.</p>
+
+<p>CC BY-NC-SA 2.0 <a href="https://creativecommons.org/licenses/by-nc-sa/2.0/">https://creativecommons.org/licenses/by-nc-sa/2.0/</a>, Zackery Glazewski, UCSB CS ULA, Feb 2024.</p>
+
+        </div><!-- content -->
+        
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light footer-navbar ">
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#footer-navbar-NavAltMarkup" aria-controls="footer-navbar-NavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="footer-navbar-NavAltMarkup">
+    <div class="navbar-nav">
+      <a class="nav-item nav-link" href="https://github.com/ucsb-cs24/w24">github site</a>
+      <a class="nav-item nav-link" href="https://github.com/ucsb-cs24/w24/edit/master/_lab/lab07.md">edit this page on github</a>
+      <span class="nav-item travis-ci-status "><a class="nav-link" href="https://travis-ci.org/ucsb-cs24/w24">
+	  <img src="https://travis-ci.org/ucsb-cs24/w24.svg?branch=master" alt="Build Status">
+	</a>
+      </span>
+    </div>
+  </div>
+</nav>
+
+      </div><!-- container -->
+  </body>
+</html>
