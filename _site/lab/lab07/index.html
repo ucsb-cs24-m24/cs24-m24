@@ -308,25 +308,6 @@ TeX: {
 
 <p>We provided a simple test suite in <code class="language-plaintext highlighter-rouge">test_neuralnet.cpp</code>. For now, running <code class="language-plaintext highlighter-rouge">./test_neuralnet</code> will fail, this is because some important functions have not been initialized yet. Once you implement steps 2 and 3, try playing around with <code class="language-plaintext highlighter-rouge">main.cpp</code> which will load and test the accuracy of a pretrained neural network model.</p>
 
-<p>After compiling the code, run <code class="language-plaintext highlighter-rouge">./test_neuralnet 4</code>.
-You should see the following output:</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>test_structure
-Attempting to update node with id: 0 but node does not exist
-Attempting to update node with id: 1 but node does not exist
-Attempting to update node with id: 2 but node does not exist
-Attempting to update node with id: 3 but node does not exist
-Attempting to update node with id: 4 but node does not exist
-Attempting to update node with id: 5 but node does not exist
-Attempting to update node with id: 6 but node does not exist
-Attempting to update node with id: 7 but node does not exist
-Attempting to update node with id: 8 but node does not exist
-Attempting to update node with id: 9 but node does not exist
-Attempting to update node with id: 10 but node does not exist
-Attempting to update node with id: 11 but node does not exist
-Attempting to update connection between 0 and 9 with weight -1.40287 but 0 does not exist
-</code></pre></div></div>
-
 <h4 id="step-2-implement-getters-and-setters">Step 2: Implement Getters and Setters</h4>
 <p>Your first step is implementing the getters and setters for the <code class="language-plaintext highlighter-rouge">Graph</code> and <code class="language-plaintext highlighter-rouge">NeuralNetwork</code> classes.</p>
 
@@ -375,10 +356,7 @@ Attempting to update connection between 0 and 9 with weight -1.40287 but 0 does 
   </li>
 </ul>
 
-<p>One indication that you have implemented the functions so far correctly is that the test_structure test case should pass, i.e. running <code class="language-plaintext highlighter-rouge">./test_neuralnet 4</code> should give you the output:</p>
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>test_structure
-        PASSED: test_structure
-</code></pre></div></div>
+<p>One indication that you have implemented the functions so far correctly is that the test_structure test case <code class="language-plaintext highlighter-rouge">./test_neuralnet 4</code> should pass.</p>
 
 <h4 id="step-4-implement-predict-with-bft">Step 4: Implement Predict with BFT</h4>
 <p>The next two steps will be the most challenging part of the programming assignment. We recommend taking the self-test assignment on Gradescope before implementing these functions.</p>
@@ -572,7 +550,7 @@ and paste it <a href="https://dreampuf.github.io/GraphvizOnline/#digraph%20G%20%
 </ul>
 
 <h3 id="credits">Credits</h3>
-<p>This assignment was conceived and created by Zackary Glazewski in consultation with Diba Mirza for CMPSC 24. Thanks to the UCSB CS24 teaching staff for reviewing and providing feedback: Joseph Ng, Nawel Alioua, Shinda Huang, Xinlei Feng, Yaoyi Bai, Ally Chu, Sanjana Shankar, Torin Schlunk, and Mehak Dhaliwal.</p>
+<p>This assignment was conceived and created by Zackary Glazewski in consultation with Diba Mirza for CMPSC 24. Thanks to the UCSB CS24 teaching staff for reviewing and providing feedback: Torin Schlunk, Mehak Dhaliwal, Nawel Alioua, Joseph Ng, Shinda Huang, Xinlei Feng, Yaoyi Bai, Ally Chu, and Sanjana Shankar.</p>
 
 <p><a href="https://creativecommons.org/licenses/by-nc-sa/2.0/">CC BY-NC-SA 2.0</a>, Zackary Glazewski and Diba Mirza, Feb 2024.</p>
 

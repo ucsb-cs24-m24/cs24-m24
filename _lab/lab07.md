@@ -85,26 +85,6 @@ Review the Makefile provided and look on top of each file to understand how the 
 
 We provided a simple test suite in ```test_neuralnet.cpp```. For now, running ```./test_neuralnet``` will fail, this is because some important functions have not been initialized yet. Once you implement steps 2 and 3, try playing around with ```main.cpp``` which will load and test the accuracy of a pretrained neural network model.
 
-After compiling the code, run `./test_neuralnet 4`.
-You should see the following output:
-
-```
-test_structure
-Attempting to update node with id: 0 but node does not exist
-Attempting to update node with id: 1 but node does not exist
-Attempting to update node with id: 2 but node does not exist
-Attempting to update node with id: 3 but node does not exist
-Attempting to update node with id: 4 but node does not exist
-Attempting to update node with id: 5 but node does not exist
-Attempting to update node with id: 6 but node does not exist
-Attempting to update node with id: 7 but node does not exist
-Attempting to update node with id: 8 but node does not exist
-Attempting to update node with id: 9 but node does not exist
-Attempting to update node with id: 10 but node does not exist
-Attempting to update node with id: 11 but node does not exist
-Attempting to update connection between 0 and 9 with weight -1.40287 but 0 does not exist
-```
-
 #### Step 2: Implement Getters and Setters
 Your first step is implementing the getters and setters for the ```Graph``` and ```NeuralNetwork``` classes.
 
@@ -141,11 +121,7 @@ You will need to implement the following functions:
 - ```void Graph::clear()```
     - This method should deallocate any allocated memory from the heap.
  
-One indication that you have implemented the functions so far correctly is that the test_structure test case should pass, i.e. running `./test_neuralnet 4` should give you the output:
-```
-test_structure
-        PASSED: test_structure
-```
+One indication that you have implemented the functions so far correctly is that the test_structure test case `./test_neuralnet 4` should pass.
 
 
 #### Step 4: Implement Predict with BFT
@@ -169,7 +145,7 @@ Your job is to write the BFT algorithm that visits nodes and connections in the 
 
 Here is a rundown of how the prediction algorithm works.
 
-![NeuralNetwork Example](assets/generic_neural_net.svg)
+![NeuralNetwork Example](assets/generic_neural_net.svg){:width=25% }
 
 For a neural network, the collections of weights and biases serve as the model or - the mechanism in which we make a prediction. We insert the input into each node of the input layer. This diagram takes in two inputs; since there are two nodes in the input layer, each node gets a different input. The value is then transformed by each weight as it "flows" to the next layer. Once it reaches the next layer, it again gets transformed by the bias and activation function - in that order. After this, the same process happens as it flows to the next layer. In this example, it flows until it has been transformed by the output layer, which leaves the value in a state we interpret as a prediction. For any given layer, we first visit all the nodes and connections to the next layer before visiting the nodes and connections of the next layer. Here is an example of how input flows from the input layer to the hidden layer in our example:
 
