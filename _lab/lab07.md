@@ -292,6 +292,6 @@ Here are some great resources to help you out. I would say that statquest has gr
 - 3Blue1Brown - <https://youtu.be/aircAruvnKk?si=KZt2AsbD7URc58-L>
 
 ### Credits
-Thanks to the UCSB CS24 teaching staff for their feedback on this assignment: Joseph Ng, Nawel Alioua, Shinda Huang, Xinlei Feng, Yaoyi Bai, Ally Chu, and Sanjana Shankar.
+Thanks to the UCSB CS24 teaching staff for their feedback on this assignment: Joseph Ng, Nawel Alioua, Shinda Huang, Xinlei Feng, Yaoyi Bai, Ally Chu, Sanjana Shankar, Torin Schlunk, Mehak Dhaliwal.
 
 CC BY-NC-SA 2.0 <https://creativecommons.org/licenses/by-nc-sa/2.0/>, Zackery Glazewski, UCSB CS ULA, Feb 2024.
