@@ -294,4 +294,4 @@ Here are some great resources to help you out. I would say that statquest has gr
 ### Credits
 Thanks to the UCSB CS24 teaching staff for their feedback on this assignment: Joseph Ng, Nawel Alioua, Shinda Huang, Xinlei Feng, Yaoyi Bai, Ally Chu, Sanjana Shankar, Torin Schlunk, Mehak Dhaliwal.
 
-CC BY-NC-SA 2.0 <https://creativecommons.org/licenses/by-nc-sa/2.0/>, Zackery Glazewski, UCSB CS ULA, Feb 2024.
+CC BY-NC-SA 2.0 <https://creativecommons.org/licenses/by-nc-sa/2.0/>, created by Zackery Glazewski, UCSB CS ULA, Feb 2024.
