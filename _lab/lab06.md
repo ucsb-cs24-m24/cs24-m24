@@ -11,7 +11,7 @@ This assignment may be completed in pairs using the pair-programming style of de
 
 # Introduction
 
-Please read the entire writeup before beginning the PA. In particular, take a look at part 3a to understand your requirements for a full score before attempting to implement a solution. You are graded on the running time efficiency of your solution. 
+Please read the entire writeup before beginning the lab. In particular, take a look at part 3a to understand your requirements for a full score before attempting to implement a solution. You are graded on the running time efficiency of your solution. 
 
 In this assignment, you will 
 * Use a container data structure from the C++ Standard Template Library (STL) where possible and/or write your own data structure to store and query data.
@@ -40,7 +40,7 @@ Obtain the starter code from this repo: <https://github.com/ucsb-cs24-w24/STARTE
 * `main.cpp`: driver code to read in movies from input files
 * `movies.h` and `movies.cpp`: empty files
 * `utilities.h` and `utilities.cpp`: empty files
-* `Makefile`: this file generates the executable `runMovies`, and please do not revise it
+* `Makefile`: this file generates the executable `runMovies`, and you are **NOT ALLOWED** to revise it
 * `input_20_ordered.csv`
 * `input_20_random.csv`
 * `input_100_ordered.csv`
@@ -267,6 +267,40 @@ No movies found with prefix xyz
 Best movie with prefix t is: the usual suspects with rating 8.1
 ```
 
+Note that:
+1. Best movies with a certain prefix should be printed at the **END** of the output. 
+2. There will **NOT** be any space before printing out best movies.
+```
+No movies found with prefix xyz
+    <--- no space here, only new line 
+Best movie with prefix t is: the usual suspects with rating 8.1
+```
+
+**Example with prefixes not in alphabetical order**
+*Let prefix.txt be a file that contains the prefixes: “two”, “xyz”, “xxx”, and “a”.
+```
+./runMovies input_100_random.csv prefix.txt
+```
+should produce the output
+
+```
+two bits, 5.4
+two if by sea, 4.5
+
+No movies found with prefix xyz
+No movies found with prefix xxx
+a midwinter's tale, 7.5
+antonia's line, 7.2
+angels and insects, 6.3
+ace ventura: when nature calls, 6.1
+assassins, 6.0
+across the sea of time, 3.5
+
+Best movie with prefix two is: two bits with rating 5.4
+Best movie with prefix a is: a midwinter's tale with rating 7.5
+```
+Note that the output will print results according to the order of the input prefix file, not the alphabetical order.
+
 ## Part 3: Analyze the time and space complexity of your algorithm from part 2
 Assume that
 * there are `n` movies in the dataset.
@@ -294,10 +328,10 @@ Second, report on **specific running times achieved by your solution** on *each*
 
 You will be graded for the efficiency of your algorithms but also the clarity and correctness of your analysis. 
 
-Here are runtime plots of three different types of solutions. These runtimes were gathered on the csil machines on the input files `input_76920_random.csv`, recording the running time to compute the result for the first `m` prefixes in `prefix_large.txt` to get each data point in the plot. If you want to get a proper runtime comparison, please run your code on csil. 
+Here are runtime plots of three different types of solutions. These runtimes were gathered on the csil machines on the input files `input_76920_random.csv`, recording the running time to compute the result for the first `m` prefixes in `prefix_large.txt` to get each data point in the plot. If you want to get a proper runtime comparison, please run your code on csil first and submit it to the Gradescope. And the leaderboard will show the efficiency for grading.
 * **Full credit will be given to solutions with an efficiency similar to `Mystery Implementation #4`**
 
-* The students who achieve the top 5 runtimes will receive **extra credit**
+* The students who achieve the top 5 runtimes will receive **extra credit**. And we will use Gradescope leaderboard to decide the top 5 runtime. 
 
 <img src="instruction_perf.jpg" alt="Part2" style="display:block; margin: 5px 10px 10px 10px;">
 
@@ -341,4 +375,5 @@ For this programming assignment, you will have a lot of flexibility on your impl
 * First, try to come up with a correct implementation, then think of how to optimize it.
 * Your code should be readable
 * Your classes should define clear interfaces and hide implementation details as much as possible. 
+* We **DO NOT** allow multi-threading in this lab. This time, we only focus on designing your own algorithms and improving them. 
 * You must include your space and time complexity analyses (part 3) in `main.cpp`, as a commented block under the `main()` function
