@@ -267,7 +267,39 @@ No movies found with prefix xyz
 Best movie with prefix t is: the usual suspects with rating 8.1
 ```
 
-Note that best movies with a certain prefix should be printed at the **END** of the output. 
+Note that:
+1. Best movies with a certain prefix should be printed at the **END** of the output. 
+2. There will **NOT** be any space before printing out best movies.
+```
+No movies found with prefix xyz
+    <--- no space here, only new line 
+Best movie with prefix t is: the usual suspects with rating 8.1
+```
+
+**Example with prefixes not in alphabetical order**
+*Let prefix.txt be a file that contains the prefixes: “two”, “xyz”, “xxx”, and “a”.
+```
+./runMovies input_100_random.csv prefix.txt
+```
+should produce the output
+
+```
+two bits, 5.4
+two if by sea, 4.5
+
+No movies found with prefix xyz
+No movies found with prefix xxx
+a midwinter's tale, 7.5
+antonia's line, 7.2
+angels and insects, 6.3
+ace ventura: when nature calls, 6.1
+assassins, 6.0
+across the sea of time, 3.5
+
+Best movie with prefix two is: two bits with rating 5.4
+Best movie with prefix a is: a midwinter's tale with rating 7.5
+```
+Note that the output will print results according to the order of the input prefix file, not the alphabetical order.
 
 ## Part 3: Analyze the time and space complexity of your algorithm from part 2
 Assume that
