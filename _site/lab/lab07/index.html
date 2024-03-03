@@ -372,6 +372,8 @@ TeX: {
   </li>
 </ul>
 
+<p>To implement a BFT, you should not use the <code class="language-plaintext highlighter-rouge">NeuralNetwork::layers</code> member variable. Instead, implement it using a <code class="language-plaintext highlighter-rouge">queue</code> as stated in the starter code of the predict function.</p>
+
 <p>A BFT is required for this function because of how input flows through a neural network, which will be discussed further down below.</p>
 
 <p>We have provided you two important functions that take care of the math for you:</p>
@@ -444,7 +446,7 @@ TeX: {
 
 <p>A DFT is required for this process because of how errors are “back-propagated” through the neural network.</p>
 
-<p>When a neural network makes a prediction, there is a sense of “how bad” the prediction was. The neural network has a mechanism for finding this out, which we’ve abstracted behind the visit functions. Curious students are encouraged to check the info in EXTRA.md for more details, but it is not required to understand this lab.</p>
+<p>When a neural network makes a prediction, there is a sense of “how bad” the prediction was. The neural network has a mechanism for finding this out, which we’ve abstracted behind the visit functions. Curious students are encouraged to check the info in the <a href="EXTRA.md">Gentle Introduction to Neural Networks</a> tutorial that provides more details, but it is not required to understand this lab.</p>
 
 <p>Changing our weights and biases causes a different prediction, and the question to be answered is: how do we change these weights and biases to make a better prediction?</p>
 

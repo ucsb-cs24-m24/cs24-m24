@@ -315,6 +315,16 @@ var dates = [{
     "desc" : "Leetcode practice with stacks and queues",
     
 }
+,{
+    "type" : "pa",
+    "url" :  "/w24/pa/pa04/",	   
+    "num" : "pa04",
+    "assigned" : "2024-03-02 09:00:00 -0800",
+        
+    "ready" : "true",
+    "desc" : "Leetcode practice with hashtables and hashmaps",
+    
+}
 ,];
 
 for (var i=0; i<cal_dates.length; i++) {

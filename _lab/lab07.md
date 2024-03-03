@@ -132,6 +132,8 @@ You will need to implement a BFT (Breadth First Traversal) algorithm for:
 
     - This function takes an input training example, ```instance```, and returns the neural network's prediction (a vector, in the case where a neural network is defined to have more than one output). 
 
+To implement a BFT, you should not use the `NeuralNetwork::layers` member variable. Instead, implement it using a `queue` as stated in the starter code of the predict function.
+
 A BFT is required for this function because of how input flows through a neural network, which will be discussed further down below. 
 
 We have provided you two important functions that take care of the math for you:
@@ -183,7 +185,7 @@ Your next task is to implement a DFT (Depth First Traversal) algorithm for:
 
 A DFT is required for this process because of how errors are "back-propagated" through the neural network.
 
-When a neural network makes a prediction, there is a sense of "how bad" the prediction was. The neural network has a mechanism for finding this out, which we've abstracted behind the visit functions. Curious students are encouraged to check the info in EXTRA.md for more details, but it is not required to understand this lab.
+When a neural network makes a prediction, there is a sense of "how bad" the prediction was. The neural network has a mechanism for finding this out, which we've abstracted behind the visit functions. Curious students are encouraged to check the info in the [Gentle Introduction to Neural Networks](EXTRA.md) tutorial that provides more details, but it is not required to understand this lab.
 
 Changing our weights and biases causes a different prediction, and the question to be answered is: how do we change these weights and biases to make a better prediction? 
 
