@@ -73,16 +73,6 @@ var dates = [{
 }
 ,{
     "type" : "lab",
-    "url" :  "/w24/lab/lab07-EXTRA/",	   
-    "num" : "lab07-tutorial",
-    "assigned" : "2024-02-28 09:00:00 -0800",
-    "due" : "2024-03-12 23:59:59 -0800",    
-    "ready" : "true",
-    "desc" : "A Gentle Introduction to Neural Networks",
-    
-}
-,{
-    "type" : "lab",
     "url" :  "/w24/lab/lab07/",	   
     "num" : "lab07",
     "assigned" : "2024-02-28 09:00:00 -0800",

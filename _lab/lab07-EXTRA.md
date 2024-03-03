@@ -2,8 +2,6 @@
 num: lab07-tutorial
 ready: true
 desc: "A Gentle Introduction to Neural Networks"
-assigned: 2024-02-28 9:00:00.00-8
-due: 2024-03-12 23:59:59.00-8
 ---
 
 {% include mathjax.html %}
