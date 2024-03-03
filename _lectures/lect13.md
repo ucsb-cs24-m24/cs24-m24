@@ -1,7 +1,7 @@
 ---
 lecture_date: 2024-02-28
 num: "lect13"
-desc: "Week 8: Graph serach and Breadth First Traversal"
+desc: "Week 8: Graph search and Breadth First Traversal"
 ready: true
 pdfurl: /lectures/CS24_Lecture13.pdf
 annotatedpdfurl: /lectures/CS24_Lecture13_ann.pdf
