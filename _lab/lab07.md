@@ -236,11 +236,12 @@ When you are ready to proceed with this step, see the following section, which w
 
 After calling contribute, the update function assumes (precondition) that the ```delta``` of every node and connection has been accumulated. Now, each delta must be applied to every node's bias and every connection's weight.
 
-Your goal in the update is to traverse the graph (in any way you want) to update every weight and bias. A single call to ```update``` affects every node and connection. 
+Your goal in the update is to traverse the graph (in any way you want) to update every weight and bias. A single call to ```update``` affects every node and connection and reset the $delta$ values to zero.
 
 For each update, follow these steps:
 1. To update the bias: $bias_{new} = bias_{old} - (lr * delta)$
 2. To update the weight: $weight_{new} = weight_{old} - (lr * delta)$
+3. Reset the $delta$ values for each node and connection to zero.
 
 where $lr$ is the learning rate (a member variable of NeuralNetwork), and controls how impactful we consider contributions to be. 
 
