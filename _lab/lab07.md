@@ -132,6 +132,8 @@ You will need to implement a BFT (Breadth First Traversal) algorithm for:
 
     - This function takes an input training example, ```instance```, and returns the neural network's prediction (a vector, in the case where a neural network is defined to have more than one output). 
 
+To implement a BFT, you should not use the `NeuralNetwork::layers` member variable. Instead, implement it using a `queue` as stated in the starter code of the predict function.
+
 A BFT is required for this function because of how input flows through a neural network, which will be discussed further down below. 
 
 We have provided you two important functions that take care of the math for you:
