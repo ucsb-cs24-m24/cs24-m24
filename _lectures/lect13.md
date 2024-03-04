@@ -5,7 +5,7 @@ desc: "Week 8: Graph search and Breadth First Traversal"
 ready: true
 pdfurl: /lectures/CS24_Lecture13.pdf
 annotatedpdfurl: /lectures/CS24_Lecture13_ann.pdf
-annotatedready: false
+annotatedready: true
 ---
 
 # Code from lecture
@@ -13,7 +13,7 @@ annotatedready: false
 
 # Topics
 * Neural Network representation
-* Graph search - Review BFS, analyzing time and complexity of BFS
+* Graph search - BFS
 
 * Continue to implementing the graph ADT (in class exercise), link to handout: <https://bit.ly/CS24W24-GraphsHandout>
 
