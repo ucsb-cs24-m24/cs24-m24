@@ -263,16 +263,15 @@ the big green, 5.2
 two if by sea, 4.5
 
 No movies found with prefix xyz
-
 Best movie with prefix t is: the usual suspects with rating 8.1
 ```
 
 Note that:
 1. Best movies with a certain prefix should be printed at the **END** of the output. 
-2. There will **NOT** be any space before printing out best movies.
+2. There will **NOT** be empty lines after printing out "No movies found with prefix <prefix_value>".
 ```
 No movies found with prefix xyz
-    <--- no space here, only new line 
+    <--- NO LINE HERE
 Best movie with prefix t is: the usual suspects with rating 8.1
 ```
 
