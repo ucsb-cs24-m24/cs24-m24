@@ -5,7 +5,7 @@ desc: "Week 9: Graph search and Depth First Traversal"
 ready: true
 pdfurl: /lectures/CS24_Lecture14.pdf
 annotatedpdfurl: /lectures/CS24_Lecture14_ann.pdf
-annotatedready: false
+annotatedready: true
 ---
 
 # Code from lecture
