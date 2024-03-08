@@ -5,7 +5,7 @@ desc: "Week 9: Running time analysis of BFS and DFS"
 ready: true
 pdfurl: /lectures/CS24_Lecture15.pdf
 annotatedpdfurl: /lectures/CS24_Lecture15_ann.pdf
-annotatedready: false
+annotatedready: true
 ---
 
 # Code from lecture
