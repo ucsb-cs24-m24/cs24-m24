@@ -2,7 +2,7 @@
 layout: lab
 num: lab08
 ready: true
-desc: "Complexity Analysis"
+desc: "Complexity Analysis - Part 2"
 assigned: 2024-03-07 9:00:00.00-8
 due: 2024-03-12 23:59:00.00-8
 ---
