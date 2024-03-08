@@ -5,7 +5,7 @@ desc: "Week 7: Hashtables, C++ unordered_set and unordered_map ADT"
 ready: true
 pdfurl: /lectures/CS24_Lecture11.pdf
 annotatedpdfurl: /lectures/CS24_Lecture11_ann.pdf
-annotatedready: false
+annotatedready: true
 ---
 
 # Code from lecture

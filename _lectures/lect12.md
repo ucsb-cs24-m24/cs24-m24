@@ -5,7 +5,7 @@ desc: "Week 8: Graph representation with applications to Neural Networks"
 ready: true
 pdfurl: /lectures/CS24_Lecture12.pdf
 annotatedpdfurl: /lectures/CS24_Lecture12_ann.pdf
-annotatedready: false
+annotatedready: true
 ---
 
 # Code from lecture
