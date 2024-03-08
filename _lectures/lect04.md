@@ -1,7 +1,7 @@
 ---
 lecture_date: 2024-01-22
 num: "lect04"
-desc: "Week 3: Efficient search and Binary Search Trees"
+desc: "Week 3: Efficient search with Binary Search Trees"
 ready: true
 pdfurl: /lectures/CS24_Lecture4.pdf
 annotatedpdfurl: /lectures/CS24_Lecture4_ann.pdf
