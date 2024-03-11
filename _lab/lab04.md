@@ -2,7 +2,7 @@
 layout: lab
 num: lab04
 ready: true
-desc: "Complexity Analysis - Part 1 (midterm practice lab)"
+desc: "Complexity Analysis - Part 1 (midterm practice)"
 assigned: 2024-01-31 9:00:00.00-8
 due: 2024-02-07 23:59:00.00-8
 ---

@@ -48,7 +48,7 @@ var dates = [{
     "assigned" : "2024-01-31 09:00:00 -0800",
     "due" : "2024-02-07 23:59:00 -0800",    
     "ready" : "true",
-    "desc" : "Big O practice",
+    "desc" : "Complexity Analysis - Part 1 (midterm practice)",
     
 }
 ,{
@@ -79,6 +79,16 @@ var dates = [{
     "due" : "2024-03-12 23:59:59 -0800",    
     "ready" : "true",
     "desc" : "Application of graphs to machine learning",
+    
+}
+,{
+    "type" : "lab",
+    "url" :  "/w24/lab/lab08/",	   
+    "num" : "lab08",
+    "assigned" : "2024-03-07 09:00:00 -0800",
+    "due" : "2024-03-12 23:59:00 -0800",    
+    "ready" : "true",
+    "desc" : "Complexity Analysis - Part 2",
     
 }
 ,{
@@ -136,7 +146,7 @@ var dates = [{
     
         
     "ready" : "true",
-    "desc" : "Week 3: Efficient search and Binary Search Trees",
+    "desc" : "Week 3: Efficient search with Binary Search Trees",
     
       "date" : "2024-01-22",
     
@@ -268,9 +278,45 @@ var dates = [{
     
         
     "ready" : "true",
-    "desc" : "Week 8: Graph serach and Breadth First Traversal",
+    "desc" : "Week 8: Graph search and Breadth First Traversal",
     
       "date" : "2024-02-28",
+    
+}
+,{
+    "type" : "lectures",
+    "url" :  "/w24/lectures/lect14/",	   
+    "num" : "lect14",
+    
+        
+    "ready" : "true",
+    "desc" : "Week 9: Graph search and Depth First Traversal",
+    
+      "date" : "2024-03-04",
+    
+}
+,{
+    "type" : "lectures",
+    "url" :  "/w24/lectures/lect15/",	   
+    "num" : "lect15",
+    
+        
+    "ready" : "true",
+    "desc" : "Week 9: Running time analysis of BFS and DFS",
+    
+      "date" : "2024-03-06",
+    
+}
+,{
+    "type" : "lectures",
+    "url" :  "/w24/lectures/lect16/",	   
+    "num" : "lect16",
+    
+        
+    "ready" : "true",
+    "desc" : "Week 10: Merge Sort",
+    
+      "date" : "2024-03-11",
     
 }
 ,{
@@ -323,6 +369,16 @@ var dates = [{
         
     "ready" : "true",
     "desc" : "Leetcode practice with hashtables and hashmaps",
+    
+}
+,{
+    "type" : "pa",
+    "url" :  "/w24/pa/pa05/",	   
+    "num" : "pa05",
+    "assigned" : "2024-03-02 09:00:00 -0800",
+        
+    "ready" : "true",
+    "desc" : "Leetcode practice with graph search - bfs and ddfs",
     
 }
 ,];

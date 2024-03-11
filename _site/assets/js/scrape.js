@@ -107,6 +107,12 @@ var DEBUGGING_ONLY = {
 		   "num" : "lab07",
 		},
 	        
+		{
+		   "collection" : "lab",
+		   "url" : "/lab/lab08/",
+		   "num" : "lab08",
+		},
+	        
 	    ]
 	},
 	
@@ -213,6 +219,24 @@ var DEBUGGING_ONLY = {
 	        
 		{
 		   "collection" : "lectures",
+		   "url" : "/lectures/lect14/",
+		   "num" : "lect14",
+		},
+	        
+		{
+		   "collection" : "lectures",
+		   "url" : "/lectures/lect15/",
+		   "num" : "lect15",
+		},
+	        
+		{
+		   "collection" : "lectures",
+		   "url" : "/lectures/lect16/",
+		   "num" : "lect16",
+		},
+	        
+		{
+		   "collection" : "lectures",
 		   "url" : "/lectures/no-lecture04/",
 		   "num" : "e02",
 		},
@@ -247,6 +271,12 @@ var DEBUGGING_ONLY = {
 		   "collection" : "pa",
 		   "url" : "/pa/pa04/",
 		   "num" : "pa04",
+		},
+	        
+		{
+		   "collection" : "pa",
+		   "url" : "/pa/pa05/",
+		   "num" : "pa05",
 		},
 	        
 	    ]

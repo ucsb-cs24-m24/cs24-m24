@@ -200,7 +200,7 @@ var nav ={
 
 <h1 id="introduction">Introduction</h1>
 
-<p>Please read the entire writeup before beginning the PA. In particular, take a look at part 3a to understand your requirements for a full score before attempting to implement a solution. You are graded on the running time efficiency of your solution.</p>
+<p>Please read the entire writeup before beginning the lab. In particular, take a look at part 3a to understand your requirements for a full score before attempting to implement a solution. You are graded on the running time efficiency of your solution.</p>
 
 <p>In this assignment, you will</p>
 <ul>
@@ -234,7 +234,7 @@ Obtain the starter code from this repo: <a href="https://github.com/ucsb-cs24-w2
   <li><code class="language-plaintext highlighter-rouge">main.cpp</code>: driver code to read in movies from input files</li>
   <li><code class="language-plaintext highlighter-rouge">movies.h</code> and <code class="language-plaintext highlighter-rouge">movies.cpp</code>: empty files</li>
   <li><code class="language-plaintext highlighter-rouge">utilities.h</code> and <code class="language-plaintext highlighter-rouge">utilities.cpp</code>: empty files</li>
-  <li><code class="language-plaintext highlighter-rouge">Makefile</code>: this file generates the executable <code class="language-plaintext highlighter-rouge">runMovies</code>, and please do not revise it</li>
+  <li><code class="language-plaintext highlighter-rouge">Makefile</code>: this file generates the executable <code class="language-plaintext highlighter-rouge">runMovies</code>, and you are <strong>NOT ALLOWED</strong> to revise it</li>
   <li><code class="language-plaintext highlighter-rouge">input_20_ordered.csv</code></li>
   <li><code class="language-plaintext highlighter-rouge">input_20_random.csv</code></li>
   <li><code class="language-plaintext highlighter-rouge">input_100_ordered.csv</code></li>
@@ -461,9 +461,42 @@ the big green, 5.2
 two if by sea, 4.5
 
 No movies found with prefix xyz
-
 Best movie with prefix t is: the usual suspects with rating 8.1
 </code></pre></div></div>
+
+<p>Note that:</p>
+<ol>
+  <li>Best movies with a certain prefix should be printed at the <strong>END</strong> of the output.</li>
+  <li>There will <strong>NOT</strong> be empty lines after printing out “No movies found with prefix <prefix_value>".
+</prefix_value>    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>No movies found with prefix xyz
+ &lt;--- NO LINE HERE
+Best movie with prefix t is: the usual suspects with rating 8.1
+</code></pre></div>    </div>
+  </li>
+</ol>
+
+<p><strong>Example with prefixes not in alphabetical order</strong>
+*Let prefix.txt be a file that contains the prefixes: “two”, “xyz”, “xxx”, and “a”.</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>./runMovies input_100_random.csv prefix.txt
+</code></pre></div></div>
+<p>should produce the output</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>two bits, 5.4
+two if by sea, 4.5
+
+No movies found with prefix xyz
+No movies found with prefix xxx
+a midwinter's tale, 7.5
+antonia's line, 7.2
+angels and insects, 6.3
+ace ventura: when nature calls, 6.1
+assassins, 6.0
+across the sea of time, 3.5
+
+Best movie with prefix two is: two bits with rating 5.4
+Best movie with prefix a is: a midwinter's tale with rating 7.5
+</code></pre></div></div>
+<p>Note that the output will print results according to the order of the input prefix file, not the alphabetical order.</p>
 
 <h2 id="part-3-analyze-the-time-and-space-complexity-of-your-algorithm-from-part-2">Part 3: Analyze the time and space complexity of your algorithm from part 2</h2>
 <p>Assume that</p>
@@ -499,13 +532,13 @@ Best movie with prefix t is: the usual suspects with rating 8.1
 
 <p>You will be graded for the efficiency of your algorithms but also the clarity and correctness of your analysis.</p>
 
-<p>Here are runtime plots of three different types of solutions. These runtimes were gathered on the csil machines on the input files <code class="language-plaintext highlighter-rouge">input_76920_random.csv</code>, recording the running time to compute the result for the first <code class="language-plaintext highlighter-rouge">m</code> prefixes in <code class="language-plaintext highlighter-rouge">prefix_large.txt</code> to get each data point in the plot. If you want to get a proper runtime comparison, please run your code on csil.</p>
+<p>Here are runtime plots of three different types of solutions. These runtimes were gathered on the csil machines on the input files <code class="language-plaintext highlighter-rouge">input_76920_random.csv</code>, recording the running time to compute the result for the first <code class="language-plaintext highlighter-rouge">m</code> prefixes in <code class="language-plaintext highlighter-rouge">prefix_large.txt</code> to get each data point in the plot. If you want to get a proper runtime comparison, please run your code on csil first and submit it to the Gradescope. And the leaderboard will show the efficiency for grading.</p>
 <ul>
   <li>
     <p><strong>Full credit will be given to solutions with an efficiency similar to <code class="language-plaintext highlighter-rouge">Mystery Implementation #4</code></strong></p>
   </li>
   <li>
-    <p>The students who achieve the top 5 runtimes will receive <strong>extra credit</strong></p>
+    <p>The students who achieve the top 5 runtimes will receive <strong>extra credit</strong>. And we will use Gradescope leaderboard to decide the top 5 runtime.</p>
   </li>
 </ul>
 
@@ -568,6 +601,7 @@ Best movie with prefix t is: the usual suspects with rating 8.1
   <li>First, try to come up with a correct implementation, then think of how to optimize it.</li>
   <li>Your code should be readable</li>
   <li>Your classes should define clear interfaces and hide implementation details as much as possible.</li>
+  <li>We <strong>DO NOT</strong> allow multi-threading in this lab. This time, we only focus on designing your own algorithms and improving them.</li>
   <li>You must include your space and time complexity analyses (part 3) in <code class="language-plaintext highlighter-rouge">main.cpp</code>, as a commented block under the <code class="language-plaintext highlighter-rouge">main()</code> function</li>
 </ul>
 
