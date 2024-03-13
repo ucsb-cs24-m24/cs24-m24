@@ -19,6 +19,3 @@ annotatedready: true
 
 * Sorting: So far we covered selection sort which runs in O(n^2) 
 * Today we will learn about Merge Sort, which runs in O(n log n)
-* We'll also continue practicing leetcode problems: <https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-tree/>
-
-
