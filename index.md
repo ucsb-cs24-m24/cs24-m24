@@ -34,38 +34,8 @@ title: "CS 24: Problem Solving with Computers-II , {{site.quarter}}"
 </div> -->
 
 
-
-### Lectures 
-<!-- {% include collapse-button.html label="Lectures" id="lectures" %} -->
-<!-- <div class="collapse" id="lectures"> -->
- <div class="card card-body" id="lectures" markdown="1">
-   {%include lecnot_table.html %}
- </div>
-
 ### Programming Assignments
 
  <div class="card card-body" id="lab" markdown="1">
   {% include lab_table.html %}
  </div>
-
-### Leetcode Practice Problems
-
- <div class="card card-body" id="pa" markdown="1">
-  {% include pa_table.html %}
- </div>
-
-<!-- </div> -->
-
-
-### Office hours 
-
-<style>
- iframe { width: 100%; height: 550px; }
-</style>
-
-<iframe src="https://calendar.google.com/calendar/embed?src=c_c7788493d2e424992c5a2393def31662bb2ccc39ccd03e51da61510f965f71e3%40group.calendar.google.com&ctz=America%2FLos_Angeles" style="border: 0" width="800" height="600" frameborder="0" scrolling="no"></iframe>
-
-<!-- <iframe src="https://calendar.google.com/calendar/embed?src=c_c7788493d2e424992c5a2393def31662bb2ccc39ccd03e51da61510f965f71e3%40group.calendar.google.com&ctz=America%2FLos_Angeles&mode=WEEK&showTitle=0" style="border: 0" frameborder="0" scrolling="no"></iframe>
- -->
-
-[CC BY-NC-SA 2.0](https://creativecommons.org/licenses/by-nc-sa/2.0/), Diba Mirza, Feb 2024. 
