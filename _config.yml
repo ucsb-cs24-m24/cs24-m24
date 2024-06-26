@@ -4,25 +4,25 @@ plugins:
 
 remote_theme: ucsb-cs-course-repos/course-repo-jekyll-theme
 #remote_theme: pmarsceill/just-the-docs@v0.3.3
-url: https://ucsb-cs24.github.io/w24 
-baseurl: "/w24"  
-instructor: "Diba Mirza"
-name: "CS24 Winter 2024"
+url: https://ucsb-cs24-m24.github.io/cs24-m24 
+baseurl: "/cs24-m24"
+instructor: "Maryam Majedi"
+name: "CS24 Summer 2024"
 course: "CS24"
 course_title: "Problem Solving with Computers II"
-title: "UCSB CS24 W24"
-github_url: https://github.com/ucsb-cs24/w24
-qtr: "W24"
-quarter: "Winter 2024"
-lecture_times: "MW 11:00a - 12:15p"
-lecture_location: "TD-W 1701"
-lab_times: "R: 2p, 3p, 4p, 5p, and 6p"
-tas: "Joseph Ng, Nawel Alioua, Shinda Huang, Xinlei Feng, Yaoyi Bai"
-ulas: "Zackary Glazewski, Ally Chu, Sanjana Shankar"
+title: "UCSB CS24 M24"
+github_url: https://github.com/ucsb-cs24-m24/cs24-m24
+qtr: "M24"
+quarter: "Summer 2024"
+lecture_times: "TR 2:00p - 3:15p"
+lecture_location: "Phelps 1445"
+lab_times: "W: 11a"
+tas: "Yilin Wang"
+ulas: "Dennis Kim"
 class_org:
-   name: ucsb-cs24-w24
-   url: https://github.com/ucsb-cs24-w24
-   githublinker: CS24 W24
+   name: ucsb-cs24-m24
+   url: https://github.com/ucsb-cs24-m24
+   githublinker: CS24 M24
    
 lect_repo: https://github.com/ucsb-cs24-w24/cs24-w24-lectures
 start_week: 1
