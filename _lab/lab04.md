@@ -3,13 +3,13 @@ layout: lab
 num: lab04
 ready: true
 desc: "Complexity Analysis - Part 1 (midterm practice)"
-assigned: 2024-01-31 9:00:00.00-8
-due: 2024-02-07 23:59:00.00-8
+assigned: 2024-07-15 9:00:00.00-8
+due: 2024-07-24 23:59:00.00-8
 ---
 
 
 ## Collaboration policy
-This lab must be done individually. Note that this lab is only for practice and will not count toward your final grade
+This lab must be done individually.
 
 ## Description
 Please navigate to lab04 on gradescope and work to complete the Big-O practice problems provided.
