@@ -3,8 +3,8 @@ layout: lab
 num: lab01
 ready: true
 desc: "Objective Cars"
-assigned: 2024-01-17 9:00:00.00-8
-due: 2024-01-24 23:59:00.00-8
+assigned: 2024-07-01 9:00:00.00-8
+due: 2024-07-10 23:59:00.00-8
 ---
 
 # Collaboration policy

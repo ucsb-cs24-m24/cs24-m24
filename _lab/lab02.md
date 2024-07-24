@@ -3,8 +3,8 @@ layout: lab
 num: lab02
 ready: true
 desc: "Binary Search Tree"
-assigned: 2024-01-24 9:00:00.00-8
-due: 2024-01-31 23:59:00.00-8
+assigned: 2024-07-08 9:00:00.00-8
+due: 2024-07-17 23:59:00.00-8
 ---
 
 
