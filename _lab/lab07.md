@@ -2,8 +2,8 @@
 num: lab07
 ready: true
 desc: "Application of graphs to machine learning"
-assigned: 2024-02-28 9:00:00.00-8
-due: 2024-03-12 23:59:59.00-8
+assigned: 2024-08-12 9:00:00.00-8
+due: 2024-08-21 23:59:59.00-8
 ---
 {% include mathjax.html %}
 
