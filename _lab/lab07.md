@@ -31,7 +31,7 @@ All work submitted for this programming assignment must be your own, or from you
 ### Tips
 - Don't be intimidated by the nature of the lab: focus on what you know about graphs and class structure and apply your skills as necessary. The neural network is meant to expose you to upper-division concepts earlier on and hopefully excite you for future classes. 
 - Start early and ask questions! It may take some time to understand what we are requiring you to do. This project is larger than normal. There is a lot of code involved, but try to focus on the subset of code you are required to implement. 
-- **The purpose of this lab is to write algorithms to traverse graphs (Breadth-First and DepthFirst) in an applied way. Please read the specifications closely to see which functions require which algorithm. We have done the heavy lifting for you in terms of the neural network implementation and abstracted the math away behind visit functions. So, your plan should be to write a BFT and DFT algorithm and decide where to place these visit functions within them. First and foremost, this is a Graph centered lab in the context of neural networks, not a neural network-centered lab.**
+- **The purpose of this lab is to write algorithms to traverse graphs (Breadth-First and Depth-First) in an applied way. Please read the specifications closely to see which functions require which algorithm. We have done the heavy lifting for you in terms of the neural network implementation and abstracted the math away behind visit functions. So, your plan should be to write a BFT and DFT algorithm and decide where to place these visit functions within them. First and foremost, this is a Graph centered lab in the context of neural networks, not a neural network-centered lab.**
 
 
 ### Project Structure
@@ -57,7 +57,7 @@ Other important classes/files that are part of the project are:
 This particular graph structure maintains an adjacency list. The adjacency list uses **integer identifiers** to refer to each NodeInfo object. So, there is a ```std::vector<NodeInfo> nodes``` member variable which maps an identifier to its corresponding NodeInfo. The adjacency list is of type: ```std::vector<std::unordered_map<int, Connection>>```, that is, a vector of hashmaps.
 
 ### NeuralNetwork Structure
-This class inherits from the graph class. You have not learned what this means, but for now, it means you can access graph members within the NeuralNetwork class. This is because a NeuralNetwork is a specific type of graph, much like how a binary tree is a type of graph.
+This class inherits from the graph class. It means you can access graph members within the NeuralNetwork class. This is because a NeuralNetwork is a specific type of graph, much like how a binary tree is a type of graph.
 
 A neural network is a specific type of graph, just like a binary tree is a type of graph. Here are the specifications of the neural network structure:
 
